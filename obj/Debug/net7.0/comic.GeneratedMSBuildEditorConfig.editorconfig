@@ -9,57 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = comic
 build_property.RootNamespace = comic
-build_property.ProjectDir = C:\Dev\C#\comic\
+build_property.ProjectDir = D:\Dev\School-CSharp\comic\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Dev\C#\comic
+build_property.MSBuildProjectDirectory = D:\Dev\School-CSharp\comic
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Dev/C\#/comic/Views/Home/Index.cshtml]
+[D:/Dev/School-CSharp/comic/Views/Components/Layout/_NavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xMYXlvdXRcX05hdkJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev/School-CSharp/comic/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Dev/C\#/comic/Views/Home/Privacy.cshtml]
+[D:/Dev/School-CSharp/comic/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Dev/C\#/comic/Views/Products/Create.cshtml]
+[D:/Dev/School-CSharp/comic/Views/Products/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Dev/C\#/comic/Views/Products/Delete.cshtml]
+[D:/Dev/School-CSharp/comic/Views/Products/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Dev/C\#/comic/Views/Products/Details.cshtml]
+[D:/Dev/School-CSharp/comic/Views/Products/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Dev/C\#/comic/Views/Products/Edit.cshtml]
+[D:/Dev/School-CSharp/comic/Views/Products/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Dev/C\#/comic/Views/Products/Index.cshtml]
+[D:/Dev/School-CSharp/comic/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Dev/C\#/comic/Views/Shared/Error.cshtml]
+[D:/Dev/School-CSharp/comic/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Dev/C\#/comic/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Dev/School-CSharp/comic/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Dev/C\#/comic/Views/_ViewImports.cshtml]
+[D:/Dev/School-CSharp/comic/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Dev/C\#/comic/Views/_ViewStart.cshtml]
+[D:/Dev/School-CSharp/comic/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Dev/C\#/comic/Views/Shared/_Layout.cshtml]
+[D:/Dev/School-CSharp/comic/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qe8o05zgp4
