@@ -4,15 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - comic</title>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    @RenderSectionAsync("Link", required: true)
+
+    <script type="text/javascript" src="~/js/search.js" defer></script>
+
+    <link rel="stylesheet" href="~/css/global.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/shared-layout/shared-layout.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/main-nav.css" asp-append-version="true" />
+
+    @await RenderSectionAsync("Link", required: false)
 </head>
 <body>
-    <div className="layout">
-        <div className="inner-layout">
-            <MainNav></MainNav>
-            @Html.PartialAsync("_NavBar")
-            <div className="layout-wrapper">
+    <div class="layout">
+        <div class="inner-layout">
+            <partial name="Components/Layout/_NavBar" />
+            <div class="layout-wrapper">
                 @RenderBody()
             </div>
         </div>

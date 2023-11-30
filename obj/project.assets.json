@@ -11210,23 +11210,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vu Tien Phat\\.nuget\\packages\\": {},
+    "C:\\Users\\vutie\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\School-CSharp\\comic\\comic.csproj",
+      "projectUniqueName": "C:\\Dev\\C#\\comic\\comic.csproj",
       "projectName": "comic",
-      "projectPath": "D:\\Dev\\School-CSharp\\comic\\comic.csproj",
-      "packagesPath": "C:\\Users\\Vu Tien Phat\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\School-CSharp\\comic\\obj\\",
+      "projectPath": "C:\\Dev\\C#\\comic\\comic.csproj",
+      "packagesPath": "C:\\Users\\vutie\\.nuget\\packages\\",
+      "outputPath": "C:\\Dev\\C#\\comic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Vu Tien Phat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vutie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -11291,7 +11291,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23330.10\\RuntimeIdentifierGraph.json"
       }
     }
   }

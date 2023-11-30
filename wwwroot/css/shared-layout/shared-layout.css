@@ -1,0 +1,17 @@
+.layout {
+  position: relative;
+  display: flex;
+}
+
+.inner-layout {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.layout-wrapper {
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=shared-layout.css.map */

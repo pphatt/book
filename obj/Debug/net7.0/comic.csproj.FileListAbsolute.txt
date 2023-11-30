@@ -509,3 +509,7 @@ D:\Dev\School-CSharp\comic\bin\Debug\net7.0\global.json
 D:\Dev\School-CSharp\comic\bin\Debug\net7.0\package-lock.json
 D:\Dev\School-CSharp\comic\bin\Debug\net7.0\package.json
 D:\Dev\School-CSharp\comic\bin\Debug\net7.0\tsconfig.json
+C:\Dev\C#\comic\bin\Debug\net7.0\global.json
+C:\Dev\C#\comic\bin\Debug\net7.0\package-lock.json
+C:\Dev\C#\comic\bin\Debug\net7.0\package.json
+C:\Dev\C#\comic\bin\Debug\net7.0\tsconfig.json
