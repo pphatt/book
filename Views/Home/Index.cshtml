@@ -1,3 +1,11 @@
-﻿@{
+﻿@model IEnumerable<Product>
+
+@{
     ViewData["Title"] = "Home Page";
 }
+
+@section Link {
+    <link rel="stylesheet" href="~/css/components/hero.css" asp-append-version="true" />
+}
+
+<partial name="Components/_Hero" />

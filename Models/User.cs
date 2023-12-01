@@ -15,7 +15,7 @@ public partial class User
 
     public string? LastName { get; set; }
 
-    public int? SexId { get; set; }
+    public string? Sex { get; set; }
 
     public string? PhoneNumber { get; set; }
 
@@ -25,9 +25,9 @@ public partial class User
 
     public DateTime? UpdatedAt { get; set; }
 
+    public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();
+
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 
     public virtual Role Role { get; set; } = null!;
-
-    public virtual Sex? Sex { get; set; }
 }

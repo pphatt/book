@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - comic</title>
 
+    <script type="text/javascript" src="~/js/global.js" defer async></script>
     <script type="text/javascript" src="~/js/search.js" defer></script>
+
+    @await RenderSectionAsync("Script", required: false)
 
     <link rel="stylesheet" href="~/css/global.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/shared-layout/shared-layout.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/components/main-nav.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/layout/main-nav.css" asp-append-version="true" />
 
     @await RenderSectionAsync("Link", required: false)
 </head>

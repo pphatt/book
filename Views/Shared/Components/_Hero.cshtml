@@ -1,0 +1,91 @@
+﻿@{
+    var products = ViewData["HeroProductData"] as List<Product>;
+}
+
+<div class="hero-wrap">
+    <div class="hero-header">
+        <div class="hero-header-wrap">
+            <h1>Popular New Titles</h1>
+        </div>
+    </div>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            @foreach (var product in products)
+            {
+                <div class="swiper-slide">
+                    <a href="/" class="swiper-item-wrapper">
+                        <img src=@Url.Content("/images/" + product.Images.First().ImageName) class="swiper-background-image"/>
+                        <div class="swiper-shade"></div>
+                        <div class="swiper-item-wrap">
+                            <div class="swiper-item">
+                                <div
+                                    class="swiper-item-image-wrapper">
+                                    <img src=@Url.Content("/images/" + product.Images.First().ImageName) class="swiper-item-image"/>
+                                </div>
+                                <div class="swiper-item-details">
+                                    <h2 class="title">@product.Name</h2>
+                                    <div class="genres">
+                                        @foreach (var genre in product.Tags)
+                                        {
+                                            <div class="genre">@genre.TagName</div>
+                                        }
+                                    </div>
+                                    <div class="description"></div>
+                                    <div class="author">
+                                        @foreach (var author in product.Authors)
+                                        {
+                                            <span>@author.AuthorName</span>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        <div class="swiper-navigate-wrapper">
+            <div class="swiper-navigate">
+                <span class="swiper-number">
+                    NO. 1
+                </span>
+                <button class="swiper-navigate-button">
+                    <span>
+                        <svg
+                            data-v-4c681a64=""
+                            data-v-a31e942f=""
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="m15 18-6-6 6-6"></path>
+                        </svg>
+                    </span>
+                </button>
+                <button class="swiper-navigate-button">
+                    <span>
+                        <svg
+                            data-v-4c681a64=""
+                            data-v-a31e942f=""
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

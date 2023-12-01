@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\comic.bundle.scp.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\main-nav.css",
-      "PackagePath": "staticwebassets\\css\\components\\main-nav.css"
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\hero.css",
+      "PackagePath": "staticwebassets\\css\\components\\hero.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\main-nav.css.map",
-      "PackagePath": "staticwebassets\\css\\components\\main-nav.css.map"
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\hero.css.map",
+      "PackagePath": "staticwebassets\\css\\components\\hero.css.map"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\main-nav.css",
+      "PackagePath": "staticwebassets\\css\\components\\layout\\main-nav.css"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\main-nav.css.map",
+      "PackagePath": "staticwebassets\\css\\components\\layout\\main-nav.css.map"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\global.css",
@@ -41,12 +49,104 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\search.js",
-      "PackagePath": "staticwebassets\\js\\search.js"
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Black.otf",
+      "PackagePath": "staticwebassets\\font\\Geist-Black.otf"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Black.woff2",
+      "PackagePath": "staticwebassets\\font\\Geist-Black.woff2"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Bold.otf",
+      "PackagePath": "staticwebassets\\font\\Geist-Bold.otf"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Bold.woff2",
+      "PackagePath": "staticwebassets\\font\\Geist-Bold.woff2"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Light.otf",
+      "PackagePath": "staticwebassets\\font\\Geist-Light.otf"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Light.woff2",
+      "PackagePath": "staticwebassets\\font\\Geist-Light.woff2"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Medium.otf",
+      "PackagePath": "staticwebassets\\font\\Geist-Medium.otf"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Medium.woff2",
+      "PackagePath": "staticwebassets\\font\\Geist-Medium.woff2"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Regular.otf",
+      "PackagePath": "staticwebassets\\font\\Geist-Regular.otf"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Regular.woff2",
+      "PackagePath": "staticwebassets\\font\\Geist-Regular.woff2"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-SemiBold.otf",
+      "PackagePath": "staticwebassets\\font\\Geist-SemiBold.otf"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-SemiBold.woff2",
+      "PackagePath": "staticwebassets\\font\\Geist-SemiBold.woff2"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Thin.otf",
+      "PackagePath": "staticwebassets\\font\\Geist-Thin.otf"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Thin.woff2",
+      "PackagePath": "staticwebassets\\font\\Geist-Thin.woff2"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-UltraBlack.otf",
+      "PackagePath": "staticwebassets\\font\\Geist-UltraBlack.otf"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-UltraBlack.woff2",
+      "PackagePath": "staticwebassets\\font\\Geist-UltraBlack.woff2"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-UltraLight.otf",
+      "PackagePath": "staticwebassets\\font\\Geist-UltraLight.otf"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-UltraLight.woff2",
+      "PackagePath": "staticwebassets\\font\\Geist-UltraLight.woff2"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\GeistVariableVF.ttf",
+      "PackagePath": "staticwebassets\\font\\GeistVariableVF.ttf"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\GeistVariableVF.woff2",
+      "PackagePath": "staticwebassets\\font\\GeistVariableVF.woff2"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Inter.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter.woff2"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\5b90247b-7538-4d26-bdb7-bb18dc51cab0.jpg",
+      "PackagePath": "staticwebassets\\images\\5b90247b-7538-4d26-bdb7-bb18dc51cab0.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\e90bdc47-c8b9-4df7-b2c0-17641b645ee1.jpg",
+      "PackagePath": "staticwebassets\\images\\e90bdc47-c8b9-4df7-b2c0-17641b645ee1.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\global.js",
+      "PackagePath": "staticwebassets\\js\\global.js"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\search.js",
+      "PackagePath": "staticwebassets\\js\\search.js"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\LICENSE",

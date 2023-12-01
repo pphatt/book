@@ -47,6 +47,8 @@
             } else {
                 this.opacity = 1
             }
+
+            this.navBarBackgroundControl()
         })
 
         window.addEventListener("keydown", (e: KeyboardEvent) => {
@@ -54,9 +56,9 @@
                 e.preventDefault()
                 this.open = !this.open
             }
-        })
 
-        this.navBarBackgroundControl()
+            this.searchInputActive()
+        })
     }
 
     searchInputActive() {

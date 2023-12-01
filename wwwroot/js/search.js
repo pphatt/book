@@ -31,14 +31,15 @@ class Search {
             else {
                 this.opacity = 1;
             }
+            this.navBarBackgroundControl();
         });
         window.addEventListener("keydown", (e) => {
             if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
                 e.preventDefault();
                 this.open = !this.open;
             }
+            this.searchInputActive();
         });
-        this.navBarBackgroundControl();
     }
     searchInputActive() {
         this.searchWrapElement.className = ["search", this.open ? " active" : ""].join("");

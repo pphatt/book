@@ -22,7 +22,7 @@ namespace comic.Controllers
         public async Task<IActionResult> Index()
         {
               return _context.Products != null ? 
-                          View(await _context.Products.ToListAsync()) :
+                          View(await _context.Products.Include(p => p.Category).ToListAsync()) :
                           Problem("Entity set 'ComicContext.Products'  is null.");
         }
 
