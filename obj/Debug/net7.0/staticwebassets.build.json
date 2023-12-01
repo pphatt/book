@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6Cxs/zgQNLtA4xIDe0QvddHY7OfxUH959+Ewzz6aJnw=",
+  "Hash": "jIr+bSC5QDguK+dlrDw9BYyZaBonHGjQEtPuzAZGPVw=",
   "Source": "comic",
   "BasePath": "_content/comic",
   "Mode": "Default",
@@ -576,23 +576,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\font\\GeistVariableVF.woff2"
-    },
-    {
-      "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Inter.woff2",
-      "SourceId": "comic",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Dev\\C#\\comic\\wwwroot\\",
-      "BasePath": "_content/comic",
-      "RelativePath": "font/Inter.woff2",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\font\\Inter.woff2"
     },
     {
       "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\images\\5b90247b-7538-4d26-bdb7-bb18dc51cab0.jpg",

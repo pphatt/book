@@ -129,10 +129,6 @@
       "PackagePath": "staticwebassets\\font\\GeistVariableVF.woff2"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Inter.woff2",
-      "PackagePath": "staticwebassets\\font\\Inter.woff2"
-    },
-    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\5b90247b-7538-4d26-bdb7-bb18dc51cab0.jpg",
       "PackagePath": "staticwebassets\\images\\5b90247b-7538-4d26-bdb7-bb18dc51cab0.jpg"
     },

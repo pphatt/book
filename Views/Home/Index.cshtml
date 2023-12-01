@@ -5,7 +5,106 @@
 }
 
 @section Link {
-    <link rel="stylesheet" href="~/css/components/hero.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/hero.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/home/home.css" asp-append-version="true"/>
 }
 
-<partial name="Components/_Hero" />
+<partial name="Components/_Hero"/>
+
+<div class="product-wrapper">
+    <div class="product-section">
+        <div class="product-header">
+            <a href="/" class="product-header-text">
+                <h2>Seasonal</h2>
+            </a>
+            <a href="/" class="product-navigate">
+                <span>
+                    <svg
+                        data-v-4c681a64=""
+                        data-v-a31e942f=""
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="feather feather-arrow-right icon"
+                        viewBox="0 0 24 24">
+                        <path d="M5 12h14m-7-7 7 7-7 7"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <div class="product-slider-wrapper">
+            <div class="product-slider">
+                @foreach (var product in Model)
+                {
+                    <div class="product">
+                        <a href="/">
+                            <div class="product-image">
+                                <img src=@Url.Content("/images/" + product.Images.First().ImageName) />
+                            </div>
+                            <div class="product-details">
+                                <div class="product-title">@product.Name</div>
+                                <div class="product-price">$@product.Price</div>
+                            </div>
+                        </a>
+                        <div class="add-to-cart">
+                            <button>Add to cart</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="product-section">
+        <div class="product-header">
+            <a href="/" class="product-header-text">
+                <h2>Seasonal</h2>
+            </a>
+            <a href="/" class="product-navigate">
+                <span>
+                    <svg
+                        data-v-4c681a64=""
+                        data-v-a31e942f=""
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="feather feather-arrow-right icon"
+                        viewBox="0 0 24 24">
+                        <path d="M5 12h14m-7-7 7 7-7 7"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <div class="product-slider-wrapper">
+            <div class="product-slider">
+                @foreach (var product in Model)
+                {
+                        <div class="product">
+                            <a href="/">
+                                <div class="product-image">
+                                    <img src=@Url.Content("/images/" + product.Images.First().ImageName) />
+                                </div>
+                                <div class="product-details">
+                                    <div class="product-title">@product.Name</div>
+                                    <div class="product-price">$@product.Price</div>
+                                </div>
+                            </a>
+                            <div class="add-to-cart">
+                                <button>Add to cart</button>
+                            </div>
+                        </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
