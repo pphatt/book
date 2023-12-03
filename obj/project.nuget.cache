@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+GEJF5JgelJCaCdijcptSfyJfe5dSiZA/yOXKkWf0AWBP8f1am/xM0XbbLceYFMcuUBBBuUFTf+bWBTTXaKCMA==",
+  "dgSpecHash": "B+8dj8QiinKhZrxUlmuyGrLRRxzBMNGQLuNcnZ1ZYXQYt8LsZR9m9yvd0dfmTtMfsyWozF5HAoIWKGkJ4ve7CA==",
   "success": true,
   "projectFilePath": "C:\\Dev\\C#\\comic\\comic.csproj",
   "expectedPackageFiles": [
@@ -116,7 +116,7 @@
     "C:\\Users\\vutie\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\vutie\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\vutie\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\vutie\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\vutie\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\vutie\\.nuget\\packages\\nuget.common\\6.6.1\\nuget.common.6.6.1.nupkg.sha512",
     "C:\\Users\\vutie\\.nuget\\packages\\nuget.configuration\\6.6.1\\nuget.configuration.6.6.1.nupkg.sha512",
     "C:\\Users\\vutie\\.nuget\\packages\\nuget.dependencyresolver.core\\6.6.1\\nuget.dependencyresolver.core.6.6.1.nupkg.sha512",

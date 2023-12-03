@@ -133,12 +133,48 @@
       "PackagePath": "staticwebassets\\images\\5b90247b-7538-4d26-bdb7-bb18dc51cab0.jpg"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\5e54c679-75d5-4645-b69e-eb46e66f3870.jpg",
+      "PackagePath": "staticwebassets\\images\\5e54c679-75d5-4645-b69e-eb46e66f3870.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\7847bc06-7b31-4a38-9bcd-c58002cd8808.jpg",
+      "PackagePath": "staticwebassets\\images\\7847bc06-7b31-4a38-9bcd-c58002cd8808.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\98162533-1838-4639-8419-2f19f8af651b.png",
+      "PackagePath": "staticwebassets\\images\\98162533-1838-4639-8419-2f19f8af651b.png"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\c4beaf09-75d0-4a9c-9dfc-7ca7b08a190a.jpg",
+      "PackagePath": "staticwebassets\\images\\c4beaf09-75d0-4a9c-9dfc-7ca7b08a190a.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\cf612559-6bec-47ac-9230-1bc7686f88dd.jpg",
+      "PackagePath": "staticwebassets\\images\\cf612559-6bec-47ac-9230-1bc7686f88dd.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\d30894c3-b90e-4225-8ac6-21c0ab094aff.jpg",
+      "PackagePath": "staticwebassets\\images\\d30894c3-b90e-4225-8ac6-21c0ab094aff.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\d54cdbcc-0081-4773-82ae-893cde97e050.jpg",
+      "PackagePath": "staticwebassets\\images\\d54cdbcc-0081-4773-82ae-893cde97e050.jpg"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\e90bdc47-c8b9-4df7-b2c0-17641b645ee1.jpg",
       "PackagePath": "staticwebassets\\images\\e90bdc47-c8b9-4df7-b2c0-17641b645ee1.jpg"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\ff8a7f7e-c7fc-4633-8c4e-1efb76abc2be.jpg",
+      "PackagePath": "staticwebassets\\images\\ff8a7f7e-c7fc-4633-8c4e-1efb76abc2be.jpg"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\global.js",
       "PackagePath": "staticwebassets\\js\\global.js"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\hero.js",
+      "PackagePath": "staticwebassets\\js\\hero.js"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\search.js",

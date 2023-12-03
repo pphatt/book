@@ -18,16 +18,14 @@ public class HomeController : Controller
 
     public async Task<IActionResult> Index()
     {
-        var products = await _context.Products
+        var products = _context.Products
             .Include(p => p.Authors)
             .Include(p => p.Images)
-            .Include(p => p.Tags)
-            .Take(10)
-            .ToListAsync();
+            .Include(p => p.Tags);
 
-        ViewData["HeroProductData"] = products;
+        ViewData["HeroProductData"] = await products.Take(10).ToListAsync();
 
-        return View(products);
+        return View(await products.ToListAsync());
     }
 
     public IActionResult Privacy()

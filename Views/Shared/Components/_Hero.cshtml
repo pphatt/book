@@ -10,29 +10,29 @@
     </div>
     <div class="swiper">
         <div class="swiper-wrapper">
-            @foreach (var product in products)
+            @for (var i = 0; i < products.Count(); i++)
             {
-                <div class="swiper-slide">
+                <div class="swiper-slide" data-swiper-slide-index=@i>
                     <a href="/" class="swiper-item-wrapper">
-                        <img src=@Url.Content("/images/" + product.Images.First().ImageName) class="swiper-background-image"/>
+                        <img src=@Url.Content("/images/" + products[i].Images.First().ImageName) class="swiper-background-image"/>
                         <div class="swiper-shade"></div>
                         <div class="swiper-item-wrap">
                             <div class="swiper-item">
                                 <div
                                     class="swiper-item-image-wrapper">
-                                    <img src=@Url.Content("/images/" + product.Images.First().ImageName) class="swiper-item-image"/>
+                                    <img src=@Url.Content("/images/" + products[i].Images.First().ImageName) class="swiper-item-image"/>
                                 </div>
                                 <div class="swiper-item-details">
-                                    <h2 class="title">@product.Name</h2>
+                                    <h2 class="title">@products[i].Name</h2>
                                     <div class="genres">
-                                        @foreach (var genre in product.Tags)
+                                        @foreach (var genre in products[i].Tags)
                                         {
                                             <div class="genre">@genre.TagName</div>
                                         }
                                     </div>
                                     <div class="description"></div>
                                     <div class="author">
-                                        @foreach (var author in product.Authors)
+                                        @foreach (var author in products[i].Authors)
                                         {
                                             <span>@author.AuthorName</span>
                                         }
@@ -49,7 +49,7 @@
                 <span class="swiper-number">
                     NO. 1
                 </span>
-                <button class="swiper-navigate-button">
+                <button class="swiper-navigate-button" id="previous">
                     <span>
                         <svg
                             data-v-4c681a64=""
@@ -67,7 +67,7 @@
                         </svg>
                     </span>
                 </button>
-                <button class="swiper-navigate-button">
+                <button class="swiper-navigate-button" id="next">
                     <span>
                         <svg
                             data-v-4c681a64=""
