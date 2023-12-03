@@ -1,5 +1,5 @@
 ﻿class Hero {
-    private currentActivePanel: number;
+    private currentActivePanel: number = Math.floor(Math.random() * 7) + 2;
     private width: number = (document.querySelector(".swiper-wrapper") as HTMLDivElement).offsetWidth - 2
 
     private isTransitioning: boolean = false;
@@ -24,8 +24,6 @@
 
         this.nextSlideButton = nextSlideButton
         this.prevSlideButton = prevSlideButton
-
-        this.currentActivePanel = Math.floor(Math.random() * 7) + 2
 
         this.setupEventListener()
         this.handleSwiperWrapperStyle()

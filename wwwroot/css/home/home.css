@@ -27,19 +27,49 @@
   font-weight: 600;
 }
 
+.product-navigate-group {
+  display: flex;
+  gap: 1rem;
+}
+
 .product-navigate {
   position: relative;
   display: flex;
   align-items: center;
   color: currentColor;
-  min-width: 2.5rem;
+  background-color: transparent;
   min-height: 2.5rem;
-  padding-left: 0;
-  padding-right: 0;
+  min-width: 2.5rem;
+  padding: 0.25rem 0;
   border-radius: 9999px;
-  overflow: hidden;
   cursor: pointer;
+  overflow: hidden;
+  pointer-events: auto;
   transition: filter 0.1s ease-out, color 0.1s ease-out, min-width 0.2s ease-out;
+}
+.product-navigate:before {
+  position: absolute;
+  inset: unset;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  content: "";
+  transition: all 0.1s ease-out;
+}
+.product-navigate:after {
+  position: absolute;
+  inset: unset;
+  background: #888;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  content: "";
+  transition: all 0.1s ease-out;
+}
+.product-navigate:hover:before {
+  background: rgb(79, 79, 79);
+  opacity: 0.35;
+  filter: brightness(0.85);
 }
 .product-navigate span {
   position: relative;
@@ -47,11 +77,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  pointer-events: none;
   font-weight: 500;
+  pointer-events: none;
   user-select: none;
 }
-.product-navigate span svg {
+.product-navigate svg {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -63,30 +93,6 @@
   text-indent: 0;
   user-select: none;
   transition: color 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
-}
-.product-navigate:before {
-  position: absolute;
-  inset: unset;
-  background: transparent;
-  width: 100%;
-  height: 100%;
-  content: "";
-  transition: all 0.1s ease-out;
-}
-.product-navigate:after {
-  position: absolute;
-  inset: unset;
-  background: #888;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  content: "";
-  transition: all 0.1s ease-out;
-}
-.product-navigate:hover:before {
-  background: rgb(79, 79, 79);
-  opacity: 0.35;
-  filter: brightness(0.85);
 }
 
 .product-slider-wrapper {
@@ -123,6 +129,18 @@
   height: 100%;
   margin-right: 20px;
   transition-property: transform;
+}
+
+.product-slide-active {
+  display: block;
+}
+
+.product-slide-next {
+  display: block;
+}
+
+.product-slide-prev {
+  display: block;
 }
 
 .product-image {

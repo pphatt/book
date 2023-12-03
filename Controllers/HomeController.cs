@@ -25,7 +25,7 @@ public class HomeController : Controller
 
         ViewData["HeroProductData"] = await products.Take(10).ToListAsync();
 
-        return View(await products.ToListAsync());
+        return View(await products.Take(15).ToListAsync());
     }
 
     public IActionResult Privacy()

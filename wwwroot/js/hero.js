@@ -1,6 +1,7 @@
 "use strict";
 class Hero {
     constructor(elems) {
+        this.currentActivePanel = Math.floor(Math.random() * 7) + 2;
         this.width = document.querySelector(".swiper-wrapper").offsetWidth - 2;
         this.isTransitioning = false;
         this.transitionDuration = 0;
@@ -9,7 +10,6 @@ class Hero {
         this.swiperWrapper = swiperWrapper;
         this.nextSlideButton = nextSlideButton;
         this.prevSlideButton = prevSlideButton;
-        this.currentActivePanel = Math.floor(Math.random() * 7) + 2;
         this.setupEventListener();
         this.handleSwiperWrapperStyle();
     }

@@ -129,6 +129,18 @@
       "PackagePath": "staticwebassets\\font\\GeistVariableVF.woff2"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\05f8dcb4-8ea1-48db-a0b1-3a8fbf695e5a.jpg",
+      "PackagePath": "staticwebassets\\images\\05f8dcb4-8ea1-48db-a0b1-3a8fbf695e5a.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\22ff2622-e93c-420f-b477-7a86eec02a1d.jpg",
+      "PackagePath": "staticwebassets\\images\\22ff2622-e93c-420f-b477-7a86eec02a1d.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\330a08d7-f6b1-4541-b958-443be3463887.jpg",
+      "PackagePath": "staticwebassets\\images\\330a08d7-f6b1-4541-b958-443be3463887.jpg"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\5b90247b-7538-4d26-bdb7-bb18dc51cab0.jpg",
       "PackagePath": "staticwebassets\\images\\5b90247b-7538-4d26-bdb7-bb18dc51cab0.jpg"
     },
@@ -139,6 +151,10 @@
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\7847bc06-7b31-4a38-9bcd-c58002cd8808.jpg",
       "PackagePath": "staticwebassets\\images\\7847bc06-7b31-4a38-9bcd-c58002cd8808.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\7cac0992-5b89-4171-87cd-250c300a77d0.jpg",
+      "PackagePath": "staticwebassets\\images\\7cac0992-5b89-4171-87cd-250c300a77d0.jpg"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\98162533-1838-4639-8419-2f19f8af651b.png",
@@ -161,12 +177,24 @@
       "PackagePath": "staticwebassets\\images\\d54cdbcc-0081-4773-82ae-893cde97e050.jpg"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\e7e5e267-502f-4b77-9f19-b7ea1344f68f.jpg",
+      "PackagePath": "staticwebassets\\images\\e7e5e267-502f-4b77-9f19-b7ea1344f68f.jpg"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\e90bdc47-c8b9-4df7-b2c0-17641b645ee1.jpg",
       "PackagePath": "staticwebassets\\images\\e90bdc47-c8b9-4df7-b2c0-17641b645ee1.jpg"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\fe570c0d-56d8-4213-8b6e-672282794001.jpg",
+      "PackagePath": "staticwebassets\\images\\fe570c0d-56d8-4213-8b6e-672282794001.jpg"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\ff8a7f7e-c7fc-4633-8c4e-1efb76abc2be.jpg",
       "PackagePath": "staticwebassets\\images\\ff8a7f7e-c7fc-4633-8c4e-1efb76abc2be.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\carousel.js",
+      "PackagePath": "staticwebassets\\js\\carousel.js"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\global.js",
