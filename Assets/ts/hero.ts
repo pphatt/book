@@ -28,31 +28,16 @@
         this.currentActivePanel = Math.floor(Math.random() * 7) + 2
 
         this.setupEventListener()
+        this.handleSwiperWrapperStyle()
     }
 
     setupEventListener() {
         this.nextSlideButton.addEventListener("click", () => {
-            if (this.isTransitioning) {
-                return
-            }
-
-            this.handleTransitioning()
-
-            this.currentActivePanel += 1
-
-            this.handleSwiperWrapperStyle()
+            this.handleSlideButton("next")
         })
 
         this.prevSlideButton.addEventListener("click", () => {
-            if (this.isTransitioning) {
-                return
-            }
-
-            this.handleTransitioning()
-
-            this.currentActivePanel -= 1
-
-            this.handleSwiperWrapperStyle()
+            this.handleSlideButton("previous")
         })
 
         this.swiperWrapper.addEventListener("transitionend", () => {
@@ -60,16 +45,29 @@
 
             this.handleSwiperWrapperStyle()
         })
+    }
+
+    handleSlideButton(direction: string) {
+        if (this.isTransitioning) {
+            return
+        }
+
+        this.transitionDuration = 300
+        this.isTransitioning = true
+
+        if (direction === "next") {
+            this.currentActivePanel += 1
+        } else {
+            this.currentActivePanel -= 1
+        }
 
         this.handleSwiperWrapperStyle()
     }
 
-    handleTransitioning() {
-        this.transitionDuration = 300
-        this.isTransitioning = true
-    }
+    handleSwiperWrapperStyle() {
+        this.swiperWrapper.style.transitionDuration = `${this.transitionDuration}ms`;
+        this.swiperWrapper.style.transform = `translate3d(${this.width * -this.currentActivePanel}px, 0px, 0px)`;
 
-    handleSlideStyle() {
         (document.querySelectorAll(".swiper-slide") as NodeList).forEach((swipe, index) => {
             const element = swipe as HTMLDivElement
 
@@ -89,13 +87,6 @@
         const index = (document.querySelector(".swiper-slide-active") as HTMLDivElement).getAttribute("data-swiper-slide-index")!
 
         this.slideNumberMarker.innerHTML = `NO. ${parseInt(index) + 1}`
-    }
-
-    handleSwiperWrapperStyle() {
-        this.swiperWrapper.style.transitionDuration = `${this.transitionDuration}ms`
-        this.swiperWrapper.style.transform = `translate3d(${this.width * -this.currentActivePanel}px, 0px, 0px)`
-
-        this.handleSlideStyle()
     }
 
     handleTransitionEnd() {

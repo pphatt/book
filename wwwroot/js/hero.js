@@ -11,35 +11,37 @@ class Hero {
         this.prevSlideButton = prevSlideButton;
         this.currentActivePanel = Math.floor(Math.random() * 7) + 2;
         this.setupEventListener();
+        this.handleSwiperWrapperStyle();
     }
     setupEventListener() {
         this.nextSlideButton.addEventListener("click", () => {
-            if (this.isTransitioning) {
-                return;
-            }
-            this.handleTransitioning();
-            this.currentActivePanel += 1;
-            this.handleSwiperWrapperStyle();
+            this.handleSlideButton("next");
         });
         this.prevSlideButton.addEventListener("click", () => {
-            if (this.isTransitioning) {
-                return;
-            }
-            this.handleTransitioning();
-            this.currentActivePanel -= 1;
-            this.handleSwiperWrapperStyle();
+            this.handleSlideButton("previous");
         });
         this.swiperWrapper.addEventListener("transitionend", () => {
             this.handleTransitionEnd();
             this.handleSwiperWrapperStyle();
         });
-        this.handleSwiperWrapperStyle();
     }
-    handleTransitioning() {
+    handleSlideButton(direction) {
+        if (this.isTransitioning) {
+            return;
+        }
         this.transitionDuration = 300;
         this.isTransitioning = true;
+        if (direction === "next") {
+            this.currentActivePanel += 1;
+        }
+        else {
+            this.currentActivePanel -= 1;
+        }
+        this.handleSwiperWrapperStyle();
     }
-    handleSlideStyle() {
+    handleSwiperWrapperStyle() {
+        this.swiperWrapper.style.transitionDuration = `${this.transitionDuration}ms`;
+        this.swiperWrapper.style.transform = `translate3d(${this.width * -this.currentActivePanel}px, 0px, 0px)`;
         document.querySelectorAll(".swiper-slide").forEach((swipe, index) => {
             const element = swipe;
             element.style.width = `${this.width}px`;
@@ -58,11 +60,6 @@ class Hero {
         });
         const index = document.querySelector(".swiper-slide-active").getAttribute("data-swiper-slide-index");
         this.slideNumberMarker.innerHTML = `NO. ${parseInt(index) + 1}`;
-    }
-    handleSwiperWrapperStyle() {
-        this.swiperWrapper.style.transitionDuration = `${this.transitionDuration}ms`;
-        this.swiperWrapper.style.transform = `translate3d(${this.width * -this.currentActivePanel}px, 0px, 0px)`;
-        this.handleSlideStyle();
     }
     handleTransitionEnd() {
         this.transitionDuration = 0;
