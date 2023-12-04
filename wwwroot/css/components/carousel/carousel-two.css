@@ -1,0 +1,200 @@
+.product-section:not(:first-child) {
+  margin-top: 32px;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.product-header-text {
+  color: inherit;
+  text-decoration: none;
+}
+.product-header-text h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.product-navigate-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.product-navigate {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: currentColor;
+  background-color: transparent;
+  min-height: 2.5rem;
+  min-width: 2.5rem;
+  padding: 0.25rem 0;
+  border-radius: 9999px;
+  cursor: pointer;
+  overflow: hidden;
+  pointer-events: auto;
+  transition: filter 0.1s ease-out, color 0.1s ease-out, min-width 0.2s ease-out;
+}
+.product-navigate:before {
+  position: absolute;
+  inset: unset;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  content: "";
+  transition: all 0.1s ease-out;
+}
+.product-navigate:after {
+  position: absolute;
+  inset: unset;
+  background: #888;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  content: "";
+  transition: all 0.1s ease-out;
+}
+.product-navigate:hover:before {
+  background: rgb(79, 79, 79);
+  opacity: 0.35;
+  filter: brightness(0.85);
+}
+.product-navigate span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-weight: 500;
+  pointer-events: none;
+  user-select: none;
+}
+.product-navigate svg {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: currentcolor;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1;
+  text-indent: 0;
+  user-select: none;
+  transition: color 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+
+.product-slider-wrapper {
+  position: relative;
+  display: block;
+  width: calc(100% + 2rem);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: -16px;
+  margin-right: -16px;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  list-style: none;
+  touch-action: pan-y;
+  z-index: auto;
+}
+
+.product-slider-2 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition-property: transform;
+  transition-timing-function: initial;
+  z-index: auto;
+}
+
+.product-2 {
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  max-width: 192px;
+  width: 100%;
+  height: 100%;
+  margin-right: 20px;
+  transition-property: transform;
+}
+
+.product-image {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  margin-bottom: auto;
+  user-select: none;
+  aspect-ratio: 5/7;
+}
+.product-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  object-fit: cover;
+  object-position: center center;
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 rgba(0, 0, 0, 0), 0 0 rgba(0, 0, 0, 0), var(--tw-shadow);
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.product-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  min-height: 40px;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-price {
+  margin-top: 0.25rem;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.add-to-cart {
+  margin-top: 0.5rem;
+}
+.add-to-cart button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: currentColor;
+  background-color: #636465;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: calc(0.5rem - 2px);
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  cursor: pointer;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+.add-to-cart button[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.add-to-cart button:not([disabled]):hover {
+  background: rgb(79, 79, 79);
+}
+
+/*# sourceMappingURL=carousel-two.css.map */

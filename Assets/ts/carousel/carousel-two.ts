@@ -1,4 +1,4 @@
-﻿class Carousel {
+﻿class CarouselTwo {
     private currentActivePanel: number = Math.floor(Math.random() * 7) + 2;
     private width: number = 212
 
@@ -64,19 +64,19 @@
         this.productSlider.style.transitionDuration = `${this.transitionDuration}ms`;
         this.productSlider.style.transform = `translate3d(${this.width * -this.currentActivePanel}px, 0px, 0px)`;
 
-        (document.querySelectorAll(".product") as NodeList).forEach((swipe, index) => {
+        (document.querySelectorAll(".product-2") as NodeList).forEach((swipe, index) => {
             const element = swipe as HTMLDivElement
 
             element.style.width = `${this.width}px`
 
             if (index === this.currentActivePanel) {
-                element.className = "product product-slide-active"
+                element.className = "product-2 product-slide-active"
             } else if (index === this.currentActivePanel + 1) {
-                element.className = "product product-slide-next"
+                element.className = "product-2 product-slide-next"
             } else if (index === this.currentActivePanel - 1) {
-                element.className = "product product-slide-previous"
+                element.className = "product-2 product-slide-previous"
             } else {
-                element.className = "product"
+                element.className = "product-2"
             }
         })
     }
@@ -88,7 +88,7 @@
         if (this.currentActivePanel === 8) {
             this.currentActivePanel = 7
 
-            const slidesArray = [...(document.querySelectorAll(".product") as NodeList)];
+            const slidesArray = [...(document.querySelectorAll(".product-2") as NodeList)];
 
             const reorderedSlides = [...slidesArray.slice(1, slidesArray.length), slidesArray[0]];
 
@@ -102,7 +102,7 @@
         if (this.currentActivePanel === 0) {
             this.currentActivePanel = 1
 
-            const slidesArray = [...(document.querySelectorAll(".product") as NodeList)];
+            const slidesArray = [...(document.querySelectorAll(".product-2") as NodeList)];
 
             const reorderedSlides = [slidesArray[slidesArray.length - 1], ...slidesArray.slice(0, slidesArray.length - 1)];
 
@@ -115,8 +115,8 @@
     }
 }
 
-const carousel = new Carousel({
-    productSlider: document.querySelector(".product-slider") as HTMLDivElement,
-    nextSlideButton: document.querySelector(".carousel-next") as HTMLButtonElement,
-    prevSlideButton: document.querySelector(".carousel-previous") as HTMLButtonElement,
+const carouselTwo = new CarouselTwo({
+    productSlider: document.querySelector(".product-slider-2") as HTMLDivElement,
+    nextSlideButton: document.querySelector(".carousel-next-2") as HTMLButtonElement,
+    prevSlideButton: document.querySelector(".carousel-previous-2") as HTMLButtonElement,
 })

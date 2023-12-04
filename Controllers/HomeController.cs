@@ -24,6 +24,10 @@ public class HomeController : Controller
             .Include(p => p.Tags);
 
         ViewData["HeroProductData"] = await products.Take(10).ToListAsync();
+        
+        ViewData["CarouselOne"] = await products.Take(15).ToListAsync();
+        
+        ViewData["CarouselTwo"] = await products.Take(15).ToListAsync();
 
         return View(await products.Take(15).ToListAsync());
     }

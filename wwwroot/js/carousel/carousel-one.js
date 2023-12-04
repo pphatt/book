@@ -1,5 +1,5 @@
 "use strict";
-class Carousel {
+class CarouselOne {
     constructor(elems) {
         this.currentActivePanel = Math.floor(Math.random() * 7) + 2;
         this.width = 212;
@@ -81,7 +81,7 @@ class Carousel {
         }
     }
 }
-const carousel = new Carousel({
+const carouselOne = new CarouselOne({
     productSlider: document.querySelector(".product-slider"),
     nextSlideButton: document.querySelector(".carousel-next"),
     prevSlideButton: document.querySelector(".carousel-previous"),
