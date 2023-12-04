@@ -7,7 +7,8 @@
 
     <link rel="stylesheet" href="~/css/global.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/shared-layout/shared-layout.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/components/layout/main-nav.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/layout/navigation-bar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components/layout/footer.css" asp-append-version="true" />
 
     @await RenderSectionAsync("Link", required: false)
 
@@ -23,6 +24,7 @@
             <div class="layout-wrapper">
                 @RenderBody()
             </div>
+            <partial name="Components/Layout/_Footer" />
         </div>
     </div>
 

@@ -29,12 +29,20 @@
       "PackagePath": "staticwebassets\\css\\components\\hero.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\main-nav.css",
-      "PackagePath": "staticwebassets\\css\\components\\layout\\main-nav.css"
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\footer.css",
+      "PackagePath": "staticwebassets\\css\\components\\layout\\footer.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\main-nav.css.map",
-      "PackagePath": "staticwebassets\\css\\components\\layout\\main-nav.css.map"
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\footer.css.map",
+      "PackagePath": "staticwebassets\\css\\components\\layout\\footer.css.map"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\navigation-bar.css",
+      "PackagePath": "staticwebassets\\css\\components\\layout\\navigation-bar.css"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\navigation-bar.css.map",
+      "PackagePath": "staticwebassets\\css\\components\\layout\\navigation-bar.css.map"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\global.css",

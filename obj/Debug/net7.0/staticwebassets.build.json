@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ygtgazwGbX8+eNcH6O9Pm6sa5Nz1vJrPTA/P0VyTzeE=",
+  "Hash": "9JIkp7WskqPQB8QCXFkRIKIxBdjl5xijuYLiaQsDHBA=",
   "Source": "comic",
   "BasePath": "_content/comic",
   "Mode": "Default",
@@ -153,12 +153,12 @@
       "OriginalItemSpec": "wwwroot\\css\\components\\hero.css.map"
     },
     {
-      "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\main-nav.css",
+      "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\footer.css",
       "SourceId": "comic",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Dev\\C#\\comic\\wwwroot\\",
       "BasePath": "_content/comic",
-      "RelativePath": "css/components/layout/main-nav.css",
+      "RelativePath": "css/components/layout/footer.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,15 +167,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\components\\layout\\main-nav.css"
+      "OriginalItemSpec": "wwwroot\\css\\components\\layout\\footer.css"
     },
     {
-      "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\main-nav.css.map",
+      "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\footer.css.map",
       "SourceId": "comic",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Dev\\C#\\comic\\wwwroot\\",
       "BasePath": "_content/comic",
-      "RelativePath": "css/components/layout/main-nav.css.map",
+      "RelativePath": "css/components/layout/footer.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,7 +184,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\components\\layout\\main-nav.css.map"
+      "OriginalItemSpec": "wwwroot\\css\\components\\layout\\footer.css.map"
+    },
+    {
+      "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\navigation-bar.css",
+      "SourceId": "comic",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\C#\\comic\\wwwroot\\",
+      "BasePath": "_content/comic",
+      "RelativePath": "css/components/layout/navigation-bar.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\components\\layout\\navigation-bar.css"
+    },
+    {
+      "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\navigation-bar.css.map",
+      "SourceId": "comic",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\C#\\comic\\wwwroot\\",
+      "BasePath": "_content/comic",
+      "RelativePath": "css/components/layout/navigation-bar.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\components\\layout\\navigation-bar.css.map"
     },
     {
       "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\css\\global.css",
