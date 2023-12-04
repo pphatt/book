@@ -51,13 +51,13 @@
             @for (var i = 0; i < products.Count(); i++)
             {
                 <div class="product" data-product-slide-index=@i>
-                    <a href="/">
+                    <a href="/" title="@products[i].Name">
                         <div class="product-image">
                             <img src=@Url.Content("/images/" + products[i].Images.First().ImageName) />
                         </div>
                         <div class="product-details">
                             <div class="product-title">@products[i].Name</div>
-                            <div class="product-price">$@products[i].Price</div>
+                            <div class="product-price" title="$@products[i].Price">$@products[i].Price</div>
                         </div>
                     </a>
                     <div class="add-to-cart">
