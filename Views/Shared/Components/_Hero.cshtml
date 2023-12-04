@@ -32,10 +32,12 @@
                                     </div>
                                     <div class="description"></div>
                                     <div class="author">
-                                        @foreach (var author in products[i].Authors)
-                                        {
-                                            <span>@author.AuthorName</span>
+                                        @{
+                                            var authors = products[i].Authors.Select(author => author.AuthorName);
+                                            var authorsName = string.Join(", ", authors);
                                         }
+
+                                        <span>@authorsName</span>
                                     </div>
                                 </div>
                             </div>
