@@ -14,13 +14,13 @@
             {
                 <div class="swiper-slide" data-swiper-slide-index=@i>
                     <a href="/" class="swiper-item-wrapper">
-                        <img src=@Url.Content("/images/" + products[i].Images.First().ImageName) class="swiper-background-image"/>
+                        <img src=@Url.Content("/images/" + products[i].Images.First().ImageName) alt="image" loading="lazy" decoding="async" class="swiper-background-image"/>
                         <div class="swiper-shade"></div>
                         <div class="swiper-item-wrap">
                             <div class="swiper-item">
                                 <div
                                     class="swiper-item-image-wrapper">
-                                    <img src=@Url.Content("/images/" + products[i].Images.First().ImageName) class="swiper-item-image"/>
+                                    <img src=@Url.Content("/images/" + products[i].Images.First().ImageName) alt="image" loading="lazy" decoding="async" class="swiper-item-image"/>
                                 </div>
                                 <div class="swiper-item-details">
                                     <h2 class="title">@products[i].Name</h2>

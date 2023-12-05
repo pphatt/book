@@ -1,5 +1,5 @@
 ﻿class CarouselOne {
-    private currentActivePanel: number = Math.floor(Math.random() * 7) + 2;
+    private currentActivePanel: number = Math.floor(Math.random() * 9);
     private width: number = 212
 
     private isTransitioning: boolean = false;
@@ -24,6 +24,9 @@
         this.prevSlideButton = prevSlideButton
 
         this.setupEventListener()
+
+        this.handleTransitionEnd()
+
         this.handleSwiperWrapperStyle()
     }
 

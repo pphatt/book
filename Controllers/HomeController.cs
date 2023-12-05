@@ -29,7 +29,7 @@ public class HomeController : Controller
         
         ViewData["CarouselTwo"] = await products.Take(15).ToListAsync();
 
-        return View(await products.Take(15).ToListAsync());
+        return View(await products.Take(18).ToListAsync());
     }
 
     public IActionResult Privacy()

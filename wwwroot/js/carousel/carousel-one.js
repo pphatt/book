@@ -1,7 +1,7 @@
 "use strict";
 class CarouselOne {
     constructor(elems) {
-        this.currentActivePanel = Math.floor(Math.random() * 7) + 2;
+        this.currentActivePanel = Math.floor(Math.random() * 9);
         this.width = 212;
         this.isTransitioning = false;
         this.transitionDuration = 0;
@@ -10,6 +10,7 @@ class CarouselOne {
         this.nextSlideButton = nextSlideButton;
         this.prevSlideButton = prevSlideButton;
         this.setupEventListener();
+        this.handleTransitionEnd();
         this.handleSwiperWrapperStyle();
     }
     setupEventListener() {

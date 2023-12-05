@@ -53,7 +53,7 @@
                 <div class="product" data-product-slide-index=@i>
                     <a href="/" title="@products[i].Name">
                         <div class="product-image">
-                            <img src=@Url.Content("/images/" + products[i].Images.First().ImageName) />
+                            <img src=@Url.Content("/images/" + products[i].Images.First().ImageName) alt="image" loading="lazy" decoding="async" />
                         </div>
                         <div class="product-details">
                             <div class="product-title">@products[i].Name</div>

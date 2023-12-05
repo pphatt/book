@@ -49,7 +49,7 @@
                     <div class="category-product" style="height: fit-content">
                         <a href="/">
                             <div class="category-product-image">
-                                <img src=@Url.Content("/images/" + product.Images.First().ImageName) />
+                                <img src=@Url.Content("/images/" + product.Images.First().ImageName) alt="image" loading="lazy" decoding="async"/>
                             </div>
                             <div class="category-product-details">
                                 <div class="category-product-title">@product.Name</div>
