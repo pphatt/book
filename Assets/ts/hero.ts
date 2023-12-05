@@ -43,6 +43,11 @@
 
             this.handleSwiperWrapperStyle()
         })
+
+        window.addEventListener("resize", () => {
+            this.width = (document.querySelector(".swiper-wrapper") as HTMLDivElement).offsetWidth - 2
+            this.handleSwiperWrapperStyle()
+        })
     }
 
     handleSlideButton(direction: string) {

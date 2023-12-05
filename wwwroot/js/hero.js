@@ -24,6 +24,10 @@ class Hero {
             this.handleTransitionEnd();
             this.handleSwiperWrapperStyle();
         });
+        window.addEventListener("resize", () => {
+            this.width = document.querySelector(".swiper-wrapper").offsetWidth - 2;
+            this.handleSwiperWrapperStyle();
+        });
     }
     handleSlideButton(direction) {
         if (this.isTransitioning) {

@@ -1,5 +1,4 @@
 ﻿@model IEnumerable<Product>
-@using Newtonsoft.Json
 
 @{
     ViewData["Title"] = "Home Page";
@@ -18,6 +17,8 @@
 }
 
 @section Script {
+    <script type="text/javascript" src="~/js/home.js" defer></script>
+
     <script type="text/javascript" src="~/js/hero.js" defer></script>
 
     <script type="text/javascript" src="~/js/carousel/carousel-one.js" defer></script>
@@ -31,4 +32,36 @@
     <partial name="Components/Carousel/_Carousel-One"/>
 
     <partial name="Components/Carousel/_Carousel-Two"/>
+
+    <div class="product-category-wrapper">
+        <div class="product-category">
+            <div class="product-category-header">
+                <div class="best-seller-category header-active">
+                    Best Seller
+                </div>
+                <div class="most-view-product-category">
+                    Most View Products
+                </div>
+            </div>
+            <div class="product-category-content">
+                @foreach (var product in products)
+                {
+                    <div class="category-product" style="height: fit-content">
+                        <a href="/">
+                            <div class="category-product-image">
+                                <img src=@Url.Content("/images/" + product.Images.First().ImageName) />
+                            </div>
+                            <div class="category-product-details">
+                                <div class="category-product-title">@product.Name</div>
+                                <div class="category-product-price">$@product.Price</div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+            <div class="load-more">
+                <a href="/">Load more</a>
+            </div>
+        </div>
+    </div>
 </div>
