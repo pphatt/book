@@ -1,55 +1,173 @@
-﻿using System.Text.Json.Serialization;
-using System.Text.Json;
-using comic.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using comic.Models;
 
-namespace comic.Controllers;
-
-[ApiController]
-[Route("api/[controller]")]
-public class ProductController : Controller
+namespace comic.Controllers
 {
-    private readonly ComicContext _context;
-
-    public ProductController(ComicContext context)
+    public class ProductController : Controller
     {
-        _context = context;
-    }
+        private readonly ComicContext _context;
 
-    [HttpGet]
-    public IActionResult GetProducts()
-    {
-        var products = _context.Products
-            .Include(p => p.Authors)
-            .Include(p => p.Images)
-            .Include(p => p.Tags)
-            .ToList();
-
-        //var productDtos = products.Select(p => new Product
-        //{
-        //    ProductId = p.ProductId,
-        //    Name = p.Name,
-        //    Description = p.Description,
-        //    Price = p.Price,
-        //    Inventory = p.Inventory,
-        //    CategoryId = p.CategoryId,
-        //    CreatedAt = p.CreatedAt,
-        //    UpdatedAt = p.UpdatedAt,
-        //    // Map other properties...
-        //    Images = p.Images.Select(i => new Product.ImageDto
-        //    {
-        //        // Map image properties...
-        //    }).ToList()
-        //}).ToList();
-
-        var jsonOptions = new JsonSerializerOptions
+        public ProductController(ComicContext context)
         {
-            ReferenceHandler = ReferenceHandler.Preserve,
-            // Other serialization options...
-        };
+            _context = context;
+        }
 
-        return new JsonResult(products, jsonOptions);
+        // GET: Product
+        public async Task<IActionResult> Index()
+        {
+            var comicContext = _context.Products.Include(p => p.Category).Include(p => p.StoreOwner);
+            return View(await comicContext.ToListAsync());
+        }
+
+        // GET: Product/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null || _context.Products == null)
+            {
+                return NotFound();
+            }
+
+            var product = await _context.Products
+                .Include(p => p.Category)
+                .Include(p => p.StoreOwner)
+                .FirstOrDefaultAsync(m => m.ProductId == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return View(product);
+        }
+
+        // GET: Product/Create
+        public IActionResult Create()
+        {
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId");
+            ViewData["StoreOwnerId"] = new SelectList(_context.StoreOwners, "StoreOwnerId", "StoreOwnerId");
+            return View();
+        }
+
+        // POST: Product/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("ProductId,Name,Description,Price,Inventory,CategoryId,StoreOwnerId,CreatedAt,UpdatedAt")] Product product)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(product);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
+            ViewData["StoreOwnerId"] = new SelectList(_context.StoreOwners, "StoreOwnerId", "StoreOwnerId", product.StoreOwnerId);
+            return View(product);
+        }
+
+        // GET: Product/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null || _context.Products == null)
+            {
+                return NotFound();
+            }
+
+            var product = await _context.Products.FindAsync(id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
+            ViewData["StoreOwnerId"] = new SelectList(_context.StoreOwners, "StoreOwnerId", "StoreOwnerId", product.StoreOwnerId);
+            return View(product);
+        }
+
+        // POST: Product/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("ProductId,Name,Description,Price,Inventory,CategoryId,StoreOwnerId,CreatedAt,UpdatedAt")] Product product)
+        {
+            if (id != product.ProductId)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(product);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!ProductExists(product.ProductId))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
+            ViewData["StoreOwnerId"] = new SelectList(_context.StoreOwners, "StoreOwnerId", "StoreOwnerId", product.StoreOwnerId);
+            return View(product);
+        }
+
+        // GET: Product/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null || _context.Products == null)
+            {
+                return NotFound();
+            }
+
+            var product = await _context.Products
+                .Include(p => p.Category)
+                .Include(p => p.StoreOwner)
+                .FirstOrDefaultAsync(m => m.ProductId == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return View(product);
+        }
+
+        // POST: Product/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            if (_context.Products == null)
+            {
+                return Problem("Entity set 'ComicContext.Products'  is null.");
+            }
+            var product = await _context.Products.FindAsync(id);
+            if (product != null)
+            {
+                _context.Products.Remove(product);
+            }
+            
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool ProductExists(int id)
+        {
+          return (_context.Products?.Any(e => e.ProductId == id)).GetValueOrDefault();
+        }
     }
 }

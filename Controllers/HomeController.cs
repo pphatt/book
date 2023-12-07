@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace comic.Controllers;
+
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -21,12 +22,13 @@ public class HomeController : Controller
         var products = _context.Products
             .Include(p => p.Authors)
             .Include(p => p.Images)
-            .Include(p => p.Tags);
+            .Include(p => p.Tags)
+            .OrderBy(p => p.ProductId);
 
         ViewData["HeroProductData"] = await products.Take(10).ToListAsync();
-        
+
         ViewData["CarouselOne"] = await products.Take(15).ToListAsync();
-        
+
         ViewData["CarouselTwo"] = await products.Take(15).ToListAsync();
 
         return View(await products.Take(18).ToListAsync());
