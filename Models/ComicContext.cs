@@ -53,7 +53,7 @@ public partial class ComicContext : DbContext
     {
         modelBuilder.Entity<Author>(entity =>
         {
-            entity.HasKey(e => e.AuthorId).HasName("PK__authors__86516BCFB635530F");
+            entity.HasKey(e => e.AuthorId).HasName("PK__authors__86516BCF858841A0");
 
             entity.ToTable("authors");
 
@@ -65,7 +65,7 @@ public partial class ComicContext : DbContext
 
         modelBuilder.Entity<Cart>(entity =>
         {
-            entity.HasKey(e => new { e.UserId, e.ProductId }).HasName("PK__cart__FDCE10D031178284");
+            entity.HasKey(e => new { e.UserId, e.ProductId }).HasName("PK__cart__FDCE10D0D4E899ED");
 
             entity.ToTable("cart");
 
@@ -86,7 +86,7 @@ public partial class ComicContext : DbContext
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__categori__D54EE9B414897451");
+            entity.HasKey(e => e.CategoryId).HasName("PK__categori__D54EE9B45A3B2871");
 
             entity.ToTable("categories");
 
@@ -98,7 +98,7 @@ public partial class ComicContext : DbContext
 
         modelBuilder.Entity<Image>(entity =>
         {
-            entity.HasKey(e => e.ImageId).HasName("PK__images__DC9AC955549D29C6");
+            entity.HasKey(e => e.ImageId).HasName("PK__images__DC9AC9556AD73BC3");
 
             entity.ToTable("images");
 
@@ -116,7 +116,7 @@ public partial class ComicContext : DbContext
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.OrderId).HasName("PK__orders__465962298D213FFA");
+            entity.HasKey(e => e.OrderId).HasName("PK__orders__46596229902E380F");
 
             entity.ToTable("orders");
 
@@ -151,7 +151,7 @@ public partial class ComicContext : DbContext
 
         modelBuilder.Entity<OrderDetail>(entity =>
         {
-            entity.HasKey(e => new { e.OrderId, e.ProductId }).HasName("PK__order_de__022945F617670708");
+            entity.HasKey(e => new { e.OrderId, e.ProductId }).HasName("PK__order_de__022945F61286A512");
 
             entity.ToTable("order_details");
 
@@ -173,7 +173,7 @@ public partial class ComicContext : DbContext
 
         modelBuilder.Entity<OrderStatus>(entity =>
         {
-            entity.HasKey(e => e.OrderStatusId).HasName("PK__order_st__A499CF231E7ADBB4");
+            entity.HasKey(e => e.OrderStatusId).HasName("PK__order_st__A499CF231C045F0B");
 
             entity.ToTable("order_statuses");
 
@@ -185,7 +185,7 @@ public partial class ComicContext : DbContext
 
         modelBuilder.Entity<Payment>(entity =>
         {
-            entity.HasKey(e => e.PaymentId).HasName("PK__payments__ED1FC9EA7D0104F4");
+            entity.HasKey(e => e.PaymentId).HasName("PK__payments__ED1FC9EA05917337");
 
             entity.ToTable("payments");
 
@@ -197,7 +197,7 @@ public partial class ComicContext : DbContext
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__products__47027DF54A0BE524");
+            entity.HasKey(e => e.ProductId).HasName("PK__products__47027DF5290DBC91");
 
             entity.ToTable("products", tb => tb.HasTrigger("AutoUpdateProductUpdatedAt"));
 
@@ -212,6 +212,7 @@ public partial class ComicContext : DbContext
                 .HasMaxLength(500)
                 .HasColumnName("name");
             entity.Property(e => e.Price).HasColumnName("price");
+            entity.Property(e => e.PublisherId).HasColumnName("publisher_id");
             entity.Property(e => e.StoreOwnerId).HasColumnName("store_owner_id");
             entity.Property(e => e.UpdatedAt)
                 .HasDefaultValueSql("(sysdatetime())")
@@ -221,6 +222,11 @@ public partial class ComicContext : DbContext
                 .HasForeignKey(d => d.CategoryId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Products_Category");
+
+            entity.HasOne(d => d.Publisher).WithMany(p => p.Products)
+                .HasForeignKey(d => d.PublisherId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Products_Publisher");
 
             entity.HasOne(d => d.StoreOwner).WithMany(p => p.Products)
                 .HasForeignKey(d => d.StoreOwnerId)
@@ -240,29 +246,10 @@ public partial class ComicContext : DbContext
                         .HasConstraintName("FK_Product_Authors_Products"),
                     j =>
                     {
-                        j.HasKey("ProductId", "AuthorId").HasName("PK__product___AF676B493F7BBDFD");
+                        j.HasKey("ProductId", "AuthorId").HasName("PK__product___AF676B49CD5D3096");
                         j.ToTable("product_authors");
                         j.IndexerProperty<int>("ProductId").HasColumnName("product_id");
                         j.IndexerProperty<int>("AuthorId").HasColumnName("author_id");
-                    });
-
-            entity.HasMany(d => d.Publishers).WithMany(p => p.Products)
-                .UsingEntity<Dictionary<string, object>>(
-                    "ProductPublisher",
-                    r => r.HasOne<Publisher>().WithMany()
-                        .HasForeignKey("PublisherId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK_Product_Publishers_Publishers"),
-                    l => l.HasOne<Product>().WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK_Product_Publishers_Product"),
-                    j =>
-                    {
-                        j.HasKey("ProductId", "PublisherId").HasName("PK__product___842442DC1EF1B6F2");
-                        j.ToTable("product_publishers");
-                        j.IndexerProperty<int>("ProductId").HasColumnName("product_id");
-                        j.IndexerProperty<int>("PublisherId").HasColumnName("publisher_id");
                     });
 
             entity.HasMany(d => d.Tags).WithMany(p => p.Products)
@@ -278,7 +265,7 @@ public partial class ComicContext : DbContext
                         .HasConstraintName("FK_Product_Tag_Product"),
                     j =>
                     {
-                        j.HasKey("ProductId", "TagId").HasName("PK__product___332B17DE31F67F03");
+                        j.HasKey("ProductId", "TagId").HasName("PK__product___332B17DE75F27951");
                         j.ToTable("product_tags");
                         j.IndexerProperty<int>("ProductId").HasColumnName("product_id");
                         j.IndexerProperty<int>("TagId").HasColumnName("tag_id");
@@ -287,7 +274,7 @@ public partial class ComicContext : DbContext
 
         modelBuilder.Entity<Publisher>(entity =>
         {
-            entity.HasKey(e => e.PublisherId).HasName("PK__publishe__3263F29D79A48C03");
+            entity.HasKey(e => e.PublisherId).HasName("PK__publishe__3263F29D7BE1878A");
 
             entity.ToTable("publishers");
 
@@ -299,7 +286,7 @@ public partial class ComicContext : DbContext
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.RoleId).HasName("PK__role__760965CC54AF9DD4");
+            entity.HasKey(e => e.RoleId).HasName("PK__role__760965CCF4ADE103");
 
             entity.ToTable("role");
 
@@ -311,7 +298,7 @@ public partial class ComicContext : DbContext
 
         modelBuilder.Entity<ShippingMethod>(entity =>
         {
-            entity.HasKey(e => e.ShippingMethodId).HasName("PK__shipping__DCF5023B40C45540");
+            entity.HasKey(e => e.ShippingMethodId).HasName("PK__shipping__DCF5023BB9EC0958");
 
             entity.ToTable("shipping_methods");
 
@@ -323,7 +310,7 @@ public partial class ComicContext : DbContext
 
         modelBuilder.Entity<StoreOwner>(entity =>
         {
-            entity.HasKey(e => e.StoreOwnerId).HasName("PK__store_ow__44C6080217E3D029");
+            entity.HasKey(e => e.StoreOwnerId).HasName("PK__store_ow__44C608023D349A80");
 
             entity.ToTable("store_owners");
 
@@ -354,7 +341,7 @@ public partial class ComicContext : DbContext
 
         modelBuilder.Entity<Tag>(entity =>
         {
-            entity.HasKey(e => e.TagId).HasName("PK__tags__4296A2B644D79768");
+            entity.HasKey(e => e.TagId).HasName("PK__tags__4296A2B67B04EB69");
 
             entity.ToTable("tags");
 
@@ -366,7 +353,7 @@ public partial class ComicContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__users__B9BE370F6B818535");
+            entity.HasKey(e => e.UserId).HasName("PK__users__B9BE370F11D92A5C");
 
             entity.ToTable("users", tb => tb.HasTrigger("AutoUpdateUserUpdatedAt"));
 

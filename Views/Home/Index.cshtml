@@ -47,7 +47,7 @@
                 @foreach (var product in products)
                 {
                     <div class="category-product" style="height: fit-content">
-                        <a href="/">
+                        <a asp-controller="products" asp-route-id="@product.ProductId">
                             <div class="category-product-image">
                                 <img src=@Url.Content("/images/" + product.Images.First().ImageName) alt="image" loading="lazy" decoding="async"/>
                             </div>

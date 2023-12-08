@@ -1,71 +1,179 @@
-﻿@model IEnumerable<Product>
+﻿@model comic.Models.Product
 
 @{
-    ViewData["Title"] = "Index";
+    var product = Model;
+
+    ViewData["Title"] = product.Name;
+
+    var author = String.Join(", ", product.Authors.Select(a => a.AuthorName));
 }
 
-<h1>Index</h1>
+@section Link {
+    <link rel="stylesheet" href="~/css/home/home.css" asp-append-version="true"/>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Category.CategoryName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inventory)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedAt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UpdatedAt)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category.CategoryName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Inventory)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedAt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UpdatedAt)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
-            </td>
-        </tr>
+    <link rel="stylesheet" href="~/css/product/product.css" asp-append-version="true"/>
 }
-    </tbody>
-</table>
+
+@section Script {
+    <script type="text/javascript" src="~/js/home.js" defer></script>
+}
+
+<div class="layout">
+    <div class="route">
+        <div class="inner-route">
+            <div>
+                <a href="/">
+                    Sách tiếng Việt
+                </a>
+            </div>
+            <div>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6"/>
+                </svg>
+                <a href="/">
+                    Manga - Comic
+                </a>
+            </div>
+            <div>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6"/>
+                </svg>
+                <a href="/">
+                    Manga
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="product-layout">
+        <div class="product-image-wrapper">
+            <div class="product-thumbnail">
+                @foreach (var image in product.Images)
+                {
+                    <div class="thumbnail-image">
+                        <img src=@Url.Content("/images/" + @image.ImageName) alt="image" loading="lazy" decoding="async"/>
+                    </div>
+                }
+            </div>
+            <div class="product-image">
+                <div class="product-image-zoom">
+                    <svg
+                        data-v-4c681a64=""
+                        data-v-5cb5638f=""
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24">
+                        <path
+                            fill="currentColor"
+                            d="m9.5 13.09 1.41 1.41-4.5 4.5H10v2H3v-7h2v3.59l4.5-4.5m1.41-3.59L9.5 10.91 5 6.41V10H3V3h7v2H6.41l4.5 4.5m3.59 3.59 4.5 4.5V14h2v7h-7v-2h3.59l-4.5-4.5 1.41-1.41M13.09 9.5l4.5-4.5H14V3h7v7h-2V6.41l-4.5 4.5-1.41-1.41Z">
+                        </path>
+                    </svg>
+                </div>
+                <img src=@Url.Content("/images/" + product.Images.First().ImageName) alt="image" loading="lazy" decoding="async" class="image"/>
+            </div>
+        </div>
+        <div class="product-details-wrapper">
+            <div class="product-details">
+                <div class="product-title">
+                    @product.Name
+                </div>
+                <div class="product-alt-title"></div>
+                <div class="non-line-separator"></div>
+                <div class="product-author">
+                    By <span>@author</span>
+                </div>
+                <div class="product-publisher">
+                    Publisher: <span>@product.Publisher.PublisherName</span>
+                </div>
+                <div class="product-release-date">
+                    Release Date: <span>@product.CreatedAt.ToString("MMMM d, yyyy")</span>
+                </div>
+                <div class="product-cover-type">
+                    Cover Type: <span>Paperback</span>
+                </div>
+            </div>
+            <div class="product-price"> $@product.Price</div>
+            <div class="add-and-paid">
+                <div class="product-quantity">
+                    <label>Quantity:</label>
+                    <div class="quantity-control">
+                        <button
+                            class="quantity-control-button"
+                            data-control="decreased">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14"/>
+                            </svg>
+                        </button>
+                        <input
+                            type="text"
+                            name="qty"
+                            id="qty"
+                            maxlength="999"
+                            minlength="1"
+                            title="SL"
+                            class="quantity-input"/>
+                        <button
+                            class="quantity-control-button"
+                            data-control="increased">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14"/>
+                                <path d="M12 5v14"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="inner-add-and-paid">
+                    <button class="add-to-cart">
+                        <span>Add To Cart</span>
+                    </button>
+                    <button class="buy">
+                        <span>Buy Product</span>
+                    </button>
+                </div>
+            </div>
+            <div class="product-description">
+                @product.Description
+            </div>
+        </div>
+    </div>
+    <div class="product-background-image"
+         style="background: radial-gradient(circle at top, rgb(25 26 28 / 0.8), rgb(25 26 28) 75%), no-repeat top 35% center / 100% url('@Url.Content("/images/" + product.Images.First().ImageName)')">
+    </div>
+</div>

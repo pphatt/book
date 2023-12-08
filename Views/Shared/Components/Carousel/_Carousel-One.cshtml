@@ -51,7 +51,7 @@
             @for (var i = 0; i < products.Count(); i++)
             {
                 <div class="product" data-product-slide-index=@i>
-                    <a href="/" title="@products[i].Name">
+                    <a asp-controller="products" asp-route-id="@products[i].ProductId" title="@products[i].Name">
                         <div class="product-image">
                             <img src=@Url.Content("/images/" + products[i].Images.First().ImageName) alt="image" loading="lazy" decoding="async" />
                         </div>
