@@ -253,6 +253,10 @@
       "PackagePath": "staticwebassets\\js\\home.js"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\product.js",
+      "PackagePath": "staticwebassets\\js\\product.js"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\search.js",
       "PackagePath": "staticwebassets\\js\\search.js"
     },
