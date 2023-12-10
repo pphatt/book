@@ -28,6 +28,8 @@
 
 using Microsoft.EntityFrameworkCore;
 using comic.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 
 namespace comic;
 

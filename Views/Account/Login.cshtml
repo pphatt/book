@@ -1,4 +1,7 @@
-﻿@{
+﻿@using comic.ViewModels
+@model LoginViewModel
+
+@{
     ViewData["Title"] = "Login";
 
     Layout = "_AuthenticateLayout";
@@ -10,10 +13,16 @@
 }
 
 @section Script {
-    
+
 }
 
 <div class="header-wrapper">
+    @if (TempData["Error"] != null)
+    {
+        <div class="col-md-12 alert alert-danger">
+            <span><b>Sorry!</b> - @TempData["Error"]</span>
+        </div>
+    }
     <div class="header">
         <a href="/" class="header-link">
             <svg
@@ -40,10 +49,11 @@
         <h1>Sign in to your account</h1>
     </div>
     <div class="form-content">
-        <form method="POST" class="form-body">
+        <form asp-action="login" class="form-body">
             <div class="group-input">
-                <label for="email">Email</label>
+                <label asp-for="Email">Email</label>
                 <input
+                    asp-for="Email"
                     id="email"
                     name="email"
                     type="text"
@@ -51,8 +61,9 @@
                     autocomplete="off"/>
             </div>
             <div class="group-input">
-                <label htmlFor="password">Password</label>
+                <label asp-for="Password">Password</label>
                 <input
+                    asp-for="Password"
                     id="password"
                     name="username"
                     type="text"
