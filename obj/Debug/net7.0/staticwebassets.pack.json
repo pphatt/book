@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\comic.bundle.scp.css"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\authenticate\\login.css",
+      "PackagePath": "staticwebassets\\css\\authenticate\\login.css"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\authenticate\\login.css.map",
+      "PackagePath": "staticwebassets\\css\\authenticate\\login.css.map"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\carousel\\carousel-one.css",
       "PackagePath": "staticwebassets\\css\\components\\carousel\\carousel-one.css"
     },
@@ -67,6 +75,14 @@
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\product\\product.css.map",
       "PackagePath": "staticwebassets\\css\\product\\product.css.map"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\shared-layout\\authenticate-shared-layout.css",
+      "PackagePath": "staticwebassets\\css\\shared-layout\\authenticate-shared-layout.css"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\shared-layout\\authenticate-shared-layout.css.map",
+      "PackagePath": "staticwebassets\\css\\shared-layout\\authenticate-shared-layout.css.map"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\shared-layout\\shared-layout.css",
