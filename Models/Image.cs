@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace comic.Models;
 
-public partial class Image
+public class Image
 {
     public int ImageId { get; set; }
 

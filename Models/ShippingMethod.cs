@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace comic.Models;
 
-public partial class ShippingMethod
+public class ShippingMethod
 {
     public int ShippingMethodId { get; set; }
 

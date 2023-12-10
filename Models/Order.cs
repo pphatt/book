@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace comic.Models;
 
-public partial class Order
+public class Order
 {
     public int OrderId { get; set; }
+    
+    [ForeignKey("User")]
 
-    public int UserId { get; set; }
+    public string Id { get; set; }
+    public virtual User User { get; set; } = null!;
 
     public int PaymentId { get; set; }
 
@@ -27,5 +31,4 @@ public partial class Order
 
     public virtual ShippingMethod ShippingMethod { get; set; } = null!;
 
-    public virtual User User { get; set; } = null!;
 }

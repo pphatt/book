@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace comic.Models;
 
-public partial class StoreOwner
+public class StoreOwner
 {
+    [Key]
     public int StoreOwnerId { get; set; }
 
     public string Email { get; set; } = null!;

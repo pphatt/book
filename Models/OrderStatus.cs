@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace comic.Models;
 
-public partial class OrderStatus
+public class OrderStatus
 {
     public int OrderStatusId { get; set; }
 
