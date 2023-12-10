@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics;
+using comic.Interfaces;
 using comic.Models;
+using comic.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,31 +9,22 @@ namespace comic.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly IProductsRepository _productsRepository;
 
-    private readonly ComicContext _context;
-
-    public HomeController(ILogger<HomeController> logger, ComicContext context)
+    public HomeController(IProductsRepository productsRepository)
     {
-        _logger = logger;
-        _context = context;
+        _productsRepository = productsRepository;
     }
 
     public async Task<IActionResult> Index()
     {
-        var products = _context.Products
-            .Include(p => p.Authors)
-            .Include(p => p.Images)
-            .Include(p => p.Tags)
-            .OrderBy(p => p.ProductId);
+        ViewData["HeroProductData"] = await _productsRepository.GetByQuantity(10);
 
-        ViewData["HeroProductData"] = await products.Take(10).ToListAsync();
+        ViewData["CarouselOne"] = await _productsRepository.GetByQuantity(15);
 
-        ViewData["CarouselOne"] = await products.Take(15).ToListAsync();
+        ViewData["CarouselTwo"] = await _productsRepository.GetByQuantity(15);
 
-        ViewData["CarouselTwo"] = await products.Take(15).ToListAsync();
-
-        return View(await products.Take(18).ToListAsync());
+        return View(await _productsRepository.GetByQuantity(18));
     }
 
     public IActionResult Privacy()

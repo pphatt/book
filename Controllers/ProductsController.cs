@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using comic.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,30 +12,16 @@ namespace comic.Controllers;
 
 public class ProductsController : Controller
 {
-    private readonly ComicContext _context;
+    private readonly IProductsRepository _productsRepository;
 
-    public ProductsController(ComicContext context)
+    public ProductsController(IProductsRepository productsRepository)
     {
-        _context = context;
+        _productsRepository = productsRepository;
     }
 
     [Route("/Products/{id:int}")]
     public async Task<IActionResult> Index(int id)
     {
-        var product = await _context.Products
-            .Include(p => p.Category)
-            .Include(p => p.Publisher)
-            .Include(p => p.Authors)
-            .Include(p => p.Images)
-            .Include(p => p.Tags)
-            // .OrderBy(p => p.ProductId)
-            .FirstOrDefaultAsync(m => m.ProductId == id);
-
-        if (product == null)
-        {
-            return NotFound();
-        }
-
-        return View(product);
+        return View(await _productsRepository.GetByIdAsync(id));
     }
 }
