@@ -43,6 +43,6 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 Seed.SeedData(app);
-await Seed.SeedUsersAndRolesAsync(app);
+// await Seed.SeedUsersAndRolesAsync(app);
 
 app.Run();

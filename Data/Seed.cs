@@ -912,7 +912,7 @@ public class Seed
                 await userManager.AddToRoleAsync(newAdminUser, UserRoles.Admin);
             }
 
-            string appUserEmail = "user@etickets.com";
+            string appUserEmail = "AnhPhucXucTu123@gmail.com";
 
             var appUser = await userManager.FindByEmailAsync(appUserEmail);
             if (appUser == null)
