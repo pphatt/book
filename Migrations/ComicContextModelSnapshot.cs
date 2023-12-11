@@ -218,18 +218,18 @@ namespace comic.Migrations
                         .HasColumnType("int")
                         .HasColumnName("product_id");
 
-                    b.Property<string>("Id")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<int>("Quantity")
                         .HasColumnType("int")
                         .HasColumnName("quantity");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("ProductId")
                         .HasName("PK__cart__FDCE10D0D4976EEE");
 
-                    b.HasIndex("Id");
+                    b.HasIndex("UserId");
 
                     b.ToTable("cart", (string)null);
                 });
@@ -291,10 +291,6 @@ namespace comic.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"));
 
-                    b.Property<string>("Id")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("order_date");
@@ -315,16 +311,20 @@ namespace comic.Migrations
                         .HasColumnType("int")
                         .HasColumnName("shipping_method_id");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("OrderId")
                         .HasName("PK__orders__4659622922BB2BA9");
-
-                    b.HasIndex("Id");
 
                     b.HasIndex("OrderStatusId");
 
                     b.HasIndex("PaymentId");
 
                     b.HasIndex("ShippingMethodId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("orders", (string)null);
                 });
@@ -765,17 +765,17 @@ namespace comic.Migrations
 
             modelBuilder.Entity("comic.Models.Cart", b =>
                 {
-                    b.HasOne("comic.Models.User", "User")
-                        .WithMany("Carts")
-                        .HasForeignKey("Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("comic.Models.Product", "Product")
                         .WithMany("Carts")
                         .HasForeignKey("ProductId")
                         .IsRequired()
                         .HasConstraintName("FK_Cart_Products");
+
+                    b.HasOne("comic.Models.User", "User")
+                        .WithMany("Carts")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Product");
 
@@ -795,12 +795,6 @@ namespace comic.Migrations
 
             modelBuilder.Entity("comic.Models.Order", b =>
                 {
-                    b.HasOne("comic.Models.User", "User")
-                        .WithMany("Orders")
-                        .HasForeignKey("Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("comic.Models.OrderStatus", "OrderStatus")
                         .WithMany("Orders")
                         .HasForeignKey("OrderStatusId")
@@ -818,6 +812,12 @@ namespace comic.Migrations
                         .HasForeignKey("ShippingMethodId")
                         .IsRequired()
                         .HasConstraintName("FK_Orders_Shipping_Methods");
+
+                    b.HasOne("comic.Models.User", "User")
+                        .WithMany("Orders")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("OrderStatus");
 

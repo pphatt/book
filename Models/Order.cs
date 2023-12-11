@@ -9,8 +9,7 @@ public class Order
     public int OrderId { get; set; }
     
     [ForeignKey("User")]
-
-    public string Id { get; set; }
+    public string UserId { get; set; }
     public virtual User User { get; set; } = null!;
 
     public int PaymentId { get; set; }

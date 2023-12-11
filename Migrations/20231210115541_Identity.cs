@@ -329,7 +329,7 @@ namespace comic.Migrations
                 {
                     order_id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     payment_id = table.Column<int>(type: "int", nullable: false),
                     shipping_method_id = table.Column<int>(type: "int", nullable: false),
                     order_status_id = table.Column<int>(type: "int", nullable: false),
@@ -355,8 +355,8 @@ namespace comic.Migrations
                         principalTable: "shipping_methods",
                         principalColumn: "shipping_method_id");
                     table.ForeignKey(
-                        name: "FK_orders_AspNetUsers_Id",
-                        column: x => x.Id,
+                        name: "FK_orders_AspNetUsers_UserId",
+                        column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -367,7 +367,7 @@ namespace comic.Migrations
                 columns: table => new
                 {
                     product_id = table.Column<int>(type: "int", nullable: false),
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     quantity = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -379,8 +379,8 @@ namespace comic.Migrations
                         principalTable: "products",
                         principalColumn: "product_id");
                     table.ForeignKey(
-                        name: "FK_cart_AspNetUsers_Id",
-                        column: x => x.Id,
+                        name: "FK_cart_AspNetUsers_UserId",
+                        column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -518,9 +518,9 @@ namespace comic.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_cart_Id",
+                name: "IX_cart_UserId",
                 table: "cart",
-                column: "Id");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_images_product_id",
@@ -531,11 +531,6 @@ namespace comic.Migrations
                 name: "IX_order_details_product_id",
                 table: "order_details",
                 column: "product_id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_orders_Id",
-                table: "orders",
-                column: "Id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_orders_order_status_id",
@@ -551,6 +546,11 @@ namespace comic.Migrations
                 name: "IX_orders_shipping_method_id",
                 table: "orders",
                 column: "shipping_method_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_orders_UserId",
+                table: "orders",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_product_authors_author_id",

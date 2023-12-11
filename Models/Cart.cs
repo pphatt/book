@@ -7,7 +7,7 @@ namespace comic.Models;
 public class Cart
 {
     [ForeignKey("User")]
-    public string Id { get; set; }
+    public string UserId { get; set; }
     public virtual User User { get; set; } = null!;
 
     [ForeignKey("Product")]
