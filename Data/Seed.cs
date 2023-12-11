@@ -1,4 +1,7 @@
-﻿namespace comic.Models;
+﻿using comic.Data;
+using Microsoft.AspNetCore.Identity;
+
+namespace comic.Models;
 
 public class Seed
 {
@@ -875,6 +878,54 @@ public class Seed
                 });
 
                 context.SaveChanges();
+            }
+        }
+    }
+
+    public static async Task SeedUsersAndRolesAsync(IApplicationBuilder applicationBuilder)
+    {
+        using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
+        {
+            //Roles
+            var roleManager = serviceScope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+            if (!await roleManager.RoleExistsAsync(UserRoles.Admin))
+                await roleManager.CreateAsync(new IdentityRole(UserRoles.Admin));
+            if (!await roleManager.RoleExistsAsync(UserRoles.User))
+                await roleManager.CreateAsync(new IdentityRole(UserRoles.User));
+
+            //Users
+            var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<User>>();
+            string adminUserEmail = "MisanropeHetCuu@gmail.com";
+
+            var adminUser = await userManager.FindByEmailAsync(adminUserEmail);
+            if (adminUser == null)
+            {
+                var newAdminUser = new User()
+                {
+                    UserName = "Misanrope",
+                    Email = adminUserEmail,
+                    FirstName = "Misanrope cc",
+                    EmailConfirmed = true,
+                };
+                await userManager.CreateAsync(newAdminUser, "KhuaKhanh123@");
+                await userManager.AddToRoleAsync(newAdminUser, UserRoles.Admin);
+            }
+
+            string appUserEmail = "user@etickets.com";
+
+            var appUser = await userManager.FindByEmailAsync(appUserEmail);
+            if (appUser == null)
+            {
+                var newAppUser = new User()
+                {
+                    UserName = "Ilaoi",
+                    Email = appUserEmail,
+                    FirstName = "Ilaoi",
+                    EmailConfirmed = true,
+                };
+                await userManager.CreateAsync(newAppUser, "KhuaPhuc123!");
+                await userManager.AddToRoleAsync(newAppUser, UserRoles.User);
             }
         }
     }
