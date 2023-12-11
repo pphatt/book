@@ -13,7 +13,7 @@
 }
 
 @section Script {
-
+    <script type="text/javascript" src="~/js/login/password-input.js" defer></script>
 }
 
 <div class="header-wrapper">
@@ -40,7 +40,7 @@
                 <path d="M11 7v10"/>
                 <path d="m15 7 2 10"/>
             </svg>
-            <span>Comic</span>
+            <span>FPT Book</span>
         </a>
     </div>
 </div>
@@ -56,9 +56,11 @@
                     asp-for="Email"
                     id="email"
                     name="email"
-                    type="text"
+                    type="email"
                     autofocus=true
-                    autocomplete="off"/>
+                    autocomplete="off"
+                    placeholder="abc@fpt.edu.vn"
+                    required="required"/>
             </div>
             <div class="group-input">
                 <label asp-for="Password">Password</label>
@@ -66,8 +68,27 @@
                     asp-for="Password"
                     id="password"
                     name="username"
-                    type="text"
-                    autocomplete="off"/>
+                    type="password"
+                    autocomplete="off"
+                    placeholder="••••••••"
+                    required="required" style="padding-right: 2.5rem"/>
+                <button type="button" class="password-icon">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        className="lucide lucide-eye">
+                        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                    <span>Show password</span>
+                </button>
             </div>
             <div class="forget-password">
                 <a href="/">Forgot Password?</a>
@@ -80,7 +101,7 @@
     <div class="register-wrapper">
         <div class="register">
             <span>New here?</span>
-            <a href="/">Register</a>
+            <a asp-action="Register">Register</a>
         </div>
     </div>
 </div>

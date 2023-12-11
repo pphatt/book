@@ -240,6 +240,10 @@
   &:hover {
     background-color: rgb(255 103 64 / 0.8);
   }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 .register-wrapper {
@@ -264,6 +268,40 @@
   a {
     color: #ff6740;
 
-    margin-left: 2px;
+    margin-left: 6px;
+  }
+}
+
+.password-description-wrapper {
+  margin-bottom: 15px;
+
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .15s;
+}
+
+.password-description {
+  display: flex;
+  align-items: center;
+  color: #707070;
+  gap: 0.25rem;
+
+  transition: all .2s cubic-bezier(.4, 0, .2, 1);
+
+  &[data-contain=true] {
+    color: #bbb
+  }
+
+  svg {
+    display: block;
+    vertical-align: middle;
+    height: 1rem;
+    width: 1rem;
+  }
+
+  p {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    margin-left: 6px;
   }
 }

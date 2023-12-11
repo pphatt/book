@@ -24,6 +24,7 @@ namespace comic.Controllers
             _userManager = userManager;
         }
 
+        [HttpGet]
         public IActionResult Login()
         {
             var response = new LoginViewModel();
@@ -40,7 +41,7 @@ namespace comic.Controllers
             if (user != null)
             {
                 var passwordCheck = await _userManager.CheckPasswordAsync(user, loginViewModel.Password);
-                
+
                 if (passwordCheck)
                 {
                     var result = await _signInManager.PasswordSignInAsync(user, loginViewModel.Password, false, false);
@@ -58,6 +59,11 @@ namespace comic.Controllers
             //User not found
             TempData["Error"] = "Wrong credentials. Please try again";
             return View(loginViewModel);
+        }
+        
+        public IActionResult Register()
+        {
+            return View();
         }
     }
 }

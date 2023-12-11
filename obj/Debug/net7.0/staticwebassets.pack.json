@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\css\\authenticate\\login.css.map"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\authenticate\\register.css",
+      "PackagePath": "staticwebassets\\css\\authenticate\\register.css"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\authenticate\\register.css.map",
+      "PackagePath": "staticwebassets\\css\\authenticate\\register.css.map"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\carousel\\carousel-one.css",
       "PackagePath": "staticwebassets\\css\\components\\carousel\\carousel-one.css"
     },
@@ -269,8 +277,20 @@
       "PackagePath": "staticwebassets\\js\\home.js"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\login\\password-input.js",
+      "PackagePath": "staticwebassets\\js\\login\\password-input.js"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\product.js",
       "PackagePath": "staticwebassets\\js\\product.js"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\register\\password-description.js",
+      "PackagePath": "staticwebassets\\js\\register\\password-description.js"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\register\\password-input.js",
+      "PackagePath": "staticwebassets\\js\\register\\password-input.js"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\search.js",
