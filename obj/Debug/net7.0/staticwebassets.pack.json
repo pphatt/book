@@ -257,6 +257,10 @@
       "PackagePath": "staticwebassets\\images\\ff8a7f7e-c7fc-4633-8c4e-1efb76abc2be.jpg"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\auth\\user-panel.js",
+      "PackagePath": "staticwebassets\\js\\auth\\user-panel.js"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\carousel\\carousel-one.js",
       "PackagePath": "staticwebassets\\js\\carousel\\carousel-one.js"
     },

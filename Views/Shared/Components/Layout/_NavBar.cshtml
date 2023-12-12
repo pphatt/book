@@ -36,25 +36,51 @@
                     <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
                 </svg>
             </button>
-            <a asp-controller="account" asp-action="login" class="sign-in">
-                <svg
-                    data-v-4c681a64=""
-                    data-v-97f04154=""
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    id="avatar">
-                    <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z">
-                    </path>
-                </svg>
-            </a>
+            @if (User.Identity!.IsAuthenticated)
+            {
+                <button class="user-button">
+                    <svg
+                        data-v-4c681a64=""
+                        data-v-97f04154=""
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        id="avatar">
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z">
+                        </path>
+                    </svg>
+                </button>
+                <div class="auth-panel-backdrop"></div>
+            }
+            else
+            {
+                <a asp-controller="account" asp-action="login" class="sign-in">
+                    <svg
+                        data-v-4c681a64=""
+                        data-v-97f04154=""
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        id="avatar">
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z">
+                        </path>
+                    </svg>
+                </a>
+            }
         </div>
     </div>
     <div class="navbar-background" style="opacity: 0"></div>

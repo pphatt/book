@@ -24,6 +24,11 @@
     <script type="text/javascript" src="~/js/carousel/carousel-one.js" defer></script>
 
     <script type="text/javascript" src="~/js/carousel/carousel-two.js" defer></script>
+    
+    @if (User.Identity!.IsAuthenticated)
+    {
+        <script type="text/javascript" src="~/js/auth/user-panel.js" defer></script>
+    }
 }
 
 <partial name="Components/_Hero"/>

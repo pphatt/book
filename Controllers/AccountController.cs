@@ -25,7 +25,6 @@ namespace comic.Controllers
             _userManager = userManager;
         }
 
-        [HttpGet]
         public IActionResult Login()
         {
             if (User.Identity!.IsAuthenticated)
@@ -89,15 +88,17 @@ namespace comic.Controllers
             var newUser = new User()
             {
                 Email = registerViewModel.Email,
-                UserName = registerViewModel.UserName
+                UserName = registerViewModel.UserName,
             };
             
             var newUserResponse = await _userManager.CreateAsync(newUser, registerViewModel.Password);
 
             if (newUserResponse.Succeeded)
+            {
                 await _userManager.AddToRoleAsync(newUser, UserRoles.User);
+            }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Account");
         }
 
         [HttpPost]
