@@ -12,5 +12,7 @@ public class RegisterViewModel
     public string Email { get; set; }
     [Required]
     [DataType(DataType.Password)]
+    [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d]).{8,}$", 
+        ErrorMessage = "Password must have more than 7 characters, 1 uppercase, 1 lowercase, 1 number, and 1 special character")]
     public string Password { get; set; }
 }

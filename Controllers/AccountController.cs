@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using comic.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +28,11 @@ namespace comic.Controllers
         [HttpGet]
         public IActionResult Login()
         {
+            if (User.Identity!.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            
             var response = new LoginViewModel();
             return View(response);
         }
@@ -52,7 +58,7 @@ namespace comic.Controllers
                 }
 
                 //Password is incorrect
-                TempData["Error"] = "Wrong credentials. Please try again";
+                TempData["Error"] = "Invalid login credentials";
                 return View(loginViewModel);
             }
 
@@ -63,7 +69,42 @@ namespace comic.Controllers
         
         public IActionResult Register()
         {
-            return View();
+            var response = new RegisterViewModel();
+            return View(response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterViewModel registerViewModel)
+        {
+            if (!ModelState.IsValid) return View(registerViewModel);
+
+            var user = await _userManager.FindByEmailAsync(registerViewModel.Email);
+            
+            if(user != null)
+            {
+                TempData["Error"] = "This email address is already in use";
+                return View(registerViewModel);
+            }
+
+            var newUser = new User()
+            {
+                Email = registerViewModel.Email,
+                UserName = registerViewModel.UserName
+            };
+            
+            var newUserResponse = await _userManager.CreateAsync(newUser, registerViewModel.Password);
+
+            if (newUserResponse.Succeeded)
+                await _userManager.AddToRoleAsync(newUser, UserRoles.User);
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
     }
 }
