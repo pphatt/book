@@ -68,6 +68,11 @@ namespace comic.Controllers
         
         public IActionResult Register()
         {
+            if (User.Identity!.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            
             var response = new RegisterViewModel();
             return View(response);
         }
@@ -104,6 +109,11 @@ namespace comic.Controllers
         [HttpPost]
         public async Task<IActionResult> Logout()
         {
+            if (!User.Identity!.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
