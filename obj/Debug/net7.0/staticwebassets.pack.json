@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\comic.bundle.scp.css"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\product-dashboard.css",
+      "PackagePath": "staticwebassets\\css\\admin\\product-dashboard.css"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\product-dashboard.css.map",
+      "PackagePath": "staticwebassets\\css\\admin\\product-dashboard.css.map"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\authenticate\\login.css",
       "PackagePath": "staticwebassets\\css\\authenticate\\login.css"
     },
@@ -83,6 +91,14 @@
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\product\\product.css.map",
       "PackagePath": "staticwebassets\\css\\product\\product.css.map"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\shared-layout\\admin-layout.css",
+      "PackagePath": "staticwebassets\\css\\shared-layout\\admin-layout.css"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\shared-layout\\admin-layout.css.map",
+      "PackagePath": "staticwebassets\\css\\shared-layout\\admin-layout.css.map"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\shared-layout\\authenticate-shared-layout.css",

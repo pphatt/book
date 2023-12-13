@@ -3,6 +3,7 @@ using comic.Models;
 using comic.Repository;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -41,6 +42,11 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "manage-products",
+    pattern: "/admin/manage-products",
+    defaults: new { controller = "Admin", action = "ManageProducts" });
 
 Seed.SeedData(app);
 // await Seed.SeedUsersAndRolesAsync(app);

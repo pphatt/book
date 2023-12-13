@@ -522,3 +522,4 @@ C:\Dev\C#\comic\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 C:\Dev\C#\comic\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Dev\C#\comic\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 C:\Dev\C#\comic\obj\Debug\net7.0\comic.MvcApplicationPartsAssemblyInfo.cs
+C:\Dev\C#\comic\obj\Debug\net7.0\comic.sourcelink.json
