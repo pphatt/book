@@ -21,7 +21,7 @@ namespace comic.Controllers
         [HttpGet]
         public async Task<IActionResult> ManageProducts()
         {
-            if (User.Identity!.IsAuthenticated && User.IsInRole("admin"))
+            if (!User.Identity!.IsAuthenticated || !User.IsInRole("admin"))
             {
                 return RedirectToAction("Index", "Home");
             }

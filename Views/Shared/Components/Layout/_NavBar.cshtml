@@ -38,7 +38,7 @@
             </button>
             @if (User.Identity!.IsAuthenticated)
             {
-                <button class="user-button">
+                <button class="user-button" data-role="@User.IsInRole("user")">
                     <svg
                         data-v-4c681a64=""
                         data-v-97f04154=""
