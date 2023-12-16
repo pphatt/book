@@ -30,102 +30,101 @@
 }
 
 .nav-bar-wrapper {
-  background: #212328;
+  background-color: hsl(220, 6%, 10%);
 
-  width: 250px;
-}
+  width: 14rem;
+  height: 100%;
 
-.nav-bar {
-  position: sticky;
-  top: 0;
-
-  color: #929aac;
-  background: #212328;
-
-  z-index: 100;
+  border-right: 1px solid #282828;
 }
 
 .nav-bar-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
 
-  color: #fefefe;
-  background: #212328;
+  div {
+    display: flex;
+    align-items: center;
 
-  max-width: 100%;
+    max-height: 3rem;
+    height: 3rem;
 
-  padding: 15px 20px;
+    border-bottom: 1px solid #282828;
 
-  a {
-    vertical-align: middle;
-    margin: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
-  svg {
-    width: 2rem;
-    height: 2rem;
-    margin-right: 8px;
+  h4 {
+    color: #ededed;
+
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
 
 .nav-list-content-wrapper {
-  padding: 25px 20px;
+  padding: 0;
   margin: 0;
 
-  font-size: 0;
-
-  &:before {
-    display: inline-block;
-
-    width: 10px;
-
-    content: '';
-  }
-
-  &:after {
-    display: inline-block;
-
-    width: 10px;
-
-    clear: both;
-
-    content: '';
-  }
+  list-style: none;
 }
 
 .nav-list-content {
-  position: relative;
+  border-bottom: 1px solid #282828;
 
-  color: #929aac;
+  padding: 1.25rem 1.5rem;
+}
 
-  font-size: 14px;
-  font-weight: 500;
+.nav-list-content-title {
+  display: flex;
 
-  text-decoration: none;
+  margin-bottom: 0.5rem;
 
-  transition: all .25s ease;
+  span {
+    color: #707070;
+
+    width: 100%;
+
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
   a {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    color: inherit;
-    background-color: transparent;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
 
-    padding: 15px;
-
-    transition: all .25s ease;
-
-    svg {
-      width: 1rem;
-      height: 1rem;
-    }
+    text-decoration: none;
 
     &:hover {
-      color: #ccd0d9;
+      span {
+        color: #ededed;
+      }
     }
+  }
+
+  span {
+    color: #bbb;
+
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }

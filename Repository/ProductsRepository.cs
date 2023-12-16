@@ -1,6 +1,7 @@
 ﻿using comic.Interfaces;
 using comic.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace comic.Repository;
@@ -20,20 +21,24 @@ public class ProductsRepository : IProductsRepository
             .Include(p => p.Authors)
             .Include(p => p.Images)
             .Include(p => p.Tags)
+            .Include(p => p.Publisher)
+            .Include(p => p.StoreOwner)
             .OrderBy(p => p.ProductId);
 
         return await products.ToListAsync();
     }
 
-    public async Task<IEnumerable<Product>> GetByQuantity(int quantity)
+    public async Task<IEnumerable<Product>> GetSliceAsync(int offset, int size)
     {
         var products = _context.Products
             .Include(p => p.Authors)
             .Include(p => p.Images)
             .Include(p => p.Tags)
+            .Include(p => p.Publisher)
+            .Include(p => p.StoreOwner)
             .OrderBy(p => p.ProductId);
 
-        return await products.Take(quantity).ToListAsync();
+        return await products.Skip(offset).Take(size).ToListAsync();
     }
 
     public async Task<Product> GetByIdAsync(int id)
@@ -51,7 +56,18 @@ public class ProductsRepository : IProductsRepository
             throw new Exception();
         }
 
-        // Product found, return it
         return product;
+    }
+    
+    public bool Add(Product product)
+    {
+        _context.Add(product);
+        return Save();
+    }
+    
+    public bool Save()
+    {
+        var saved = _context.SaveChanges();
+        return saved > 0 ? true : false;
     }
 }

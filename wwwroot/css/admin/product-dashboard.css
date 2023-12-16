@@ -2,7 +2,51 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: #121318;
+  background-color: hsl(220, 6%, 10%);
+}
+
+.route-nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 3rem;
+  height: 3rem;
+  border-bottom: 1px solid #282828;
+  padding: 0.5rem 1.25rem;
+}
+
+.route-nav {
+  display: flex;
+  align-items: center;
+}
+
+.route {
+  color: #ededed;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 0.2s;
+}
+.route:hover {
+  background-color: #2e2e2e;
+}
+
+.sub-route-layout {
+  display: flex;
+  align-items: center;
+}
+.sub-route-layout span {
+  color: #3e3e3e;
+}
+.sub-route-layout svg {
+  display: block;
+  vertical-align: middle;
 }
 
 .main-content {
@@ -159,7 +203,6 @@
   display: inline-block;
   min-width: 100%;
   border-radius: 0.25rem;
-  overflow-x: auto;
   vertical-align: middle;
 }
 
@@ -177,7 +220,7 @@
 
 .table-column-name {
   color: #bbb;
-  background-color: #212328;
+  background-color: #28292b;
   border-top: 1px solid #282828;
   border-bottom: 1px solid #282828;
   font-weight: 400;
@@ -259,9 +302,34 @@
   border-color: #e5484d;
 }
 
+.description {
+  display: flex;
+  width: 60%;
+}
+.description:hover .description-panel {
+  visibility: visible;
+  opacity: 1;
+}
+
 .description-panel {
   position: absolute;
   inset: unset;
+  visibility: hidden;
+  color: hsl(0, 0%, 98%);
+  background-color: #212328;
+  border-radius: calc(0.5rem - 2px);
+  max-width: 20rem;
+  width: 20rem;
+  padding: 1rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  word-wrap: break-word;
+  white-space: break-spaces;
+  box-shadow: 0 1px 2px 0 rgba(33, 33, 33, 0.14), 0 0 1px 0 rgba(0, 0, 0, 0.14);
+  opacity: 0;
+  z-index: 10;
+  transform: translate(55px, 0);
+  transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .view {

@@ -43,12 +43,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.MapControllerRoute(
-    name: "manage-products",
-    pattern: "/admin/manage-products",
-    defaults: new { controller = "Admin", action = "ManageProducts" });
-
 Seed.SeedData(app);
-// await Seed.SeedUsersAndRolesAsync(app);
+await Seed.SeedUsersAndRolesAsync(app);
 
 app.Run();

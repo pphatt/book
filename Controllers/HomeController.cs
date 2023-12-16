@@ -18,13 +18,13 @@ public class HomeController : Controller
 
     public async Task<IActionResult> Index()
     {
-        ViewData["HeroProductData"] = await _productsRepository.GetByQuantity(10);
+        ViewData["HeroProductData"] = await _productsRepository.GetSliceAsync(0, 10);
 
-        ViewData["CarouselOne"] = await _productsRepository.GetByQuantity(15);
+        ViewData["CarouselOne"] = await _productsRepository.GetSliceAsync(0, 15);
 
-        ViewData["CarouselTwo"] = await _productsRepository.GetByQuantity(15);
+        ViewData["CarouselTwo"] = await _productsRepository.GetSliceAsync(0, 15);
 
-        return View(await _productsRepository.GetByQuantity(18));
+        return View(await _productsRepository.GetSliceAsync(0, 18));
     }
 
     public IActionResult Privacy()

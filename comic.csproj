@@ -23,4 +23,21 @@
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Product\Create.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Product\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Product\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Product\Edit.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Product\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Admin\Create.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Admin\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Admin\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Admin\Edit.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Admin\ManageProducts.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Views\ManageProducts\ManageProducts.cshtml" />
+  </ItemGroup>
+
 </Project>
