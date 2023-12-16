@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using comic.Models;
+using comic.ViewModels;
 
 namespace comic.Controllers;
 
@@ -71,6 +72,14 @@ public class ManageProductsController : Controller
     //     return RedirectToAction("Index");
     // }
     
+    [HttpPost]
+    [Route("/admin/manage-products/create")]
+    public async Task<IActionResult> Create(TestFilepondImageViewModel vm, List<IFormFile> postedFiles)
+    {
+        // var test = Request.Form.Files.Count;
+        return View();
+    }
+    
     // GET: ManageProducts/Create
     [Route("/admin/manage-products/create")]
     public IActionResult Create()
@@ -84,27 +93,27 @@ public class ManageProductsController : Controller
     // POST: ManageProducts/Create
     // To protect from overposting attacks, enable the specific properties you want to bind to.
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(
-        [Bind("ProductId,Name,PublisherId,Description,Price,Inventory,CategoryId,StoreOwnerId,CreatedAt,UpdatedAt")]
-        Product product)
-    {
-        if (!ModelState.IsValid)
-        {
-            _context.Add(product);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(ManageProducts));
-            return RedirectToAction(nameof(Create));
-        }
-    
-        // ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
-        // ViewData["PublisherId"] =
-        //     new SelectList(_context.Publishers, "PublisherId", "PublisherId", product.PublisherId);
-        // ViewData["StoreOwnerId"] =
-        //     new SelectList(_context.StoreOwners, "StoreOwnerId", "StoreOwnerId", product.StoreOwnerId);
-        return View(product);
-    }
+    // [HttpPost]
+    // [ValidateAntiForgeryToken]
+    // public async Task<IActionResult> Create(
+    //     [Bind("ProductId,Name,PublisherId,Description,Price,Inventory,CategoryId,StoreOwnerId,CreatedAt,UpdatedAt")]
+    //     Product product)
+    // {
+    //     if (!ModelState.IsValid)
+    //     {
+    //         _context.Add(product);
+    //         await _context.SaveChangesAsync();
+    //         return RedirectToAction(nameof(ManageProducts));
+    //         return RedirectToAction(nameof(Create));
+    //     }
+    //
+    //     // ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
+    //     // ViewData["PublisherId"] =
+    //     //     new SelectList(_context.Publishers, "PublisherId", "PublisherId", product.PublisherId);
+    //     // ViewData["StoreOwnerId"] =
+    //     //     new SelectList(_context.StoreOwners, "StoreOwnerId", "StoreOwnerId", product.StoreOwnerId);
+    //     return View(product);
+    // }
     
     // // GET: ManageProducts/Edit/5
     // public async Task<IActionResult> Edit(int? id)

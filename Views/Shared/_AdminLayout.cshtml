@@ -9,10 +9,19 @@
     <link rel="stylesheet" href="~/css/shared-layout/admin-layout.css" asp-append-version="true"/>
     
     <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet" />
+    
+    <link
+        href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+        rel="stylesheet"
+    />
 
     @await RenderSectionAsync("Link", required: false)
 
     <script type="text/javascript" src="~/js/global.js" defer></script>
+    
+    <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+    
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
 
     @await RenderSectionAsync("Script", required: false)
 </head>
