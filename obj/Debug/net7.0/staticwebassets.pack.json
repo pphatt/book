@@ -229,8 +229,20 @@
       "PackagePath": "staticwebassets\\images\\05f8dcb4-8ea1-48db-a0b1-3a8fbf695e5a.jpg"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\13d94309-60dc-4dac-9e3c-2c6bf91076ed.jpg",
+      "PackagePath": "staticwebassets\\images\\13d94309-60dc-4dac-9e3c-2c6bf91076ed.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\2221de21-76f5-49be-8920-fa4b071a0396.jpg",
+      "PackagePath": "staticwebassets\\images\\2221de21-76f5-49be-8920-fa4b071a0396.jpg"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\22ff2622-e93c-420f-b477-7a86eec02a1d.jpg",
       "PackagePath": "staticwebassets\\images\\22ff2622-e93c-420f-b477-7a86eec02a1d.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\25c61bc3-4df3-437d-a266-ef629ea65770.jpg",
+      "PackagePath": "staticwebassets\\images\\25c61bc3-4df3-437d-a266-ef629ea65770.jpg"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\2fc35906-cdde-47f6-9a7a-b26f112e24be.jpg",
@@ -239,6 +251,10 @@
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\330a08d7-f6b1-4541-b958-443be3463887.jpg",
       "PackagePath": "staticwebassets\\images\\330a08d7-f6b1-4541-b958-443be3463887.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\523624d3-80c9-4e78-a61d-bb9584de7fbc.jpg",
+      "PackagePath": "staticwebassets\\images\\523624d3-80c9-4e78-a61d-bb9584de7fbc.jpg"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\5b90247b-7538-4d26-bdb7-bb18dc51cab0.jpg",
@@ -259,6 +275,18 @@
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\84a140c3-2afb-4c8a-af28-0c9e48431dab.jpg",
       "PackagePath": "staticwebassets\\images\\84a140c3-2afb-4c8a-af28-0c9e48431dab.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\94400622-096e-4a56-bb35-d501853148d7.jpg",
+      "PackagePath": "staticwebassets\\images\\94400622-096e-4a56-bb35-d501853148d7.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\974804d2-c0df-4639-a0af-425ccf2462f9.jpg",
+      "PackagePath": "staticwebassets\\images\\974804d2-c0df-4639-a0af-425ccf2462f9.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\978acb8b-19bc-448b-acea-7eadade924d8.jpg",
+      "PackagePath": "staticwebassets\\images\\978acb8b-19bc-448b-acea-7eadade924d8.jpg"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\98162533-1838-4639-8419-2f19f8af651b.png",
@@ -315,6 +343,10 @@
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\e90bdc47-c8b9-4df7-b2c0-17641b645ee1.jpg",
       "PackagePath": "staticwebassets\\images\\e90bdc47-c8b9-4df7-b2c0-17641b645ee1.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\f3190354-e4db-4456-a184-1d91fcb0d893.jpg",
+      "PackagePath": "staticwebassets\\images\\f3190354-e4db-4456-a184-1d91fcb0d893.jpg"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\fe570c0d-56d8-4213-8b6e-672282794001.jpg",

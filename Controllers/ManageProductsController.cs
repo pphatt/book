@@ -32,6 +32,8 @@ public class ManageProductsController : Controller
         {
             return RedirectToAction("Index", "Home");
         }
+        
+        _logger.LogError("An error occurred while loading products.");
 
         return View(await _productsRepository.GetAll());
     }
@@ -135,8 +137,9 @@ public class ManageProductsController : Controller
             };
 
             _productsRepository.Add(product);
-
-            return RedirectToAction(nameof(ManageProducts));
+            
+            var products = await _productsRepository.GetAll();
+            return View("ManageProducts", products);
         }
 
         return View();

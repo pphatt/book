@@ -4,6 +4,13 @@
     ViewData["Title"] = "Manage Products";
 
     Layout = "_AdminLayout";
+
+    Console.WriteLine(Model);
+    
+    foreach (var testProduct in Model)
+    {
+        Console.WriteLine(testProduct.Name);
+    }
 }
 
 @section Link {
