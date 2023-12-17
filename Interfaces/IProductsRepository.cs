@@ -12,6 +12,6 @@ public interface IProductsRepository
     Task<IEnumerable<StoreOwner>> GetAllStoreOwner();
     bool Add(Product product);
     // bool Update(Product product);
-    // bool Delete(Product product);
+    bool Delete(Product product);
     bool Save();
 }

@@ -235,48 +235,34 @@ public class ManageProductsController : Controller
     //         new SelectList(_context.StoreOwners, "StoreOwnerId", "StoreOwnerId", product.StoreOwnerId);
     //     return View(product);
     // }
-    //
-    // // GET: ManageProducts/Delete/5
-    // public async Task<IActionResult> Delete(int? id)
-    // {
-    //     if (id == null || _context.Products == null)
-    //     {
-    //         return NotFound();
-    //     }
-    //
-    //     var product = await _context.Products
-    //         .Include(p => p.Category)
-    //         .Include(p => p.Publisher)
-    //         .Include(p => p.StoreOwner)
-    //         .FirstOrDefaultAsync(m => m.ProductId == id);
-    //     if (product == null)
-    //     {
-    //         return NotFound();
-    //     }
-    //
-    //     return View(product);
-    // }
-    //
-    // // POST: ManageProducts/Delete/5
-    // [HttpPost, ActionName("Delete")]
-    // [ValidateAntiForgeryToken]
-    // public async Task<IActionResult> DeleteConfirmed(int id)
-    // {
-    //     if (_context.Products == null)
-    //     {
-    //         return Problem("Entity set 'ComicContext.Products'  is null.");
-    //     }
-    //
-    //     var product = await _context.Products.FindAsync(id);
-    //     if (product != null)
-    //     {
-    //         _context.Products.Remove(product);
-    //     }
-    //
-    //     await _context.SaveChangesAsync();
-    //     return RedirectToAction(nameof(ManageProducts));
-    // }
-    //
+    
+    // GET: ManageProducts/Delete/5
+    [Route("delete/{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var product = await _productsRepository.GetByIdAsync(id);
+        
+        if (product == null)
+        {
+            return NotFound();
+        }
+    
+        return View(product);
+    }
+    
+    // POST: ManageProducts/Delete/5
+    [HttpPost, ActionName("Delete")]
+    [ValidateAntiForgeryToken]
+    [Route("delete/{id}")]
+    public async Task<IActionResult> DeleteConfirmed(int id)
+    {
+        var product = await _productsRepository.GetByIdAsync(id);
+        
+        _productsRepository.Delete(product);
+    
+        return RedirectToAction(nameof(ManageProducts));
+    }
+    
     // private bool ProductExists(int id)
     // {
     //     return (_context.Products?.Any(e => e.ProductId == id)).GetValueOrDefault();

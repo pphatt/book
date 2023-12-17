@@ -191,7 +191,7 @@
                                 </td>
                                 <td class="table-value" style="width: 200px">
                                     <div class="view">
-                                        <button data-open="false" data-account-id="1">
+                                        <a asp-controller="ManageProducts" asp-action="Delete" asp-route-id="@product.ProductId" data-open="false">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="14"
@@ -206,7 +206,7 @@
                                                     d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
                                                 </path>
                                             </svg>
-                                        </button>
+                                        </a>
                                         <a href="/" target="_blank">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"

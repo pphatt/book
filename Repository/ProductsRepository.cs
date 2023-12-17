@@ -49,6 +49,7 @@ public class ProductsRepository : IProductsRepository
             .Include(p => p.Authors)
             .Include(p => p.Images)
             .Include(p => p.Tags)
+            .Include(p => p.StoreOwner)
             .FirstOrDefaultAsync(m => m.ProductId == id);
 
         if (product == null)
@@ -86,6 +87,12 @@ public class ProductsRepository : IProductsRepository
     public bool Add(Product product)
     {
         _context.Add(product);
+        return Save();
+    }
+    
+    public bool Delete(Product product)
+    {
+        _context.Remove(product);
         return Save();
     }
     
