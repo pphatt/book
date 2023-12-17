@@ -59,6 +59,30 @@ public class ProductsRepository : IProductsRepository
         return product;
     }
     
+    public async Task<IEnumerable<Category>> GetAllCategories()
+    {
+        var categories = _context.Categories
+            .OrderBy(c => c.CategoryId);
+
+        return await categories.ToListAsync();
+    }
+    
+    public async Task<IEnumerable<Publisher>> GetAllPublisher()
+    {
+        var publisher = _context.Publishers
+            .OrderBy(c => c.PublisherId);
+
+        return await publisher.ToListAsync();
+    }
+    
+    public async Task<IEnumerable<StoreOwner>> GetAllStoreOwner()
+    {
+        var storeOwner = _context.StoreOwners
+            .OrderBy(c => c.StoreOwnerId);
+
+        return await storeOwner.ToListAsync();
+    }
+    
     public bool Add(Product product)
     {
         _context.Add(product);

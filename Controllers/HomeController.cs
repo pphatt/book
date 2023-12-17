@@ -24,7 +24,7 @@ public class HomeController : Controller
 
         ViewData["CarouselTwo"] = await _productsRepository.GetSliceAsync(0, 15);
 
-        return View(await _productsRepository.GetSliceAsync(0, 18));
+        return View(await _productsRepository.GetSliceAsync(0, 24));
     }
 
     public IActionResult Privacy()

@@ -94,7 +94,7 @@
                 <div class="card-body">
                     <div class="card-body-row">
                         <label for="name">Name</label>
-                        <input id="name" class="input" asp-for="Name"/>
+                        <input id="name" class="input" asp-for="Name" placeholder="Product title" required="required"/>
                     </div>
                     <div class="card-body-row-mul">
                         <div>
@@ -102,7 +102,8 @@
                             <input
                                 id="price"
                                 type="number"
-                                class="input" asp-for="Price"/>
+                                step="any"
+                                class="input" asp-for="Price" placeholder="Price" required="required"/>
                         </div>
                         <div>
                             <label for="quantity">Quantity</label>
@@ -111,7 +112,7 @@
                                 max="999"
                                 id="quantity"
                                 type="number"
-                                class="input" asp-for="Inventory"/>
+                                class="input" asp-for="Inventory" placeholder="Quantity" required="required"/>
                         </div>
                     </div>
                     <div class="card-body-row">
@@ -119,10 +120,11 @@
                             Description (Optional)
                         </label>
                         <textarea 
-                        class="description"
-                        id="description"
-                        asp-for="Description"
-                    ></textarea>
+                            class="description"
+                            id="description"
+                            asp-for="Description"
+                            placeholder="Product Description"
+                        ></textarea>
                     </div>
                 </div>
             </div>
@@ -160,7 +162,7 @@
                     <div class="product-category">
                         <label for="name">Publisher</label>
                         <div class="form-select-wrapper">
-                            <select class="form-select" asp-for="PublisherId" asp-items="ViewBag.PublisherId">
+                            <select class="form-select" required="required" asp-for="PublisherId" asp-items="ViewBag.PublisherId">
                                 <option value="" selected disabled hidden>
                                     Select publisher
                                 </option>
@@ -200,6 +202,7 @@
                         <label for="name">Store owner</label>
                         <div class="form-select-wrapper">
                             <select
+                                required="required"
                                 class="form-select"
                                 style="width: 200px"
                                 asp-for="StoreOwnerId" asp-items="ViewBag.StoreOwnerId">

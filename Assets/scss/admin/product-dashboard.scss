@@ -70,10 +70,12 @@
 }
 
 .inner-main-content {
+  height: 100%;
+  
+  overflow: auto;
+  
   & > div {
     flex: 1;
-
-    max-height: 100vh;
 
     overflow: auto;
   }

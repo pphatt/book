@@ -15,12 +15,14 @@ namespace comic.Controllers;
 public class ManageProductsController : Controller
 {
     private readonly IProductsRepository _productsRepository;
-    private readonly ComicContext _context;
+    private IWebHostEnvironment _env;
+    private readonly ILogger<ManageProductsController> _logger;
 
-    public ManageProductsController(IProductsRepository productsRepository, ComicContext context)
+    public ManageProductsController(IProductsRepository productsRepository,IWebHostEnvironment env, ILogger<ManageProductsController> logger)
     {
         _productsRepository = productsRepository;
-        _context = context;
+        _env = env;
+        _logger = logger;
     }
 
     [HttpGet]
@@ -70,11 +72,16 @@ public class ManageProductsController : Controller
     // GET: ManageProducts/Create
     [HttpGet]
     [Route("/admin/manage-products/create")]
-    public IActionResult Create()
+    public async Task<IActionResult> Create()
     {
-        ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryName");
-        ViewData["PublisherId"] = new SelectList(_context.Publishers, "PublisherId", "PublisherName");
-        ViewData["StoreOwnerId"] = new SelectList(_context.StoreOwners, "StoreOwnerId", "FullName");
+        ViewData["CategoryId"] =
+            new SelectList(await _productsRepository.GetAllCategories(), "CategoryId", "CategoryName");
+
+        ViewData["PublisherId"] =
+            new SelectList(await _productsRepository.GetAllPublisher(), "PublisherId", "PublisherName");
+
+        ViewData["StoreOwnerId"] =
+            new SelectList(await _productsRepository.GetAllStoreOwner(), "StoreOwnerId", "FullName");
 
         return View();
     }
@@ -84,6 +91,54 @@ public class ManageProductsController : Controller
     [Route("/admin/manage-products/create")]
     public async Task<IActionResult> Create(CreateProductViewModel vm)
     {
+        if (ModelState.IsValid)
+        {
+            var images = new List<string>();
+            
+            if (vm.images.Any())
+            {
+                String uploadfolder = Path.Combine(_env.WebRootPath, "images");
+                
+                foreach (var image in vm.images)
+                {
+                    var filename = Guid.NewGuid().ToString() + Path.GetExtension(image.FileName);
+                    
+                    var filepath = Path.Combine(uploadfolder, filename);
+                    
+                    try
+                    {
+                        using (var fileStream = new FileStream(filepath, FileMode.Create))
+                        {
+                            await image.CopyToAsync(fileStream);
+                        }
+                    
+                        images.Add(filename);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error copying file: {ex.Message}");
+                        return View("Error");
+                    }
+                }
+            }
+
+            var product = new Product
+            {
+                Name = vm.Name,
+                PublisherId = vm.PublisherId,
+                Description = vm.Description,
+                Price = vm.Price,
+                Inventory = vm.Inventory,
+                CategoryId = 1,
+                StoreOwnerId = vm.StoreOwnerId,
+                Images = images.Select(image => new Image { ImageName = image }).ToList()
+            };
+
+            _productsRepository.Add(product);
+
+            return RedirectToAction("ManageProducts");
+        }
+
         return View();
     }
 

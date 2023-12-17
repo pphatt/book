@@ -54,9 +54,12 @@
   overflow: hidden;
 }
 
+.inner-main-content {
+  height: 100%;
+  overflow: auto;
+}
 .inner-main-content > div {
   flex: 1;
-  max-height: 100vh;
   overflow: auto;
 }
 
