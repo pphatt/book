@@ -1,0 +1,185 @@
+﻿@model IEnumerable<comic.ViewModels.ManageUsersViewModel>
+
+@{
+    ViewData["Title"] = "Manage Products";
+
+    Layout = "_AdminLayout";
+}
+
+@section Link {
+    <link rel="stylesheet" href="~/css/admin/product-dashboard.css" asp-append-version="true"/>
+}
+
+@section Script {
+    @* <script type="text/javascript" src="~/js/login/password-input.js" defer></script> *@
+}
+
+<div class="main-content-wrapper">
+<div class="route-nav-wrapper">
+    <div class="route-nav">
+        <a class="route" href="/">
+            FPT Book
+        </a>
+        <div class="sub-route-layout">
+            <span>
+                <svg
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                    shape-rendering="geometricPrecision">
+                    <path d="M16 3.549L7.12 20.600"></path>
+                </svg>
+            </span>
+            <a
+                class="route"
+                href="/">
+                Manage Products
+            </a>
+        </div>
+    </div>
+</div>
+<div class="main-content">
+    <div class="inner-main-content">
+        <div>
+            <div class="action-section-wrapper">
+                <div class="action-section">
+                    <div class="search-section">
+                        <div class="search-input">
+                            <input type="text" placeholder="Search"/>
+                            <span>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="14"
+                                    height="14"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line
+                                        x1="21"
+                                        y1="21"
+                                        x2="16.65"
+                                        y2="16.65">
+                                    </line>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="action-button-group">
+                        <button>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                style="display: block; vertical-align: middle">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <a asp-action="Create" asp-controller="ManageProducts" style="margin-left: 8px">
+                                Add new product
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <section class="table-layout-wrapper">
+                <div class="table-layout">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th class="table-column-name">
+                                User Name
+                            </th>
+                            <th class="table-column-name">
+                                Email
+                            </th>
+                            <th class="table-column-name">
+                                Role
+                            </th>
+                            <th class="table-column-name"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+                                <td class="table-value">
+                                    <span>@user.UserName</span>
+                                </td>
+                                <td class="table-value">
+                                    <span>@user.Email</span>
+                                </td>
+                                <td class="table-value">
+                                    <span>@string.Join(" , ", user.Roles.ToList())</span>
+                                </td>
+                                <td class="table-value">
+                                    <div class="view">
+                                        <button data-open="false" data-account-id="1">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="14"
+                                                height="14"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <polyline points="3 6 5 6 21 6"></polyline>
+                                                <path
+                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                        <a href="/" target="_blank">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="14"
+                                                height="14"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path d="M12 20h9"></path>
+                                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                                            </svg>
+                                        </a>
+                                        <a href="/" target="_blank">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="14"
+                                                height="14"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path
+                                                    d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7m0-18H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7m0-18v18">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</div>

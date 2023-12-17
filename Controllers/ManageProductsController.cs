@@ -136,7 +136,7 @@ public class ManageProductsController : Controller
 
             _productsRepository.Add(product);
 
-            return RedirectToAction("ManageProducts");
+            return RedirectToAction(nameof(ManageProducts));
         }
 
         return View();

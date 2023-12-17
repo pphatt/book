@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ywtAA3agJepRICLDZbt73CNM28wu2rvUjePdiJx6/HI=",
+  "Hash": "QT15K2yhrxLBFNijxYihueDk9ue6Mginn8+FQQe0qu4=",
   "Source": "comic",
   "BasePath": "_content/comic",
   "Mode": "Default",
@@ -1174,6 +1174,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\7cac0992-5b89-4171-87cd-250c300a77d0.jpg"
+    },
+    {
+      "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\images\\84a140c3-2afb-4c8a-af28-0c9e48431dab.jpg",
+      "SourceId": "comic",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\C#\\comic\\wwwroot\\",
+      "BasePath": "_content/comic",
+      "RelativePath": "images/84a140c3-2afb-4c8a-af28-0c9e48431dab.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\84a140c3-2afb-4c8a-af28-0c9e48431dab.jpg"
     },
     {
       "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\images\\98162533-1838-4639-8419-2f19f8af651b.png",

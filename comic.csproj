@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Data\Enum\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 

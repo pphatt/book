@@ -12,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
+builder.Services.AddScoped<IUsersRepository, UserRepository>();
 
 builder.Services.AddDbContext<ComicContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnection")));
