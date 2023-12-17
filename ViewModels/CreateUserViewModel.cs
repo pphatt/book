@@ -1,8 +1,8 @@
 ﻿namespace comic.ViewModels;
 
-public class ManageUsersViewModel
+public class CreateUserViewModel
 {
-    public string Id
+    public int Id
     {
         get;
         set;
@@ -19,8 +19,14 @@ public class ManageUsersViewModel
         get;
         set;
     }
+    
+    public string Password
+    {
+        get;
+        set;
+    }
 
-    public IEnumerable<string> Roles
+    public string RoleId
     {
         get;
         set;

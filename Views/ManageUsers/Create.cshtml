@@ -1,0 +1,160 @@
+﻿@model comic.ViewModels.CreateUserViewModel
+
+@{
+    ViewData["Title"] = "Add user";
+
+    Layout = "_AdminLayout";
+}
+
+@section Link {
+    <link rel="stylesheet" href="~/css/admin/add-user.css" asp-append-version="true"/>
+}
+
+<div class="main-content-wrapper">
+    <div class="route-nav-wrapper">
+        <div class="route-nav">
+            <a class="route" href="/">
+                FPT Book
+            </a>
+            <div class="sub-route-layout">
+                <span>
+                    <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        stroke="currentColor"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill="none"
+                        shape-rendering="geometricPrecision">
+                        <path d="M16 3.549L7.12 20.600"></path>
+                    </svg>
+                </span>
+                <a
+                    class="route"
+                    href="/">
+                    Admin
+                </a>
+            </div>
+            <div class="sub-route-layout">
+                <span>
+                    <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        stroke="currentColor"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill="none"
+                        shape-rendering="geometricPrecision">
+                        <path d="M16 3.549L7.12 20.600"></path>
+                    </svg>
+                </span>
+                <a
+                    class="route"
+                    href="/">
+                    Manage Users
+                </a>
+            </div>
+            <div class="sub-route-layout">
+                <span>
+                    <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        stroke="currentColor"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill="none"
+                        shape-rendering="geometricPrecision">
+                        <path d="M16 3.549L7.12 20.600"></path>
+                    </svg>
+                </span>
+                <a
+                    class="route"
+                    href="/">
+                    Add User
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div></div>
+
+    <form method="post" enctype="multipart/form-data" asp-action="Create" class="main-content">
+        <div class="form-action">
+            <div class="form-action-text">
+                <h4>Add a new User</h4>
+                <p>Add new user to the system</p>
+            </div>
+            <div class="submit-form-group">
+                <button class="submit-form" type="submit">Add user</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="first-column">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>User information</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-body-row">
+                            <label for="name">Name</label>
+                            <input id="name" class="input" asp-for="UserName" placeholder="UserName" required="required"/>
+                        </div>
+                        <div class="card-body-row">
+                            <label for="email">Email</label>
+                            <input id="email" class="input" asp-for="Email" placeholder="Email" required="required"/>
+                        </div>
+                        <div class="card-body-row">
+                            <label for="password">Password</label>
+                            <input id="password" class="input" asp-for="Password" placeholder="Password" required="required"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="second-column">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Role</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="product-category">
+                            <label for="name">Publisher</label>
+                            <div class="form-select-wrapper">
+                                <select class="form-select" required="required" asp-for="RoleId" asp-items="ViewBag.RoleId">
+                                    <option value="" selected disabled hidden>
+                                        Select Role
+                                    </option>
+                                </select>
+                                <span class="select-icon">
+                                    <svg
+                                        data-testid="geist-icon"
+                                        fill="none"
+                                        height="24"
+                                        shape-rendering="geometricPrecision"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                        viewBox="0 0 24 24"
+                                        width="24">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

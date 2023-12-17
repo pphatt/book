@@ -1,4 +1,5 @@
-﻿using comic.Interfaces;
+﻿using comic.Data;
+using comic.Interfaces;
 using comic.Models;
 using comic.ViewModels;
 using Microsoft.AspNetCore.Identity;
@@ -16,35 +17,38 @@ public class UserRepository : IUsersRepository
     public UserRepository(ComicContext context, UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
     {
         _context = context;
-        
+
         _userManager = userManager;
-        
+
         _roleManager = roleManager;
     }
 
     public async Task<IEnumerable<ManageUsersViewModel>> GetAll()
     {
-        // var user = await _userManager.Users.ToListAsync();
-        // var role = await _roleManager.Roles.ToListAsync();
-        
         var users = await _userManager.Users.ToListAsync();
         var userRolesViewModel = new List<ManageUsersViewModel>();
-        
+
         foreach (var user in users)
         {
-            var thisViewModel = new ManageUsersViewModel();
-            
-            thisViewModel.Id = user.Id;
-            thisViewModel.Email = user.Email;
-            thisViewModel.UserName = user.UserName;
-            thisViewModel.Roles = new List<string>(await _userManager.GetRolesAsync(user));
-            
-            userRolesViewModel.Add(thisViewModel);
+            userRolesViewModel.Add(new ManageUsersViewModel()
+            {
+                Id = user.Id,
+                Email = user.Email!,
+                UserName = user.UserName!,
+                Roles = new List<string>(await _userManager.GetRolesAsync(user)),
+            });
         }
-        
+
         return userRolesViewModel;
     }
     
+    public async Task<IEnumerable<IdentityRole>> GetAllRoles()
+    {
+        var role = await _roleManager.Roles.ToListAsync();
+
+        return role;
+    }
+
     public bool Add(User user)
     {
         _context.Add(user);

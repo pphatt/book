@@ -13,12 +13,28 @@
       "PackagePath": "staticwebassets\\css\\admin\\add-product.css.map"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\add-user.css",
+      "PackagePath": "staticwebassets\\css\\admin\\add-user.css"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\add-user.css.map",
+      "PackagePath": "staticwebassets\\css\\admin\\add-user.css.map"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\product-dashboard.css",
       "PackagePath": "staticwebassets\\css\\admin\\product-dashboard.css"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\product-dashboard.css.map",
       "PackagePath": "staticwebassets\\css\\admin\\product-dashboard.css.map"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\user-dashboard.css",
+      "PackagePath": "staticwebassets\\css\\admin\\user-dashboard.css"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\user-dashboard.css.map",
+      "PackagePath": "staticwebassets\\css\\admin\\user-dashboard.css.map"
     },
     {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\authenticate\\login.css",
