@@ -83,4 +83,26 @@ public class ManageUsersController : Controller
         
         return View("ManageUsers");
     }
+    
+    // GET: ManageProducts/Delete/5
+    [Route("delete/{id}")]
+    public async Task<IActionResult> Delete(string id)
+    {
+        var user = await _usersRepository.GetByIdAsync(id);
+    
+        return View(user);
+    }
+    
+    // POST: ManageProducts/Delete/5
+    [HttpPost, ActionName("Delete")]
+    [ValidateAntiForgeryToken]
+    [Route("delete/{id}")]
+    public async Task<IActionResult> DeleteConfirmed(string id)
+    {
+        var user = await _usersRepository.GetByIdWithoutRoleAsync(id);
+        
+        _usersRepository.Delete(user);
+    
+        return RedirectToAction(nameof(ManageUsers));
+    }
 }

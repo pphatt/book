@@ -1,0 +1,126 @@
+﻿@* @model comic.Models.Product *@
+@model comic.ViewModels.ManageUsersViewModel
+
+@{
+    ViewData["Title"] = "Delete user";
+
+    Layout = "_AdminLayout";
+}
+
+@section Link {
+    <link rel="stylesheet" href="~/css/admin/delete-user.css" asp-append-version="true"/>
+}
+
+<div class="main-content-wrapper">
+    <div class="route-nav-wrapper">
+        <div class="route-nav">
+            <a class="route" href="/">
+                FPT Book
+            </a>
+            <div class="sub-route-layout">
+                <span>
+                    <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        stroke="currentColor"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill="none"
+                        shape-rendering="geometricPrecision">
+                        <path d="M16 3.549L7.12 20.600"></path>
+                    </svg>
+                </span>
+                <a
+                    class="route"
+                    href="/">
+                    Admin
+                </a>
+            </div>
+            <div class="sub-route-layout">
+                <span>
+                    <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        stroke="currentColor"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill="none"
+                        shape-rendering="geometricPrecision">
+                        <path d="M16 3.549L7.12 20.600"></path>
+                    </svg>
+                </span>
+                <a
+                    class="route"
+                    href="/">
+                    Delete Product
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div></div>
+
+    <div class="main-content">
+        <form class="form-action" asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-action-text">
+                <h4>Delete user @Model.Email</h4>
+            </div>
+            <div class="submit-form-group">
+                <button class="submit-form" type="submit">Delete User</button>
+            </div>
+        </form>
+
+        <div class="form-group">
+            <div class="first-column">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Product information</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-body-row">
+                            <label for="name">Name</label>
+                            <input id="name" class="input" placeholder="Product title" disabled="disabled" value="@Model.UserName"/>
+                        </div>
+                        <div class="card-body-row-mul">
+                            <div>
+                                <label for="email">Email</label>
+                                <input
+                                    id="email"
+                                    class="input" required="required" disabled="disabled" value="@Model.Email"/>
+                            </div>
+                            <div>
+                                <label for="role">Role</label>
+                                <input
+                                    id="role"
+                                    class="input" required="required" disabled="disabled" value="@Model.Roles.ElementAt(0)"/>
+                            </div>
+                        </div>
+                        <div class="card-body-row-mul">
+                            <div>
+                                <label for="phone_number">Phone Number</label>
+                                <input
+                                    id="phone_number"
+                                    class="input" required="required" disabled="disabled" value="null"/>
+                            </div>
+                            <div>
+                                <label for="created_at">Created at</label>
+                                <input
+                                    id="created_at"
+                                    class="input" required="required" disabled="disabled" value="December 17, 2023"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

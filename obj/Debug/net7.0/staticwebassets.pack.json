@@ -29,6 +29,14 @@
       "PackagePath": "staticwebassets\\css\\admin\\delete-product.css.map"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\delete-user.css",
+      "PackagePath": "staticwebassets\\css\\admin\\delete-user.css"
+    },
+    {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\delete-user.css.map",
+      "PackagePath": "staticwebassets\\css\\admin\\delete-user.css.map"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\product-dashboard.css",
       "PackagePath": "staticwebassets\\css\\admin\\product-dashboard.css"
     },

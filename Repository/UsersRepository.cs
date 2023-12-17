@@ -41,6 +41,28 @@ public class UserRepository : IUsersRepository
 
         return userRolesViewModel;
     }
+
+    public async Task<ManageUsersViewModel> GetByIdAsync(string id)
+    {
+        var user = await _userManager.FindByIdAsync(id);
+        
+        var userViewModel = new ManageUsersViewModel
+        {
+            Id = user.Id,
+            Email = user.Email,
+            UserName = user.UserName,
+            Roles = await _userManager.GetRolesAsync(user)
+        };
+
+        return userViewModel;
+    }
+    
+    public async Task<User> GetByIdWithoutRoleAsync(string id)
+    {
+        var user = await _userManager.FindByIdAsync(id);
+
+        return user;
+    }
     
     public async Task<IEnumerable<IdentityRole>> GetAllRoles()
     {
@@ -52,6 +74,12 @@ public class UserRepository : IUsersRepository
     public bool Add(User user)
     {
         _context.Add(user);
+        return Save();
+    }
+    
+    public bool Delete(User user)
+    {
+        _context.Remove(user);
         return Save();
     }
 

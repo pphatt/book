@@ -7,11 +7,11 @@ namespace comic.Interfaces;
 public interface IUsersRepository
 {
     Task<IEnumerable<ManageUsersViewModel>> GetAll();
-    // Task<IEnumerable<User>> GetSliceAsync(int offset, int size);
-    // Task<User> GetByIdAsync(int id);
+    Task<ManageUsersViewModel> GetByIdAsync(string id);
+    Task<User> GetByIdWithoutRoleAsync(string id);
     public Task<IEnumerable<IdentityRole>> GetAllRoles();
     bool Add(User user);
     // bool Update(Product product);
-    // bool Delete(Product product);
+    bool Delete(User user);
     bool Save();
 }
