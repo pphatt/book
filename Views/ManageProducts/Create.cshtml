@@ -1,5 +1,5 @@
 ﻿@* @model comic.Models.Product *@
-@model comic.ViewModels.TestFilepondImageViewModel
+@model comic.ViewModels.CreateProductViewModel
 
 @{
     ViewData["Title"] = "Login";
@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="~/css/admin/add-product.css" asp-append-version="true"/>
 
     <style>
+        .filepond--root {
+            margin-top: 0.25rem;
+        }
+        
         .filepond--credits {
             display: none;
         }
@@ -18,96 +22,110 @@
 }
 
 <div class="main-content-wrapper">
-    <div class="route-nav-wrapper">
-        <div class="route-nav">
-            <a class="route" href="/">
-                FPT Book
+<div class="route-nav-wrapper">
+    <div class="route-nav">
+        <a class="route" href="/">
+            FPT Book
+        </a>
+        <div class="sub-route-layout">
+            <span>
+                <svg
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                    shape-rendering="geometricPrecision">
+                    <path d="M16 3.549L7.12 20.600"></path>
+                </svg>
+            </span>
+            <a
+                class="route"
+                href="/">
+                Admin
             </a>
-            <div class="sub-route-layout">
-                <span>
-                    <svg
-                        viewBox="0 0 24 24"
-                        width="16"
-                        height="16"
-                        stroke="currentColor"
-                        stroke-width="1"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        fill="none"
-                        shape-rendering="geometricPrecision">
-                        <path d="M16 3.549L7.12 20.600"></path>
-                    </svg>
-                </span>
-                <a
-                    class="route"
-                    href="/">
-                    Admin
-                </a>
-            </div>
-            <div class="sub-route-layout">
-                <span>
-                    <svg
-                        viewBox="0 0 24 24"
-                        width="16"
-                        height="16"
-                        stroke="currentColor"
-                        stroke-width="1"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        fill="none"
-                        shape-rendering="geometricPrecision">
-                        <path d="M16 3.549L7.12 20.600"></path>
-                    </svg>
-                </span>
-                <a
-                    class="route"
-                    href="/">
-                    Add Product
-                </a>
-            </div>
+        </div>
+        <div class="sub-route-layout">
+            <span>
+                <svg
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                    shape-rendering="geometricPrecision">
+                    <path d="M16 3.549L7.12 20.600"></path>
+                </svg>
+            </span>
+            <a
+                class="route"
+                href="/">
+                Add Product
+            </a>
+        </div>
+    </div>
+</div>
+
+<div></div>
+
+<form method="post" id="uploadform" enctype="multipart/form-data" class="main-content">
+    <div class="form-action">
+        <div class="form-action-text">
+            <h4>Add a new Product</h4>
+            <p>Orders placed across your store</p>
+        </div>
+        <div class="submit-form-group">
+            <button class="submit-form" type="submit">Publish Product</button>
         </div>
     </div>
 
-    <form method="post" id="uploadform" enctype="multipart/form-data" class="main-content">
+    <div class="form-group">
         <div class="first-column">
-            @* <div class="card"> *@
-            @*     <div class="card-header"> *@
-            @*         <h5>Product information</h5> *@
-            @*     </div> *@
-            @*     <div class="card-body"> *@
-            @*         <div class="card-body-row"> *@
-            @*             <label for="name">Name</label> *@
-            @*             <input id="name" class="input"/> *@
-            @*         </div> *@
-            @*         <div class="card-body-row-mul"> *@
-            @*             <div> *@
-            @*                 <label for="price">Price</label> *@
-            @*                 <input *@
-            @*                     id="price" *@
-            @*                     type="number" *@
-            @*                     class="input"/> *@
-            @*             </div> *@
-            @*             <div> *@
-            @*                 <label for="quantity">Quantity</label> *@
-            @*                 <input *@
-            @*                     min="1" *@
-            @*                     max="999" *@
-            @*                     id="quantity" *@
-            @*                     type="number" *@
-            @*                     class="input"/> *@
-            @*             </div> *@
-            @*         </div> *@
-            @*         <div class="card-body-row"> *@
-            @*             <label for="description"> *@
-            @*                 Description (Optional) *@
-            @*             </label> *@
-            @*             <textarea *@
-            @*           class="description" *@
-            @*           id="description" *@
-            @*         ></textarea> *@
-            @*         </div> *@
-            @*     </div> *@
-            @* </div> *@
+            <div class="card">
+                <div class="card-header">
+                    <h5>Product information</h5>
+                </div>
+                <div class="card-body">
+                    <div class="card-body-row">
+                        <label for="name">Name</label>
+                        <input id="name" class="input" asp-for="Name"/>
+                    </div>
+                    <div class="card-body-row-mul">
+                        <div>
+                            <label for="price">Price</label>
+                            <input
+                                id="price"
+                                type="number"
+                                class="input" asp-for="Price"/>
+                        </div>
+                        <div>
+                            <label for="quantity">Quantity</label>
+                            <input
+                                min="1"
+                                max="999"
+                                id="quantity"
+                                type="number"
+                                class="input" asp-for="Inventory"/>
+                        </div>
+                    </div>
+                    <div class="card-body-row">
+                        <label for="description">
+                            Description (Optional)
+                        </label>
+                        <textarea 
+                        class="description"
+                        id="description"
+                        asp-for="Description"
+                    ></textarea>
+                    </div>
+                </div>
+            </div>
             <div class="card">
                 <div class="card-header">
                     <h5>Product Images</h5>
@@ -119,112 +137,107 @@
                                 Image
                             </label>
                             <input
-                                asp-for="postedFiles"
+                                asp-for="images"
                                 type="file"
                                 class="filepond"
                                 multiple
                                 data-allow-reorder="true"
                                 data-max-file-size="3MB"
                                 data-max-files="3"
-                                name="postedFiles"
+                                name="images"
                                 accept="image/*"/>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <button type="submit">Upload Document</button>
-@*         <div class="second-column"> *@
-@*             <div class="card"> *@
-@*                 <div class="card-header"> *@
-@*                     <h5>Product Publishers</h5> *@
-@*                 </div> *@
-@*                 <div class="card-body"> *@
-@*                     <div class="product-category"> *@
-@*                         <label for="name">Publisher</label> *@
-@*                         <div class="form-select-wrapper"> *@
-@*                             <select class="form-select"> *@
-@*                                 <option value="" selected disabled hidden> *@
-@*                                     Select publisher *@
-@*                                 </option> *@
-@*                                 <option value="Viz">Viz</option> *@
-@*                                 <option value="Kadokawa">Kadokawa</option> *@
-@*                             </select> *@
-@*                             <span class="select-icon"> *@
-@*                                 <svg *@
-@*                                     data-testid="geist-icon" *@
-@*                                     fill="none" *@
-@*                                     height="24" *@
-@*                                     shape-rendering="geometricPrecision" *@
-@*                                     stroke="currentColor" *@
-@*                                     stroke-linecap="round" *@
-@*                                     stroke-linejoin="round" *@
-@*                                     stroke-width="1.5" *@
-@*                                     viewBox="0 0 24 24" *@
-@*                                     width="24"> *@
-@*                                     <path d="M6 9l6 6 6-6"></path> *@
-@*                                 </svg> *@
-@*                             </span> *@
-@*                         </div> *@
-@*                     </div> *@
-@*                     <div class="line"></div> *@
-@*                     <div class="product-category"> *@
-@*                         <input *@
-@*                             id="publisher" *@
-@*                             class="input" *@
-@*                             placeholder="Add new Publisher"/> *@
-@*                     </div> *@
-@*                 </div> *@
-@*             </div> *@
-@*             <div class="card"> *@
-@*                 <div class="card-header"> *@
-@*                     <h5>Product Store Owner</h5> *@
-@*                 </div> *@
-@*                 <div class="card-body"> *@
-@*                     <div class="product-category"> *@
-@*                         <label for="name">Store owner</label> *@
-@*                         <div class="form-select-wrapper"> *@
-@*                             <select *@
-@*                                 class="form-select" *@
-@*                                 style="width: 200px"> *@
-@*                                 <option value="" selected disabled hidden> *@
-@*                                     Select store owner *@
-@*                                 </option> *@
-@*                                 <option value="Kim Dong *@
-@*                       "> *@
-@*                                     Kim Dong *@
-@*                                 </option> *@
-@*                             </select> *@
-@*                             <span *@
-@*                                 class="select-icon" *@
-@*                                 style="left: 170px"> *@
-@*                                 <svg *@
-@*                                     data-testid="geist-icon" *@
-@*                                     fill="none" *@
-@*                                     height="24" *@
-@*                                     shape-rendering="geometricPrecision" *@
-@*                                     stroke="currentColor" *@
-@*                                     stroke-linecap="round" *@
-@*                                     stroke-linejoin="round" *@
-@*                                     stroke-width="1.5" *@
-@*                                     viewBox="0 0 24 24" *@
-@*                                     width="24"> *@
-@*                                     <path d="M6 9l6 6 6-6"></path> *@
-@*                                 </svg> *@
-@*                             </span> *@
-@*                         </div> *@
-@*                     </div> *@
-@*                     <div class="line"></div> *@
-@*                     <div class="product-category"> *@
-@*                         <input *@
-@*                             id="store_owner" *@
-@*                             class="input" *@
-@*                             placeholder="Add new Store owner"/> *@
-@*                     </div> *@
-@*                 </div> *@
-@*             </div> *@
-@*         </div> *@
-    </form>
+        <div class="second-column">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Product Publishers</h5>
+                </div>
+                <div class="card-body">
+                    <div class="product-category">
+                        <label for="name">Publisher</label>
+                        <div class="form-select-wrapper">
+                            <select class="form-select" asp-for="PublisherId" asp-items="ViewBag.PublisherId">
+                                <option value="" selected disabled hidden>
+                                    Select publisher
+                                </option>
+                            </select>
+                            <span class="select-icon">
+                                <svg
+                                    data-testid="geist-icon"
+                                    fill="none"
+                                    height="24"
+                                    shape-rendering="geometricPrecision"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1.5"
+                                    viewBox="0 0 24 24"
+                                    width="24">
+                                    <path d="M6 9l6 6 6-6"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="product-category">
+                        <input
+                            id="publisher"
+                            class="input"
+                            placeholder="Add new Publisher"/>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5>Product Store Owner</h5>
+                </div>
+                <div class="card-body">
+                    <div class="product-category">
+                        <label for="name">Store owner</label>
+                        <div class="form-select-wrapper">
+                            <select
+                                class="form-select"
+                                style="width: 200px"
+                                asp-for="StoreOwnerId" asp-items="ViewBag.StoreOwnerId">
+                                <option value="" selected disabled hidden>
+                                    Select store owner
+                                </option>
+                            </select>
+                            <span
+                                class="select-icon"
+                                style="left: 170px">
+                                <svg
+                                    data-testid="geist-icon"
+                                    fill="none"
+                                    height="24"
+                                    shape-rendering="geometricPrecision"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1.5"
+                                    viewBox="0 0 24 24"
+                                    width="24">
+                                    <path d="M6 9l6 6 6-6"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="product-category">
+                        <input
+                            id="store_owner"
+                            class="input"
+                            placeholder="Add new Store owner"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
 </div>
 
 @section Scripts {
@@ -248,70 +261,53 @@
             allowProcess: false,
             allowBrowse: true,
 
-            server: {
-                // process: (fieldName, file, metadata, load, error, progress, abort, transfer, options) => {
-                // //     // fieldName is the name of the input field
-                // //     // file is the actual file object to send
-                //     const formData = new FormData();
-                //
-                //     console.log(formData)
-                //    
-                //     for (let i = 0; i < file.length; i++) {
-                //         console.log(file[i].file)
-                //         formData.append('photos', file[i].file);
-                //     }
-                //
-                //     console.log(formData)
-                //    
-                //     fetch("/admin/manage-products/create", {
-                //         method: 'POST',
-                //         body: formData
-                //     });
-                //
-                //     // window.fileName = file.name
-                //
-                // //     const request = new XMLHttpRequest();
-                // //
-                // //     // Should call the progress method to update the progress to 100% before calling load
-                // //     // Setting computable to false switches the loading indicator to infinite mode
-                // //     request.upload.onprogress = (e) => {
-                // //         progress(e.lengthComputable, e.loaded, e.total);
-                // //     };
-                // //
-                // //     // Should call the load method when done and pass the returned server file id
-                // //     // this server file id is then used later on when reverting or restoring a file
-                // //     // so your server knows which file to return without exposing that info to the client
-                // //     request.onload = function () {
-                // //         if (request.status >= 200 && request.status < 300) {
-                // //             // the load method accepts either a string (id) or an object
-                // //             load(request.responseText);
-                // //         } else {
-                // //             // Can call the error method if something is wrong, should exit after
-                // //             error('oh no');
-                // //         }
-                // //     };
-                // //
-                // //     request.send(formData);
-                // //
-                // //     // Should expose an abort method so the request can be cancelled
-                // //     return {
-                // //         abort: () => {
-                // //             // This function is entered if the user has tapped the cancel button
-                // //             request.abort();
-                // //
-                // //             // Let FilePond know the request has been cancelled
-                // //             abort();
-                // //         },
-                // //     };
-                // // },
-                // // revert: async (source, load, error) => {
-                // //     const res = await fetch(`/Admin/SongUpload/Test?type=song&songName=${fileName}`, {
-                // //         method: "DELETE"
-                // //     })
-                // //
-                // //     load()
-                // }
-            }
+            // server: {
+            //     process: (fieldName, file, metadata, load, error, progress, abort, transfer, options) => {
+            //         // fieldName is the name of the input field
+            //         // file is the actual file object to send
+            //         const formData = new FormData();
+            //        
+            //         for (let i = 0; i < file.length; i++) {
+            //             formData.append(fieldName, file[i], file[i].name);
+            //             // formdata.append('postedFiles', pondFiles[i].file);
+            //         }
+            //
+            //         const request = new XMLHttpRequest();
+            //         request.open('POST', '/admin/manage-products/create');
+            //
+            //         // Should call the progress method to update the progress to 100% before calling load
+            //         // Setting computable to false switches the loading indicator to infinite mode
+            //         request.upload.onprogress = (e) => {
+            //             progress(e.lengthComputable, e.loaded, e.total);
+            //         };
+            //
+            //         // Should call the load method when done and pass the returned server file id
+            //         // this server file id is then used later on when reverting or restoring a file
+            //         // so your server knows which file to return without exposing that info to the client
+            //         request.onload = function () {
+            //             if (request.status >= 200 && request.status < 300) {
+            //                 // the load method accepts either a string (id) or an object
+            //                 load(request.responseText);
+            //             } else {
+            //                 // Can call the error method if something is wrong, should exit after
+            //                 error('oh no');
+            //             }
+            //         };
+            //
+            //         request.send(formData);
+            //
+            //         // Should expose an abort method so the request can be cancelled
+            //         return {
+            //             abort: () => {
+            //                 // This function is entered if the user has tapped the cancel button
+            //                 request.abort();
+            //
+            //                 // Let FilePond know the request has been cancelled
+            //                 abort();
+            //             },
+            //         };
+            //     },
+            // }
         });
 
         document.getElementById('uploadform').addEventListener('submit', function (e) {
@@ -320,15 +316,9 @@
 
             const pondFiles = pond.getFiles();
 
-            console.log(formdata)
-
             for (let i = 0; i < pondFiles.length; i++) {
-                console.log(pondFiles[i].file)
-                formdata.append('PostedFiles', pondFiles[i].file, pondFiles[i].file.name);
-                // formdata.append('postedFiles', pondFiles[i].file);
+                formdata.append('images', pondFiles[i].file, pondFiles[i].file.name);
             }
-
-            console.log(formdata)
 
             fetch("/admin/manage-products/create", {
                 method: 'POST',

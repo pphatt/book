@@ -22,6 +22,8 @@ public class StoreOwner
     public DateTime CreatedAt { get; set; }
 
     public DateTime UpdatedAt { get; set; }
+    
+    public string FullName => $"{FirstName} {LastName}";
 
     public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 }

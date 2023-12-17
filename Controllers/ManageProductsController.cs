@@ -33,7 +33,7 @@ public class ManageProductsController : Controller
 
         return View(await _productsRepository.GetAll());
     }
-    
+
     // // GET: ManageProducts/Details/5
     // public async Task<IActionResult> Details(int? id)
     // {
@@ -54,11 +54,6 @@ public class ManageProductsController : Controller
     //
     //     return View(product);
     // }
-    
-    // public IActionResult Create()
-    // {
-    //     return View();
-    // }
 
     // [HttpPost]
     // public async Task<IActionResult> Create(Product product)
@@ -71,25 +66,27 @@ public class ManageProductsController : Controller
     //     _productsRepository.Add(product);
     //     return RedirectToAction("Index");
     // }
-    
-    [HttpPost]
-    [Route("/admin/manage-products/create")]
-    public async Task<IActionResult> Create(TestFilepondImageViewModel vm, List<IFormFile> postedFiles)
-    {
-        // var test = Request.Form.Files.Count;
-        return View();
-    }
-    
+
     // GET: ManageProducts/Create
+    [HttpGet]
     [Route("/admin/manage-products/create")]
     public IActionResult Create()
     {
-        ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId");
-        ViewData["PublisherId"] = new SelectList(_context.Publishers, "PublisherId", "PublisherId");
-        ViewData["StoreOwnerId"] = new SelectList(_context.StoreOwners, "StoreOwnerId", "StoreOwnerId");
+        ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryName");
+        ViewData["PublisherId"] = new SelectList(_context.Publishers, "PublisherId", "PublisherName");
+        ViewData["StoreOwnerId"] = new SelectList(_context.StoreOwners, "StoreOwnerId", "FullName");
+
         return View();
     }
-    
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    [Route("/admin/manage-products/create")]
+    public async Task<IActionResult> Create(CreateProductViewModel vm)
+    {
+        return View();
+    }
+
     // POST: ManageProducts/Create
     // To protect from overposting attacks, enable the specific properties you want to bind to.
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -114,7 +111,7 @@ public class ManageProductsController : Controller
     //     //     new SelectList(_context.StoreOwners, "StoreOwnerId", "StoreOwnerId", product.StoreOwnerId);
     //     return View(product);
     // }
-    
+
     // // GET: ManageProducts/Edit/5
     // public async Task<IActionResult> Edit(int? id)
     // {
