@@ -2,6 +2,8 @@
     private button: NodeList
     private modal: NodeList
 
+    private isAnimating: boolean = false
+
     constructor(elems: { button: NodeList; modal: NodeList }) {
         const {button, modal} = elems
 
@@ -17,7 +19,9 @@
             element.addEventListener("click", () => {
                 const open = element.getAttribute("data-open") as string
 
-                if (open === "false") {
+                if (open === "false" && !this.isAnimating) {
+                    this.isAnimating = true
+
                     element.setAttribute("data-open", "true")
 
                     const current_modal = this.modal[index] as HTMLElement
@@ -26,9 +30,30 @@
 
                     const backdrop = current_modal.firstElementChild as HTMLElement
 
+                    backdrop.className = "back-drop backdrop-animate-in"
+
+                    current_modal.className = "modal modal-animate-in"
+
                     backdrop.addEventListener("click", () => {
-                        element.setAttribute("data-open", "false")
-                        current_modal.setAttribute("style", "display: none")
+                        if (this.isAnimating) {
+                            return
+                        }
+
+                        backdrop.className = "back-drop backdrop-animate-out"
+
+                        current_modal.className = "modal modal-animate-out"
+                    })
+
+                    backdrop.addEventListener("animationend", (event) => {
+                        this.isAnimating = false
+
+                        backdrop.className = "back-drop"
+                        current_modal.className = "modal"
+
+                        if (event.animationName === "backdrop-animate-out") {
+                            element.setAttribute("data-open", "false")
+                            current_modal.setAttribute("style", "display: none")
+                        }
                     })
                 }
             })

@@ -376,10 +376,34 @@
 .back-drop {
   position: fixed;
   top: 0;
+  right: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
   z-index: 39;
+}
+
+.backdrop-animate-in {
+  animation: backdrop-animate-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes backdrop-animate-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.backdrop-animate-out {
+  animation: backdrop-animate-out 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes backdrop-animate-out {
+  0% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .modal {
@@ -389,7 +413,10 @@
   background-color: rgba(28, 28, 28, 0.8);
   pointer-events: auto;
   overflow-y: auto;
-  animation: overlayContentShow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-animate-in {
+  animation: overlayContentShow 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 @keyframes overlayContentShow {
   0% {
@@ -399,6 +426,20 @@
   100% {
     opacity: 1;
     transform: translate(0) scale(1);
+  }
+}
+
+.modal-animate-out {
+  animation: fadeOutOverlayBg 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes fadeOutOverlayBg {
+  0% {
+    opacity: 1;
+    transform: translate(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-2%) scale(0.96);
   }
 }
 
