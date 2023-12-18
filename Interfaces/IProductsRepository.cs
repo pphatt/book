@@ -10,6 +10,7 @@ public interface IProductsRepository
     Task<IEnumerable<Category>> GetAllCategories();
     Task<IEnumerable<Publisher>> GetAllPublisher();
     Task<IEnumerable<StoreOwner>> GetAllStoreOwner();
+    int AddNewPublisher(Publisher publisher);
     bool Add(Product product);
     // bool Update(Product product);
     bool Delete(Product product);

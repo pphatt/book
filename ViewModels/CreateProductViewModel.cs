@@ -20,6 +20,12 @@ public class CreateProductViewModel
         set;
     }
 
+    public string? NewPublisherName
+    {
+        get;
+        set;
+    }
+
     public string Description
     {
         get;

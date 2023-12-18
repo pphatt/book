@@ -83,6 +83,14 @@ public class ProductsRepository : IProductsRepository
 
         return await storeOwner.ToListAsync();
     }
+
+    public int AddNewPublisher(Publisher publisher)
+    {
+        _context.Add(publisher);
+        Save();
+
+        return publisher.PublisherId;
+    }
     
     public bool Add(Product product)
     {

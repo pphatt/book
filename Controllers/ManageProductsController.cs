@@ -18,7 +18,8 @@ public class ManageProductsController : Controller
     private IWebHostEnvironment _env;
     private readonly ILogger<ManageProductsController> _logger;
 
-    public ManageProductsController(IProductsRepository productsRepository,IWebHostEnvironment env, ILogger<ManageProductsController> logger)
+    public ManageProductsController(IProductsRepository productsRepository, IWebHostEnvironment env,
+        ILogger<ManageProductsController> logger)
     {
         _productsRepository = productsRepository;
         _env = env;
@@ -32,7 +33,7 @@ public class ManageProductsController : Controller
         {
             return RedirectToAction("Index", "Home");
         }
-        
+
         _logger.LogError("An error occurred while loading products.");
 
         return View(await _productsRepository.GetAll());
@@ -96,24 +97,24 @@ public class ManageProductsController : Controller
         if (ModelState.IsValid)
         {
             var images = new List<string>();
-            
+
             if (vm.images.Any())
             {
                 String uploadfolder = Path.Combine(_env.WebRootPath, "images");
-                
+
                 foreach (var image in vm.images)
                 {
                     var filename = Guid.NewGuid().ToString() + Path.GetExtension(image.FileName);
-                    
+
                     var filepath = Path.Combine(uploadfolder, filename);
-                    
+
                     try
                     {
                         using (var fileStream = new FileStream(filepath, FileMode.Create))
                         {
                             await image.CopyToAsync(fileStream);
                         }
-                    
+
                         images.Add(filename);
                     }
                     catch (Exception ex)
@@ -127,7 +128,12 @@ public class ManageProductsController : Controller
             var product = new Product
             {
                 Name = vm.Name,
-                PublisherId = vm.PublisherId,
+                PublisherId = vm.NewPublisherName != null
+                    ? _productsRepository.AddNewPublisher(new Publisher()
+                    {
+                        PublisherName = vm.NewPublisherName
+                    })
+                    : vm.PublisherId,
                 Description = vm.Description,
                 Price = vm.Price,
                 Inventory = vm.Inventory,
@@ -137,9 +143,8 @@ public class ManageProductsController : Controller
             };
 
             _productsRepository.Add(product);
-            
-            var products = await _productsRepository.GetAll();
-            return View("ManageProducts", products);
+
+            return RedirectToAction(nameof(ManageProducts));
         }
 
         return View();
@@ -235,21 +240,21 @@ public class ManageProductsController : Controller
     //         new SelectList(_context.StoreOwners, "StoreOwnerId", "StoreOwnerId", product.StoreOwnerId);
     //     return View(product);
     // }
-    
+
     // GET: ManageProducts/Delete/5
     [Route("delete/{id}")]
     public async Task<IActionResult> Delete(int id)
     {
         var product = await _productsRepository.GetByIdAsync(id);
-        
+
         if (product == null)
         {
             return NotFound();
         }
-    
+
         return View(product);
     }
-    
+
     // POST: ManageProducts/Delete/5
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
@@ -257,12 +262,12 @@ public class ManageProductsController : Controller
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var product = await _productsRepository.GetByIdAsync(id);
-        
+
         _productsRepository.Delete(product);
-    
+
         return RedirectToAction(nameof(ManageProducts));
     }
-    
+
     // private bool ProductExists(int id)
     // {
     //     return (_context.Products?.Any(e => e.ProductId == id)).GetValueOrDefault();

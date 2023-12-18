@@ -14,7 +14,7 @@
         .filepond--root {
             margin-top: 0.25rem;
         }
-        
+
         .filepond--credits {
             display: none;
         }
@@ -160,9 +160,9 @@
                 </div>
                 <div class="card-body">
                     <div class="product-category">
-                        <label for="name">Publisher</label>
+                        <label for="publisher">Publisher</label>
                         <div class="form-select-wrapper">
-                            <select class="form-select" required="required" asp-for="PublisherId" asp-items="ViewBag.PublisherId">
+                            <select class="form-select" id="publisher" required="required" asp-for="PublisherId" asp-items="ViewBag.PublisherId">
                                 <option value="" selected disabled hidden>
                                     Select publisher
                                 </option>
@@ -187,6 +187,7 @@
                     <div class="line"></div>
                     <div class="product-category">
                         <input
+                            asp-for="NewPublisherName"
                             id="publisher"
                             class="input"
                             placeholder="Add new Publisher"/>
@@ -326,6 +327,10 @@
             fetch("/admin/manage-products/create", {
                 method: 'POST',
                 body: formdata,
+            }).then((res) => {
+                if (res.ok) {
+                    window.location.replace("/admin/manage-products");
+                }
             });
         });
     </script>
