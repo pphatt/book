@@ -251,6 +251,14 @@
                                                         <p style="width: 150px">Category: </p>
                                                         <span>@String.Join("", product.Category?.CategoryName.Substring(0, 1).ToUpper(), product.Category?.CategoryName.Substring(1))</span>
                                                     </div>
+                                                    <div style="display:flex">
+                                                        <p style="width: 150px">Publisher: </p>
+                                                        <span>@product.Publisher.PublisherName</span>
+                                                    </div>
+                                                    <div style="display:flex">
+                                                        <p style="width: 150px">Store owner: </p>
+                                                        <span>@product.StoreOwner.FirstName @product.StoreOwner.LastName</span>
+                                                    </div>
                                                 </div>
                                                 <div class="submit-delete">
                                                     <button type="button" class="cancel-button">
