@@ -1,7 +1,7 @@
-﻿@model comic.ViewModels.CreateUserViewModel
+﻿@model comic.ViewModels.EditUserViewModel
 
 @{
-    ViewData["Title"] = "Add user";
+    ViewData["Title"] = "Edit user";
 
     Layout = "_AdminLayout";
 }
@@ -16,27 +16,6 @@
             <a class="route" href="/">
                 FPT Book
             </a>
-            <div class="sub-route-layout">
-                <span>
-                    <svg
-                        viewBox="0 0 24 24"
-                        width="16"
-                        height="16"
-                        stroke="currentColor"
-                        stroke-width="1"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        fill="none"
-                        shape-rendering="geometricPrecision">
-                        <path d="M16 3.549L7.12 20.600"></path>
-                    </svg>
-                </span>
-                <a
-                    class="route"
-                    href="/">
-                    Admin
-                </a>
-            </div>
             <div class="sub-route-layout">
                 <span>
                     <svg
@@ -76,7 +55,7 @@
                 <a
                     class="route"
                     href="/">
-                    Add User
+                    Edit User
                 </a>
             </div>
         </div>
@@ -84,14 +63,14 @@
 
     <div></div>
 
-    <form method="post" enctype="multipart/form-data" asp-action="Create" class="main-content">
+    <form method="post" enctype="multipart/form-data" asp-action="Edit" class="main-content">
         <div class="form-action">
             <div class="form-action-text">
-                <h4>Add a new User</h4>
-                <p>Add new user to the system</p>
+                <h4>Edit user ID: @Model.Id</h4>
+                <p>Edit user</p>
             </div>
             <div class="submit-form-group">
-                <button class="submit-form" type="submit">Add user</button>
+                <button class="submit-form" type="submit">Edit user</button>
             </div>
         </div>
 
@@ -104,15 +83,15 @@
                     <div class="card-body">
                         <div class="card-body-row">
                             <label for="name">Name</label>
-                            <input id="name" class="input" asp-for="UserName" placeholder="UserName" required="required"/>
+                            <input id="name" class="input" asp-for="UserName" placeholder="UserName" required="required" value="@Model.Name"/>
                         </div>
                         <div class="card-body-row">
                             <label for="email">Email</label>
-                            <input id="email" class="input" asp-for="Email" placeholder="Email" required="required"/>
+                            <input id="email" class="input" asp-for="Email" placeholder="Email" required="required" value="@Model.Email"/>
                         </div>
                         <div class="card-body-row">
                             <label for="password">Password</label>
-                            <input id="password" class="input" asp-for="Password" placeholder="Password" required="required"/>
+                            <input id="password" class="input" asp-for="Password" placeholder="Password" required="required" value="@Model.Password"/>
                         </div>
                     </div>
                 </div>
@@ -126,10 +105,53 @@
                         <div class="product-category">
                             <label for="name">Publisher</label>
                             <div class="form-select-wrapper">
-                                <select class="form-select" required="required" asp-for="RoleId" asp-items="ViewBag.RoleId">
-                                    <option value="" selected disabled hidden>
-                                        Select Role
-                                    </option>
+                                <select class="form-select" required="required" asp-for="RoleId" asp-items="ViewBag.RoleId"></select>
+                                <span class="select-icon">
+                                    <svg
+                                        data-testid="geist-icon"
+                                        fill="none"
+                                        height="24"
+                                        shape-rendering="geometricPrecision"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                        viewBox="0 0 24 24"
+                                        width="24">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Sex</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="product-category">
+                            <label for="Sex">Sex</label>
+                            <div class="form-select-wrapper">
+                                <select class="form-select" required="required" asp-for="Sex">
+                                    @if (Model.Sex == "Male")
+                                    {
+                                        <option value="Male" selected>
+                                            Male
+                                        </option>
+                                        <option value="Female">
+                                            Female
+                                        </option>
+                                    }
+                                    else
+                                    {
+                                        <option value="Male">
+                                            Male
+                                        </option>
+                                        <option value="Female" selected>
+                                            Female
+                                        </option>
+                                    }
                                 </select>
                                 <span class="select-icon">
                                     <svg

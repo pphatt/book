@@ -13,5 +13,6 @@ public interface IUsersRepository
     bool Add(User user);
     // bool Update(Product product);
     bool Delete(User user);
+    bool Update(User user);
     bool Save();
 }

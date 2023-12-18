@@ -89,6 +89,41 @@ public class ManageUsersController : Controller
         return View();
     }
     
+    [HttpGet]
+    [Route("/admin/manage-users/edit/{id}")]
+    public async Task<IActionResult> Edit(int id)
+    {
+        var roles = await _usersRepository.GetAllRoles();
+
+        ViewData["RoleId"] = new SelectList(roles, nameof(IdentityRole.Name), nameof(IdentityRole.Name));
+        
+        return View();
+    }
+    
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    [Route("/admin/manage-users/edit/{id}")]
+    public async Task<IActionResult> Edit(EditUserViewModel userViewModel)
+    {
+        // var user = new User()
+        // {
+        //     Name = userViewModel.Name,
+        //     Email = userViewModel.Email,
+        //     Sex = userViewModel.Sex,
+        // };
+        //
+        // if (userViewModel.RoleId == "admin")
+        // {
+        //     await _userManager.AddToRoleAsync(user, UserRoles.Admin);
+        // }
+        // else
+        // {
+        //     await _userManager.AddToRoleAsync(user, UserRoles.User);
+        // }
+        
+        return View();
+    }
+    
     // POST: ManageProducts/Delete/5
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]

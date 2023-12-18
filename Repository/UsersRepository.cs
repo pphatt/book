@@ -86,6 +86,12 @@ public class UserRepository : IUsersRepository
         
         return Save();
     }
+    
+    public bool Update(User user)
+    {
+        _context.Update(user);
+        return Save();
+    }
 
     public bool Save()
     {
