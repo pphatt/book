@@ -896,35 +896,83 @@ public class Seed
 
             //Users
             var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<User>>();
-            string adminUserEmail = "MisanropeHetCuu@gmail.com";
+            string adminUserEmail = "khanh123@gmail.com";
 
             var adminUser = await userManager.FindByEmailAsync(adminUserEmail);
             if (adminUser == null)
             {
                 var newAdminUser = new User()
                 {
-                    UserName = "Misanrope",
+                    UserName = "Khanh",
                     Email = adminUserEmail,
-                    FirstName = "Misanrope cc",
+                    FirstName = "Khanh",
                     EmailConfirmed = true,
                 };
-                await userManager.CreateAsync(newAdminUser, "KhuaKhanh123@");
+                await userManager.CreateAsync(newAdminUser, "LeNguyenQuocKhanh123@");
                 await userManager.AddToRoleAsync(newAdminUser, UserRoles.Admin);
             }
 
-            string appUserEmail = "AnhPhucXucTu123@gmail.com";
+            string appUserEmail = "NguyenVinhPhuc123@gmail.com";
 
             var appUser = await userManager.FindByEmailAsync(appUserEmail);
             if (appUser == null)
             {
                 var newAppUser = new User()
                 {
-                    UserName = "Ilaoi",
+                    UserName = "Phuc",
                     Email = appUserEmail,
-                    FirstName = "Ilaoi",
+                    FirstName = "Phuc",
                     EmailConfirmed = true,
                 };
-                await userManager.CreateAsync(newAppUser, "KhuaPhuc123!");
+                await userManager.CreateAsync(newAppUser, "NguyenVinhPhuc123@");
+                await userManager.AddToRoleAsync(newAppUser, UserRoles.User);
+            }
+            
+            string appUserEmail1 = "BuiHuuNghia123@gmail.com";
+            
+            var appUser1 = await userManager.FindByEmailAsync(appUserEmail1);
+            if (appUser1 == null)
+            {
+                var newAppUser = new User()
+                {
+                    UserName = "Nghia",
+                    Email = appUserEmail1,
+                    FirstName = "Nghia",
+                    EmailConfirmed = true,
+                };
+                await userManager.CreateAsync(newAppUser, "BuiHuuNghia123@");
+                await userManager.AddToRoleAsync(newAppUser, UserRoles.User);
+            }
+            
+            string appUserEmail2 = "VuTienPhat123@gmail.com";
+            
+            var appUser2 = await userManager.FindByEmailAsync(appUserEmail2);
+            if (appUser2 == null)
+            {
+                var newAppUser = new User()
+                {
+                    UserName = "Phat",
+                    Email = appUserEmail2,
+                    FirstName = "Phat",
+                    EmailConfirmed = true,
+                };
+                await userManager.CreateAsync(newAppUser, "VuTienPhat123@");
+                await userManager.AddToRoleAsync(newAppUser, UserRoles.User);
+            }
+            
+            string appUserEmail3 = "TrinhAnhDuong123@gmail.com";
+            
+            var appUser3 = await userManager.FindByEmailAsync(appUserEmail3);
+            if (appUser3 == null)
+            {
+                var newAppUser = new User()
+                {
+                    UserName = "Duong",
+                    Email = appUserEmail3,
+                    FirstName = "Duong",
+                    EmailConfirmed = true,
+                };
+                await userManager.CreateAsync(newAppUser, "TrinhAnhDuong123@");
                 await userManager.AddToRoleAsync(newAppUser, UserRoles.User);
             }
         }
