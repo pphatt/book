@@ -8,7 +8,7 @@ public class ManageUsersViewModel
         set;
     }
 
-    public string UserName
+    public string? UserName
     {
         get;
         set;

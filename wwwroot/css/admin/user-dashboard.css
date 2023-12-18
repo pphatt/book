@@ -171,7 +171,7 @@
   align-items: center;
   gap: 8px;
 }
-.action-button-group button {
+.action-button-group button, .action-button-group a {
   display: inline-flex;
   align-items: center;
   color: #fff;
@@ -188,7 +188,7 @@
   outline-offset: 2px;
   transition: all 200ms cubic-bezier(0, 0, 0.2, 1);
 }
-.action-button-group button span {
+.action-button-group button span, .action-button-group a span {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;

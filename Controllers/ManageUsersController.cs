@@ -64,8 +64,10 @@ public class ManageUsersController : Controller
         var newAdminUser = new User
         {
             UserName = vm.UserName,
+            Name = vm.Name,
             Email = vm.Email,
             EmailConfirmed = true,
+            Sex = vm.Sex,
         };
 
         var result = await _userManager.CreateAsync(newAdminUser, vm.Password);
@@ -84,7 +86,7 @@ public class ManageUsersController : Controller
             return RedirectToAction("ManageUsers");
         }
         
-        return View("ManageUsers");
+        return View();
     }
     
     // POST: ManageProducts/Delete/5

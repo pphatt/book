@@ -34,28 +34,7 @@
                 <a
                     class="route"
                     href="/">
-                    Admin
-                </a>
-            </div>
-            <div class="sub-route-layout">
-                <span>
-                    <svg
-                        viewBox="0 0 24 24"
-                        width="16"
-                        height="16"
-                        stroke="currentColor"
-                        stroke-width="1"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        fill="none"
-                        shape-rendering="geometricPrecision">
-                        <path d="M16 3.549L7.12 20.600"></path>
-                    </svg>
-                </span>
-                <a
-                    class="route"
-                    href="/">
-                    Manage Users
+                    Manage users
                 </a>
             </div>
             <div class="sub-route-layout">
@@ -103,8 +82,12 @@
                     </div>
                     <div class="card-body">
                         <div class="card-body-row">
-                            <label for="name">Name</label>
+                            <label for="name">UserName (short)</label>
                             <input id="name" class="input" asp-for="UserName" placeholder="UserName" required="required"/>
+                        </div>
+                        <div class="card-body-row">
+                            <label for="name">Name</label>
+                            <input id="name" class="input" asp-for="Name" placeholder="UserName" required="required"/>
                         </div>
                         <div class="card-body-row">
                             <label for="email">Email</label>
@@ -124,11 +107,49 @@
                     </div>
                     <div class="card-body">
                         <div class="product-category">
-                            <label for="name">Publisher</label>
+                            <label for="name">Role</label>
                             <div class="form-select-wrapper">
                                 <select class="form-select" required="required" asp-for="RoleId" asp-items="ViewBag.RoleId">
                                     <option value="" selected disabled hidden>
                                         Select Role
+                                    </option>
+                                </select>
+                                <span class="select-icon">
+                                    <svg
+                                        data-testid="geist-icon"
+                                        fill="none"
+                                        height="24"
+                                        shape-rendering="geometricPrecision"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                        viewBox="0 0 24 24"
+                                        width="24">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Sex</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="product-category">
+                            <label for="Sex">Sex</label>
+                            <div class="form-select-wrapper">
+                                <select class="form-select" required="required" asp-for="Sex">
+                                    <option value="" selected disabled hidden>
+                                        Select Sex
+                                    </option>
+                                    <option value="Male">
+                                        Male
+                                    </option>
+                                    <option value="Female">
+                                        Female
                                     </option>
                                 </select>
                                 <span class="select-icon">
