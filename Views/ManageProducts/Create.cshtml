@@ -75,77 +75,77 @@
 <div></div>
 
 <form method="post" id="uploadform" enctype="multipart/form-data" class="main-content">
-<div class="form-action">
-    <div class="form-action-text">
-        <h4>Add a new Product</h4>
-        <p>Orders placed across your store</p>
+    <div class="form-action">
+        <div class="form-action-text">
+            <h4>Add a new Product</h4>
+            <p>Orders placed across your store</p>
+        </div>
+        <div class="submit-form-group">
+            <button class="submit-form" type="submit">Publish Product</button>
+        </div>
     </div>
-    <div class="submit-form-group">
-        <button class="submit-form" type="submit">Publish Product</button>
-    </div>
-</div>
 
-<div class="form-group">
-    <div class="first-column">
-        <div class="card">
-            <div class="card-header">
-                <h5>Product information</h5>
-            </div>
-            <div class="card-body">
-                <div class="card-body-row">
-                    <label for="name">Name</label>
-                    <input id="name" class="input" asp-for="Name" placeholder="Product title" required="required"/>
+    <div class="form-group">
+        <div class="first-column">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Product information</h5>
                 </div>
-                <div class="card-body-row-mul">
-                    <div>
-                        <label for="price">Price</label>
-                        <input
-                            id="price"
-                            type="number"
-                            step="any"
-                            class="input" asp-for="Price" placeholder="Price" required="required"/>
+                <div class="card-body">
+                    <div class="card-body-row">
+                        <label for="name">Name</label>
+                        <input id="name" class="input" asp-for="Name" placeholder="Product title" required="required"/>
                     </div>
-                    <div>
-                        <label for="quantity">Quantity</label>
-                        <input
-                            min="1"
-                            max="999"
-                            id="quantity"
-                            type="number"
-                            class="input" asp-for="Inventory" placeholder="Quantity" required="required"/>
+                    <div class="card-body-row-mul">
+                        <div>
+                            <label for="price">Price</label>
+                            <input
+                                id="price"
+                                type="number"
+                                step="any"
+                                class="input" asp-for="Price" placeholder="Price" required="required"/>
+                        </div>
+                        <div>
+                            <label for="quantity">Quantity</label>
+                            <input
+                                min="1"
+                                max="999"
+                                id="quantity"
+                                type="number"
+                                class="input" asp-for="Inventory" placeholder="Quantity" required="required"/>
+                        </div>
                     </div>
-                </div>
-                <div class="card-body-row">
-                    <label for="description">
-                        Description (Optional)
-                    </label>
-                    <textarea 
+                    <div class="card-body-row">
+                        <label for="description">
+                            Description (Optional)
+                        </label>
+                        <textarea 
                             class="description"
                             id="description"
                             asp-for="Description"
                             placeholder="Product Description"
                         ></textarea>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <h5>Product Category</h5>
-            </div>
-            <div class="card-body">
-                <div class="card-body-row"
-                     style="display: flex;
+            <div class="card">
+                <div class="card-header">
+                    <h5>Product Category</h5>
+                </div>
+                <div class="card-body">
+                    <div class="card-body-row"
+                         style="display: flex;
                                 align-items: flex-start;
                                 flex-direction: column;
                                 gap: 0.25rem;">
-                    <label for="tag">Product Tags</label>
-                    <div class="form-select-wrapper">
-                        <select class="form-select" id="tag" required="required" asp-for="CategoryId" asp-items="ViewBag.CategoryId">
-                            <option value="" selected disabled hidden>
-                                Select category
-                            </option>
-                        </select>
-                        <script>
+                        <label for="tag">Product Tags</label>
+                        <div class="form-select-wrapper">
+                            <select class="form-select" id="tag" required="required" asp-for="CategoryId" asp-items="ViewBag.CategoryId">
+                                <option value="" selected disabled hidden>
+                                    Select category
+                                </option>
+                            </select>
+                            <script>
                             const element = document.getElementById("tag");
                             
                             const value = element.options[element.selectedIndex].value
@@ -156,141 +156,136 @@
                                 
                             }
                         </script>
-                        <span class="select-icon">
-                            <svg
-                                data-testid="geist-icon"
-                                fill="none"
-                                height="24"
-                                shape-rendering="geometricPrecision"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="1.5"
-                                viewBox="0 0 24 24"
-                                width="24">
-                                <path d="M6 9l6 6 6-6"></path>
-                            </svg>
-                        </span>
+                            <span class="select-icon">
+                                <svg
+                                    data-testid="geist-icon"
+                                    fill="none"
+                                    height="24"
+                                    shape-rendering="geometricPrecision"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1.5"
+                                    viewBox="0 0 24 24"
+                                    width="24">
+                                    <path d="M6 9l6 6 6-6"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="tag-panel">
+                            <div></div>
+                        </div>
                     </div>
-                    <div class="tag-panel">
-                        <div></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5>Product Images</h5>
+                </div>
+                <div class="card-body">
+                    <div class="form-image">
+                        <div class="form-image-input">
+                            <label>
+                                Image
+                            </label>
+                            <input
+                                asp-for="images"
+                                type="file"
+                                class="filepond"
+                                multiple
+                                data-allow-reorder="true"
+                                data-max-file-size="3MB"
+                                data-max-files="3"
+                                name="images"
+                                accept="image/*"/>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-header">
-                <h5>Product Images</h5>
-            </div>
-            <div class="card-body">
-                <div class="form-image">
-                    <div class="form-image-input">
-                        <label>
-                            Image
-                        </label>
+        <div class="second-column">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Product Publishers</h5>
+                </div>
+                <div class="card-body">
+                    <div class="product-category">
+                        <label for="publisher">Publisher</label>
+                        <div class="form-select-wrapper">
+                            <select class="form-select" id="publisher" asp-for="PublisherId" asp-items="ViewBag.PublisherId">
+                                <option value="" selected disabled hidden>
+                                    Select publisher
+                                </option>
+                            </select>
+                            <span class="select-icon">
+                                <svg
+                                    data-testid="geist-icon"
+                                    fill="none"
+                                    height="24"
+                                    shape-rendering="geometricPrecision"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1.5"
+                                    viewBox="0 0 24 24"
+                                    width="24">
+                                    <path d="M6 9l6 6 6-6"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="product-category">
                         <input
-                            asp-for="images"
-                            type="file"
-                            class="filepond"
-                            multiple
-                            data-allow-reorder="true"
-                            data-max-file-size="3MB"
-                            data-max-files="3"
-                            name="images"
-                            accept="image/*"/>
+                            asp-for="NewPublisherName"
+                            class="input"
+                            placeholder="Add new publisher" />
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5>Product Store Owner</h5>
+                </div>
+                <div class="card-body">
+                    <div class="product-category">
+                        <label for="store_owner">Store owner</label>
+                        <div class="form-select-wrapper">
+                            <select id="store_owner" required="required" class="form-select" style="width: 200px" asp-for="StoreOwnerId" asp-items="ViewBag.StoreOwnerId">
+                                <option value="" selected disabled hidden>
+                                    Select store owner
+                                </option>
+                            </select>
+                            <span
+                                class="select-icon"
+                                style="left: 170px">
+                                <svg
+                                    data-testid="geist-icon"
+                                    fill="none"
+                                    height="24"
+                                    shape-rendering="geometricPrecision"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1.5"
+                                    viewBox="0 0 24 24"
+                                    width="24">
+                                    <path d="M6 9l6 6 6-6"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="product-category">
+                        <input
+                            class="input"
+                            asp-for="NewStoreOwner"
+                            placeholder="Add new store owner" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="second-column">
-        <div class="card">
-            <div class="card-header">
-                <h5>Product Publishers</h5>
-            </div>
-            <div class="card-body">
-                <div class="product-category">
-                    <label for="publisher">Publisher</label>
-                    <div class="form-select-wrapper">
-                        <select class="form-select" id="publisher" required="required" asp-for="PublisherId" asp-items="ViewBag.PublisherId">
-                            <option value="" selected disabled hidden>
-                                Select publisher
-                            </option>
-                        </select>
-                        <span class="select-icon">
-                            <svg
-                                data-testid="geist-icon"
-                                fill="none"
-                                height="24"
-                                shape-rendering="geometricPrecision"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="1.5"
-                                viewBox="0 0 24 24"
-                                width="24">
-                                <path d="M6 9l6 6 6-6"></path>
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-                <div class="line"></div>
-                <div class="product-category">
-                    <input
-                        asp-for="NewPublisherName"
-                        id="publisher"
-                        class="input"
-                        placeholder="Add new Publisher"/>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <h5>Product Store Owner</h5>
-            </div>
-            <div class="card-body">
-                <div class="product-category">
-                    <label for="name">Store owner</label>
-                    <div class="form-select-wrapper">
-                        <select
-                            required="required"
-                            class="form-select"
-                            style="width: 200px"
-                            asp-for="StoreOwnerId" asp-items="ViewBag.StoreOwnerId">
-                            <option value="" selected disabled hidden>
-                                Select store owner
-                            </option>
-                        </select>
-                        <span
-                            class="select-icon"
-                            style="left: 170px">
-                            <svg
-                                data-testid="geist-icon"
-                                fill="none"
-                                height="24"
-                                shape-rendering="geometricPrecision"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="1.5"
-                                viewBox="0 0 24 24"
-                                width="24">
-                                <path d="M6 9l6 6 6-6"></path>
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-                <div class="line"></div>
-                <div class="product-category">
-                    <input
-                        id="store_owner"
-                        class="input"
-                        placeholder="Add new Store owner"/>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 </form>
 </div>
 

@@ -12,6 +12,7 @@ public interface IProductsRepository
     Task<IEnumerable<Tag>> GetAllTag();
     Task<IEnumerable<StoreOwner>> GetAllStoreOwner();
     int AddNewPublisher(Publisher publisher);
+    int AddNewStoreOwner(StoreOwner storeOwner);
     bool Add(Product product);
     // bool Update(Product product);
     bool Delete(Product product);

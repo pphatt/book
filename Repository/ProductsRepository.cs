@@ -102,6 +102,14 @@ public class ProductsRepository : IProductsRepository
         return publisher.PublisherId;
     }
     
+    public int AddNewStoreOwner(StoreOwner storeOwner)
+    {
+        _context.Add(storeOwner);
+        Save();
+
+        return storeOwner.StoreOwnerId;
+    }
+    
     public bool Add(Product product)
     {
         _context.Add(product);

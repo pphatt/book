@@ -57,12 +57,12 @@ public class CreateProductViewModel
         get;
         set;
     }
-
-    // public List<Tag> Tags
-    // {
-    //     get;
-    //     set;
-    // }
+    
+    public string? NewStoreOwner
+    {
+        get;
+        set;
+    }
 
     public List<IFormFile> images
     {

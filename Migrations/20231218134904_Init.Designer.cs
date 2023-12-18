@@ -12,7 +12,7 @@ using comic.Models;
 namespace comic.Migrations
 {
     [DbContext(typeof(ComicContext))]
-    [Migration("20231218131557_Init")]
+    [Migration("20231218134904_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -545,23 +545,11 @@ namespace comic.Migrations
                         .HasDefaultValueSql("(sysdatetime())");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("email");
 
-                    b.Property<string>("FirstName")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
-                        .HasColumnName("first_name");
-
-                    b.Property<string>("LastName")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
-                        .HasColumnName("last_name");
-
                     b.Property<string>("Password")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("password");
@@ -577,6 +565,11 @@ namespace comic.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("updated_at")
                         .HasDefaultValueSql("(sysdatetime())");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("last_name");
 
                     b.HasKey("StoreOwnerId")
                         .HasName("PK__store_ow__44C6080230412774");

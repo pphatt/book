@@ -165,26 +165,7 @@ public class Seed
                     {
                         Email = "abc@gmail.com",
                         Password = "123456789",
-                        FirstName = "Kim",
-                        LastName = "Dong",
-                        PhoneNumber = "1234567890"
-                    },
-                });
-
-                context.SaveChanges();
-            }
-
-            //StoreOwners
-            if (!context.StoreOwners.Any())
-            {
-                context.StoreOwners.AddRange(new List<StoreOwner>()
-                {
-                    new StoreOwner()
-                    {
-                        Email = "abc@gmail.com",
-                        Password = "123456789",
-                        FirstName = "Kim",
-                        LastName = "Dong",
+                        UserName = "Kim đồng",
                         PhoneNumber = "1234567890"
                     },
                 });

@@ -84,7 +84,7 @@ public class ManageProductsController : Controller
             new SelectList(await _productsRepository.GetAllPublisher(), "PublisherId", "PublisherName");
 
         ViewData["StoreOwnerId"] =
-            new SelectList(await _productsRepository.GetAllStoreOwner(), "StoreOwnerId", "FullName");
+            new SelectList(await _productsRepository.GetAllStoreOwner(), "StoreOwnerId", "UserName");
         
         ViewData["TagsId"] =
             new SelectList(await _productsRepository.GetAllTag(), "TagId", "TagName");
@@ -141,7 +141,12 @@ public class ManageProductsController : Controller
                 Price = vm.Price,
                 Inventory = vm.Inventory,
                 CategoryId = vm.CategoryId,
-                StoreOwnerId = vm.StoreOwnerId,
+                StoreOwnerId = vm.NewStoreOwner != null
+                    ? _productsRepository.AddNewStoreOwner(new StoreOwner()
+                    {
+                        UserName = vm.NewStoreOwner
+                    })
+                    : vm.PublisherId,
                 Images = images.Select(image => new Image { ImageName = image }).ToList()
             };
 

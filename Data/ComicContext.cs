@@ -368,10 +368,7 @@ public partial class ComicContext : IdentityDbContext<User>
             entity.Property(e => e.Email)
                 .HasMaxLength(100)
                 .HasColumnName("email");
-            entity.Property(e => e.FirstName)
-                .HasMaxLength(100)
-                .HasColumnName("first_name");
-            entity.Property(e => e.LastName)
+            entity.Property(e => e.UserName)
                 .HasMaxLength(100)
                 .HasColumnName("last_name");
             entity.Property(e => e.Password)
