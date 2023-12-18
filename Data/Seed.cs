@@ -937,7 +937,7 @@ public class Seed
                 await userManager.AddToRoleAsync(newAppUser, UserRoles.User);
             }
 
-            string appUserEmail2 = "VuTienPhat123@gmail.com";
+            string appUserEmail2 = "abc@fpt.edu.vn";
 
             var appUser2 = await userManager.FindByEmailAsync(appUserEmail2);
             if (appUser2 == null)
@@ -953,8 +953,8 @@ public class Seed
                     Birthday = new DateTime(2003, new Random().Next(1, 13),
                         new Random().Next(1, DateTime.DaysInMonth(2003, new Random().Next(1, 13)) + 1))
                 };
-                await userManager.CreateAsync(newAppUser, "VuTienPhat123@");
-                await userManager.AddToRoleAsync(newAppUser, UserRoles.User);
+                await userManager.CreateAsync(newAppUser, "Vutienphat123@");
+                await userManager.AddToRoleAsync(newAppUser, UserRoles.Admin);
             }
 
             string appUserEmail3 = "TrinhAnhDuong123@gmail.com";

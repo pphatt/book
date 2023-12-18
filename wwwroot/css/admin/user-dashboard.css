@@ -373,4 +373,163 @@
   background-color: #2e2e2e;
 }
 
+.back-drop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  z-index: 39;
+}
+
+.backdrop-animate-in {
+  animation: backdrop-animate-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes backdrop-animate-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.backdrop-animate-out {
+  animation: backdrop-animate-out 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes backdrop-animate-out {
+  0% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background-color: rgba(28, 28, 28, 0.8);
+  pointer-events: auto;
+  overflow-y: auto;
+}
+
+.modal-animate-in {
+  animation: overlayContentShow 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes overlayContentShow {
+  0% {
+    opacity: 0;
+    transform: translateY(-2%) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0) scale(1);
+  }
+}
+
+.modal-animate-out {
+  animation: fadeOutOverlayBg 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes fadeOutOverlayBg {
+  0% {
+    opacity: 1;
+    transform: translate(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-2%) scale(0.96);
+  }
+}
+
+.modal-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.modal-card {
+  background-color: #232323;
+  height: fit-content;
+  border: 1px solid #2e2e2e;
+  border-radius: 0.375rem;
+  vertical-align: middle;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  z-index: 40;
+  max-width: 24rem;
+  width: 100%;
+  box-shadow: 0 0 #000, 0 0 #000, 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  animation: overlayContentShow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-head {
+  color: #ededed;
+  background-color: #282828;
+  border-bottom: 1px solid #2e2e2e;
+  padding: 0.75rem 1.25rem;
+}
+
+.modal-body .form {
+  padding: 1rem;
+}
+.modal-body .form > div {
+  color: #bbb;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.modal-body .form > div:nth-child(n+2) {
+  margin-top: 8px;
+}
+.modal-body .submit-delete {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid #2e2e2e;
+}
+.modal-body .submit-delete > .button {
+  display: inline-flex;
+  color: #ededed;
+  border: 0;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-align: center;
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  width: 100%;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
+}
+.modal-body .submit-delete > .button > span {
+  color: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.modal-body .submit-delete .cancel-button {
+  background-color: #2e2e2e;
+  border: 1px solid #3e3e3e;
+}
+.modal-body .submit-delete .cancel-button:hover {
+  background-color: #343434;
+  border-color: #505050;
+}
+.modal-body .submit-delete .delete-button {
+  color: #ff6369;
+  background-color: #c62937;
+  border: 1px solid #822025;
+}
+.modal-body .submit-delete .delete-button:hover {
+  color: #fbfcfd;
+  background-color: #e5484d;
+  border-color: #e5484d;
+}
+
 /*# sourceMappingURL=user-dashboard.css.map */

@@ -17,13 +17,16 @@ namespace comic.Controllers;
 public class ManageUsersController : Controller
 {
     private readonly IUsersRepository _usersRepository;
+    private readonly SignInManager<User> _signInManager;
     private readonly UserManager<User> _userManager;
 
-    public ManageUsersController(IUsersRepository usersRepository, UserManager<User> userManager)
+    public ManageUsersController(IUsersRepository usersRepository, UserManager<User> userManager, SignInManager<User> signInManager)
     {
         _usersRepository = usersRepository;
         
         _userManager = userManager;
+        
+        _signInManager = signInManager;
     }
 
     [HttpGet]
@@ -82,15 +85,6 @@ public class ManageUsersController : Controller
         }
         
         return View("ManageUsers");
-    }
-    
-    // GET: ManageProducts/Delete/5
-    [Route("delete/{id}")]
-    public async Task<IActionResult> Delete(string id)
-    {
-        var user = await _usersRepository.GetByIdAsync(id);
-    
-        return View(user);
     }
     
     // POST: ManageProducts/Delete/5

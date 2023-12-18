@@ -42,13 +42,13 @@ public class UserRepository : IUsersRepository
             });
         }
 
-        return userRolesViewModel;
+        return userRolesViewModel.OrderBy(p => p.Roles.ElementAt(0) != "admin");
     }
 
     public async Task<ManageUsersViewModel> GetByIdAsync(string id)
     {
         var user = await _userManager.FindByIdAsync(id);
-        
+
         var userViewModel = new ManageUsersViewModel
         {
             Id = user.Id,
@@ -59,14 +59,14 @@ public class UserRepository : IUsersRepository
 
         return userViewModel;
     }
-    
+
     public async Task<User> GetByIdWithoutRoleAsync(string id)
     {
         var user = await _userManager.FindByIdAsync(id);
 
         return user;
     }
-    
+
     public async Task<IEnumerable<IdentityRole>> GetAllRoles()
     {
         var role = await _roleManager.Roles.ToListAsync();
@@ -79,10 +79,11 @@ public class UserRepository : IUsersRepository
         _context.Add(user);
         return Save();
     }
-    
+
     public bool Delete(User user)
     {
         _context.Remove(user);
+        
         return Save();
     }
 

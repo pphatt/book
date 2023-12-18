@@ -449,6 +449,10 @@
       "PackagePath": "staticwebassets\\js\\admin\\delete-product.js"
     },
     {
+      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\admin\\detele-user.js",
+      "PackagePath": "staticwebassets\\js\\admin\\detele-user.js"
+    },
+    {
       "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\auth\\delete-product.js",
       "PackagePath": "staticwebassets\\js\\auth\\delete-product.js"
     },

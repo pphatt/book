@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9c2tT+H9ub2zsF2Zq2YrKwG1TqkVubU+ddUfnx4zFbg=",
+  "Hash": "Y5CYtKKptlBx+Co/P+eUMb70ubK/6LC+XV/gDw7YoXI=",
   "Source": "comic",
   "BasePath": "_content/comic",
   "Mode": "Default",
@@ -2162,6 +2162,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\admin\\delete-product.js"
+    },
+    {
+      "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\js\\admin\\detele-user.js",
+      "SourceId": "comic",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\C#\\comic\\wwwroot\\",
+      "BasePath": "_content/comic",
+      "RelativePath": "js/admin/detele-user.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\admin\\detele-user.js"
     },
     {
       "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\js\\auth\\delete-product.js",
