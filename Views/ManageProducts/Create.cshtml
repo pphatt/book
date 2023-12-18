@@ -130,6 +130,56 @@
         </div>
         <div class="card">
             <div class="card-header">
+                <h5>Product Category</h5>
+            </div>
+            <div class="card-body">
+                <div class="card-body-row"
+                     style="display: flex;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                gap: 0.25rem;">
+                    <label for="tag">Product Tags</label>
+                    <div class="form-select-wrapper">
+                        <select class="form-select" id="tag" required="required" asp-for="CategoryId" asp-items="ViewBag.CategoryId">
+                            <option value="" selected disabled hidden>
+                                Select category
+                            </option>
+                        </select>
+                        <script>
+                            const element = document.getElementById("tag");
+                            
+                            const value = element.options[element.selectedIndex].value
+                            
+                            if (value === "comic") {
+                                
+                            } else if (value === "literature") {
+                                
+                            }
+                        </script>
+                        <span class="select-icon">
+                            <svg
+                                data-testid="geist-icon"
+                                fill="none"
+                                height="24"
+                                shape-rendering="geometricPrecision"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                                viewBox="0 0 24 24"
+                                width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="tag-panel">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
                 <h5>Product Images</h5>
             </div>
             <div class="card-body">
@@ -236,44 +286,6 @@
                         id="store_owner"
                         class="input"
                         placeholder="Add new Store owner"/>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <h5>Product Tags</h5>
-            </div>
-            <div class="card-body">
-                <div class="product-category">
-                    <label for="name">Tags</label>
-                    <div class="form-select-wrapper">
-                        <select
-                            required="required"
-                            class="form-select"
-                            style="width: 200px"
-                            asp-for="Tags" asp-items="ViewBag.TagId">
-                            <option value="" selected disabled hidden>
-                                Select tags
-                            </option>
-                        </select>
-                        <span
-                            class="select-icon"
-                            style="left: 170px">
-                            <svg
-                                data-testid="geist-icon"
-                                fill="none"
-                                height="24"
-                                shape-rendering="geometricPrecision"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="1.5"
-                                viewBox="0 0 24 24"
-                                width="24">
-                                <path d="M6 9l6 6 6-6"></path>
-                            </svg>
-                        </span>
-                    </div>
                 </div>
             </div>
         </div>
