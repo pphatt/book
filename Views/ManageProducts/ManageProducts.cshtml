@@ -237,7 +237,7 @@
                                     <div class="modal-card">
                                         <div class="modal-head">Delete conformation</div>
                                         <div class="modal-body">
-                                            <form method="post" asp-action="Delete">
+                                            <form method="post" asp-action="Delete" asp-controller="ManageProducts" asp-route-id="@product.ProductId">
                                                 <div class="form">
                                                     <div style="display: flex">
                                                         <p style="width: 150px">Product ID: </p>
@@ -249,7 +249,7 @@
                                                     </div>
                                                     <div style="display:flex">
                                                         <p style="width: 150px">Category: </p>
-                                                        <span></span>
+                                                        <span>@String.Join("", product.Category?.CategoryName.Substring(0, 1).ToUpper(), product.Category?.CategoryName.Substring(1))</span>
                                                     </div>
                                                 </div>
                                                 <div class="submit-delete">

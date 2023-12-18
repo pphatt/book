@@ -23,6 +23,7 @@ public class ProductsRepository : IProductsRepository
             .Include(p => p.Tags)
             .Include(p => p.Publisher)
             .Include(p => p.StoreOwner)
+            .Include(p => p.Category)
             .OrderBy(p => p.ProductId);
 
         return await products.ToListAsync();
@@ -36,6 +37,7 @@ public class ProductsRepository : IProductsRepository
             .Include(p => p.Tags)
             .Include(p => p.Publisher)
             .Include(p => p.StoreOwner)
+            .Include(p => p.Category)
             .OrderBy(p => p.ProductId);
 
         return await products.Skip(offset).Take(size).ToListAsync();
@@ -44,12 +46,12 @@ public class ProductsRepository : IProductsRepository
     public async Task<Product> GetByIdAsync(int id)
     {
         var product = await _context.Products
-            .Include(p => p.Category)
-            .Include(p => p.Publisher)
             .Include(p => p.Authors)
             .Include(p => p.Images)
             .Include(p => p.Tags)
+            .Include(p => p.Publisher)
             .Include(p => p.StoreOwner)
+            .Include(p => p.Category)
             .FirstOrDefaultAsync(m => m.ProductId == id);
 
         if (product == null)
