@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace comic.Migrations
 {
     /// <inheritdoc />
-    public partial class Identity : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -225,12 +225,14 @@ namespace comic.Migrations
                         name: "FK_Products_Category",
                         column: x => x.category_id,
                         principalTable: "categories",
-                        principalColumn: "category_id");
+                        principalColumn: "category_id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Products_Publisher",
                         column: x => x.publisher_id,
                         principalTable: "publishers",
-                        principalColumn: "publisher_id");
+                        principalColumn: "publisher_id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Products_Store",
                         column: x => x.store_owner_id,
@@ -377,7 +379,8 @@ namespace comic.Migrations
                         name: "FK_Cart_Products",
                         column: x => x.product_id,
                         principalTable: "products",
-                        principalColumn: "product_id");
+                        principalColumn: "product_id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_cart_AspNetUsers_UserId",
                         column: x => x.UserId,
@@ -402,7 +405,8 @@ namespace comic.Migrations
                         name: "FK_Images_Product",
                         column: x => x.product_id,
                         principalTable: "products",
-                        principalColumn: "product_id");
+                        principalColumn: "product_id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -419,12 +423,14 @@ namespace comic.Migrations
                         name: "FK_Product_Authors_Authors",
                         column: x => x.author_id,
                         principalTable: "authors",
-                        principalColumn: "author_id");
+                        principalColumn: "author_id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Product_Authors_Products",
                         column: x => x.product_id,
                         principalTable: "products",
-                        principalColumn: "product_id");
+                        principalColumn: "product_id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -441,12 +447,14 @@ namespace comic.Migrations
                         name: "FK_Product_Tag_Product",
                         column: x => x.product_id,
                         principalTable: "products",
-                        principalColumn: "product_id");
+                        principalColumn: "product_id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Product_Tag_Tag",
                         column: x => x.tag_id,
                         principalTable: "tags",
-                        principalColumn: "tag_id");
+                        principalColumn: "tag_id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -465,12 +473,14 @@ namespace comic.Migrations
                         name: "FK_Order_Details_Orders",
                         column: x => x.order_id,
                         principalTable: "orders",
-                        principalColumn: "order_id");
+                        principalColumn: "order_id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Order_Details_Products",
                         column: x => x.product_id,
                         principalTable: "products",
-                        principalColumn: "product_id");
+                        principalColumn: "product_id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

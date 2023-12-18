@@ -133,7 +133,7 @@ public partial class ComicContext : IdentityDbContext<User>
 
             entity.HasOne(d => d.Product).WithMany(p => p.Carts)
                 .HasForeignKey(d => d.ProductId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_Cart_Products");
         });
 
@@ -163,7 +163,7 @@ public partial class ComicContext : IdentityDbContext<User>
 
             entity.HasOne(d => d.Product).WithMany(p => p.Images)
                 .HasForeignKey(d => d.ProductId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_Images_Product");
         });
 
@@ -209,12 +209,12 @@ public partial class ComicContext : IdentityDbContext<User>
 
             entity.HasOne(d => d.Order).WithMany(p => p.OrderDetails)
                 .HasForeignKey(d => d.OrderId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_Order_Details_Orders");
 
             entity.HasOne(d => d.Product).WithMany(p => p.OrderDetails)
                 .HasForeignKey(d => d.ProductId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_Order_Details_Products");
         });
 
@@ -267,12 +267,12 @@ public partial class ComicContext : IdentityDbContext<User>
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_Products_Category");
 
             entity.HasOne(d => d.Publisher).WithMany(p => p.Products)
                 .HasForeignKey(d => d.PublisherId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_Products_Publisher");
 
             entity.HasOne(d => d.StoreOwner).WithMany(p => p.Products)
@@ -285,11 +285,11 @@ public partial class ComicContext : IdentityDbContext<User>
                     "ProductAuthor",
                     r => r.HasOne<Author>().WithMany()
                         .HasForeignKey("AuthorId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("FK_Product_Authors_Authors"),
                     l => l.HasOne<Product>().WithMany()
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("FK_Product_Authors_Products"),
                     j =>
                     {
@@ -304,11 +304,11 @@ public partial class ComicContext : IdentityDbContext<User>
                     "ProductTag",
                     r => r.HasOne<Tag>().WithMany()
                         .HasForeignKey("TagId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("FK_Product_Tag_Tag"),
                     l => l.HasOne<Product>().WithMany()
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("FK_Product_Tag_Product"),
                     j =>
                     {

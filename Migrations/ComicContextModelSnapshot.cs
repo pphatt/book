@@ -738,12 +738,14 @@ namespace comic.Migrations
                     b.HasOne("comic.Models.Author", null)
                         .WithMany()
                         .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Product_Authors_Authors");
 
                     b.HasOne("comic.Models.Product", null)
                         .WithMany()
                         .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Product_Authors_Products");
                 });
@@ -753,12 +755,14 @@ namespace comic.Migrations
                     b.HasOne("comic.Models.Product", null)
                         .WithMany()
                         .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Product_Tag_Product");
 
                     b.HasOne("comic.Models.Tag", null)
                         .WithMany()
                         .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Product_Tag_Tag");
                 });
@@ -768,6 +772,7 @@ namespace comic.Migrations
                     b.HasOne("comic.Models.Product", "Product")
                         .WithMany("Carts")
                         .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Cart_Products");
 
@@ -787,6 +792,7 @@ namespace comic.Migrations
                     b.HasOne("comic.Models.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Images_Product");
 
@@ -833,12 +839,14 @@ namespace comic.Migrations
                     b.HasOne("comic.Models.Order", "Order")
                         .WithMany("OrderDetails")
                         .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Order_Details_Orders");
 
                     b.HasOne("comic.Models.Product", "Product")
                         .WithMany("OrderDetails")
                         .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Order_Details_Products");
 
@@ -852,12 +860,14 @@ namespace comic.Migrations
                     b.HasOne("comic.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Products_Category");
 
                     b.HasOne("comic.Models.Publisher", "Publisher")
                         .WithMany("Products")
                         .HasForeignKey("PublisherId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Products_Publisher");
 
