@@ -35,6 +35,9 @@ public class UserRepository : IUsersRepository
                 Id = user.Id,
                 Email = user.Email!,
                 UserName = user.UserName!,
+                Name = user.Name!,
+                Sex = user.Sex!,
+                Birthday = user.Birthday!,
                 Roles = new List<string>(await _userManager.GetRolesAsync(user)),
             });
         }

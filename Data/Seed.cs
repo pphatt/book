@@ -886,8 +886,12 @@ public class Seed
                 {
                     UserName = "Khanh",
                     Email = adminUserEmail,
-                    FirstName = "Khanh",
+                    Name = "Le Nguyen Quoc Khanh",
                     EmailConfirmed = true,
+                    Sex = "Male",
+                    Age = 60,
+                    Birthday = new DateTime(2003, new Random().Next(1, 13),
+                        new Random().Next(1, DateTime.DaysInMonth(2003, new Random().Next(1, 13)) + 1))
                 };
                 await userManager.CreateAsync(newAdminUser, "LeNguyenQuocKhanh123@");
                 await userManager.AddToRoleAsync(newAdminUser, UserRoles.Admin);
@@ -902,15 +906,19 @@ public class Seed
                 {
                     UserName = "Phuc",
                     Email = appUserEmail,
-                    FirstName = "Phuc",
+                    Name = "Nguyen Vinh Phuc",
                     EmailConfirmed = true,
+                    Sex = "Male",
+                    Age = 30,
+                    Birthday = new DateTime(2003, new Random().Next(1, 13),
+                        new Random().Next(1, DateTime.DaysInMonth(2003, new Random().Next(1, 13)) + 1))
                 };
                 await userManager.CreateAsync(newAppUser, "NguyenVinhPhuc123@");
                 await userManager.AddToRoleAsync(newAppUser, UserRoles.User);
             }
-            
+
             string appUserEmail1 = "BuiHuuNghia123@gmail.com";
-            
+
             var appUser1 = await userManager.FindByEmailAsync(appUserEmail1);
             if (appUser1 == null)
             {
@@ -918,15 +926,19 @@ public class Seed
                 {
                     UserName = "Nghia",
                     Email = appUserEmail1,
-                    FirstName = "Nghia",
+                    Name = "Bui Huu Nghia",
                     EmailConfirmed = true,
+                    Sex = "Male",
+                    Age = 30,
+                    Birthday = new DateTime(2003, new Random().Next(1, 13),
+                        new Random().Next(1, DateTime.DaysInMonth(2003, new Random().Next(1, 13)) + 1))
                 };
                 await userManager.CreateAsync(newAppUser, "BuiHuuNghia123@");
                 await userManager.AddToRoleAsync(newAppUser, UserRoles.User);
             }
-            
+
             string appUserEmail2 = "VuTienPhat123@gmail.com";
-            
+
             var appUser2 = await userManager.FindByEmailAsync(appUserEmail2);
             if (appUser2 == null)
             {
@@ -934,24 +946,32 @@ public class Seed
                 {
                     UserName = "Phat",
                     Email = appUserEmail2,
-                    FirstName = "Phat",
+                    Name = "Vu Tien Phat",
                     EmailConfirmed = true,
+                    Sex = "Male",
+                    Age = 20,
+                    Birthday = new DateTime(2003, new Random().Next(1, 13),
+                        new Random().Next(1, DateTime.DaysInMonth(2003, new Random().Next(1, 13)) + 1))
                 };
                 await userManager.CreateAsync(newAppUser, "VuTienPhat123@");
                 await userManager.AddToRoleAsync(newAppUser, UserRoles.User);
             }
-            
+
             string appUserEmail3 = "TrinhAnhDuong123@gmail.com";
-            
+
             var appUser3 = await userManager.FindByEmailAsync(appUserEmail3);
             if (appUser3 == null)
             {
                 var newAppUser = new User()
                 {
-                    UserName = "Duong",
+                    UserName = "TrinhAnhDuong",
                     Email = appUserEmail3,
-                    FirstName = "Duong",
+                    Name = "Trinh Anh Duong",
                     EmailConfirmed = true,
+                    Sex = "Male",
+                    Age = 60,
+                    Birthday = new DateTime(2003, new Random().Next(1, 13),
+                        new Random().Next(1, DateTime.DaysInMonth(2003, new Random().Next(1, 13)) + 1))
                 };
                 await userManager.CreateAsync(newAppUser, "TrinhAnhDuong123@");
                 await userManager.AddToRoleAsync(newAppUser, UserRoles.User);

@@ -12,7 +12,7 @@ using comic.Models;
 namespace comic.Migrations
 {
     [DbContext(typeof(ComicContext))]
-    [Migration("20231218134904_Init")]
+    [Migration("20231218155155_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -606,6 +606,12 @@ namespace comic.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<int?>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Birthday")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -633,6 +639,9 @@ namespace comic.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
 
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -654,6 +663,9 @@ namespace comic.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sex")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("TwoFactorEnabled")
