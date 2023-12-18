@@ -140,7 +140,7 @@ public class ManageProductsController : Controller
                 Description = vm.Description,
                 Price = vm.Price,
                 Inventory = vm.Inventory,
-                CategoryId = 1,
+                CategoryId = vm.CategoryId,
                 StoreOwnerId = vm.StoreOwnerId,
                 Images = images.Select(image => new Image { ImageName = image }).ToList()
             };

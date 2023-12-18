@@ -58,11 +58,11 @@ public class CreateProductViewModel
         set;
     }
 
-    public List<Tag> Tags
-    {
-        get;
-        set;
-    }
+    // public List<Tag> Tags
+    // {
+    //     get;
+    //     set;
+    // }
 
     public List<IFormFile> images
     {
