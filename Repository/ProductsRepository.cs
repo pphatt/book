@@ -113,12 +113,33 @@ public class ProductsRepository : IProductsRepository
     public bool Add(Product product)
     {
         _context.Add(product);
+
+        return Save();
+    }
+    
+    public bool DeleteImages(int productId)
+    {
+        var product = _context.Products.Include(p => p.Images).FirstOrDefault(p => p.ProductId == productId);
+
+        if (product != null)
+        {
+            _context.Images.RemoveRange(product.Images);
+            _context.Entry(product).State = EntityState.Detached;
+        }
+        
         return Save();
     }
     
     public bool Delete(Product product)
     {
         _context.Remove(product);
+        return Save();
+    }
+    
+    public bool Update(Product product)
+    {
+        _context.Update(product);
+        
         return Save();
     }
     

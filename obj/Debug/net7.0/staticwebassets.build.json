@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Y5CYtKKptlBx+Co/P+eUMb70ubK/6LC+XV/gDw7YoXI=",
+  "Hash": "PgaT+ga88HZi0ThfS/JFQF07Q6RDVsc87wTnnk+CGTE=",
   "Source": "comic",
   "BasePath": "_content/comic",
   "Mode": "Default",
@@ -1537,6 +1537,25 @@
       "OriginalItemSpec": "wwwroot\\images\\5e54c679-75d5-4645-b69e-eb46e66f3870.jpg"
     },
     {
+      "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\images\\5eb71db0-2984-4d17-b138-2d467633506d.jpg",
+      "SourceId": "comic",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\C#\\comic\\wwwroot\\",
+      "BasePath": "_content/comic",
+      "RelativePath": "images/5eb71db0-2984-4d17-b138-2d467633506d.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\5eb71db0-2984-4d17-b138-2d467633506d.jpg"
+    },
+    {
       "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\images\\67efc5a2-306b-409b-aaba-e513daa13999.jpg",
       "SourceId": "comic",
       "SourceType": "Discovered",
@@ -1858,6 +1877,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\b56e7a3a-c2ac-4d07-a5c6-2350233da1ab.jpg"
+    },
+    {
+      "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\images\\bb867c48-1ea0-4f8f-b129-d0b216090e85.jpg",
+      "SourceId": "comic",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\C#\\comic\\wwwroot\\",
+      "BasePath": "_content/comic",
+      "RelativePath": "images/bb867c48-1ea0-4f8f-b129-d0b216090e85.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bb867c48-1ea0-4f8f-b129-d0b216090e85.jpg"
     },
     {
       "Identity": "C:\\Dev\\C#\\comic\\wwwroot\\images\\c4beaf09-75d0-4a9c-9dfc-7ca7b08a190a.jpg",

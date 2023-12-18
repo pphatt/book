@@ -85,7 +85,7 @@ public class ManageProductsController : Controller
 
         ViewData["StoreOwnerId"] =
             new SelectList(await _productsRepository.GetAllStoreOwner(), "StoreOwnerId", "UserName");
-        
+
         ViewData["TagsId"] =
             new SelectList(await _productsRepository.GetAllTag(), "TagId", "TagName");
 
@@ -146,7 +146,7 @@ public class ManageProductsController : Controller
                     {
                         UserName = vm.NewStoreOwner
                     })
-                    : vm.PublisherId,
+                    : vm.StoreOwnerId,
                 Images = images.Select(image => new Image { ImageName = image }).ToList()
             };
 
@@ -183,71 +183,101 @@ public class ManageProductsController : Controller
     //     return View(product);
     // }
 
-    // // GET: ManageProducts/Edit/5
-    // public async Task<IActionResult> Edit(int? id)
-    // {
-    //     if (id == null || _context.Products == null)
-    //     {
-    //         return NotFound();
-    //     }
-    //
-    //     var product = await _context.Products.FindAsync(id);
-    //     if (product == null)
-    //     {
-    //         return NotFound();
-    //     }
-    //
-    //     ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
-    //     ViewData["PublisherId"] =
-    //         new SelectList(_context.Publishers, "PublisherId", "PublisherId", product.PublisherId);
-    //     ViewData["StoreOwnerId"] =
-    //         new SelectList(_context.StoreOwners, "StoreOwnerId", "StoreOwnerId", product.StoreOwnerId);
-    //     return View(product);
-    // }
-    //
-    // // POST: ManageProducts/Edit/5
-    // // To protect from overposting attacks, enable the specific properties you want to bind to.
-    // // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-    // [HttpPost]
-    // [ValidateAntiForgeryToken]
-    // public async Task<IActionResult> Edit(int id,
-    //     [Bind("ProductId,Name,PublisherId,Description,Price,Inventory,CategoryId,StoreOwnerId,CreatedAt,UpdatedAt")]
-    //     Product product)
-    // {
-    //     if (id != product.ProductId)
-    //     {
-    //         return NotFound();
-    //     }
-    //
-    //     if (ModelState.IsValid)
-    //     {
-    //         try
-    //         {
-    //             _context.Update(product);
-    //             await _context.SaveChangesAsync();
-    //         }
-    //         catch (DbUpdateConcurrencyException)
-    //         {
-    //             if (!ProductExists(product.ProductId))
-    //             {
-    //                 return NotFound();
-    //             }
-    //             else
-    //             {
-    //                 throw;
-    //             }
-    //         }
-    //
-    //         return RedirectToAction(nameof(ManageProducts));
-    //     }
-    //
-    //     ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
-    //     ViewData["PublisherId"] =
-    //         new SelectList(_context.Publishers, "PublisherId", "PublisherId", product.PublisherId);
-    //     ViewData["StoreOwnerId"] =
-    //         new SelectList(_context.StoreOwners, "StoreOwnerId", "StoreOwnerId", product.StoreOwnerId);
-    //     return View(product);
-    // }
+    // GET: ManageProducts/Edit/5
+    [Route("/admin/manage-products/edit/{id}")]
+    public async Task<IActionResult> Edit(int id)
+    {
+        var product = await _productsRepository.GetByIdAsync(id);
+
+        var productViewModel = new EditProductViewModel()
+        {
+            Id = product.ProductId,
+            Name = product.Name,
+            PublisherId = product.PublisherId,
+            Description = product.Description,
+            Price = product.Price,
+            Inventory = product.Inventory,
+            CategoryId = product.CategoryId,
+            StoreOwnerId = product.StoreOwnerId,
+            images = new List<IFormFile>()
+        };
+
+        ViewData["CategoryId"] =
+            new SelectList(await _productsRepository.GetAllCategories(), "CategoryId", "CategoryName",
+                product.CategoryId);
+
+        ViewData["PublisherId"] =
+            new SelectList(await _productsRepository.GetAllPublisher(), "PublisherId", "PublisherName",
+                product.PublisherId);
+
+        ViewData["StoreOwnerId"] =
+            new SelectList(await _productsRepository.GetAllStoreOwner(), "StoreOwnerId", "UserName",
+                product.StoreOwnerId);
+
+        return View(productViewModel);
+    }
+
+    // POST: ManageProducts/Edit/5
+    // To protect from overposting attacks, enable the specific properties you want to bind to.
+    // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    [Route("/admin/manage-products/edit/{id}")]
+    public async Task<IActionResult> Edit(EditProductViewModel vm)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View();
+        }
+        
+        var images = new List<string>();
+
+        if (vm.images != null && vm.images.Any())
+        {
+            _productsRepository.DeleteImages(vm.Id);
+            
+            String uploadfolder = Path.Combine(_env.WebRootPath, "images");
+
+            foreach (var image in vm.images)
+            {
+                var filename = Guid.NewGuid().ToString() + Path.GetExtension(image.FileName);
+
+                var filepath = Path.Combine(uploadfolder, filename);
+
+                try
+                {
+                    using (var fileStream = new FileStream(filepath, FileMode.Create))
+                    {
+                        await image.CopyToAsync(fileStream);
+                    }
+
+                    images.Add(filename);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error copying file: {ex.Message}");
+                    return View("Error");
+                }
+            }
+        }
+
+        var product = new Product
+        {
+            ProductId = vm.Id,
+            Name = vm.Name,
+            PublisherId = vm.PublisherId,
+            Description = vm.Description,
+            Price = vm.Price,
+            Inventory = vm.Inventory,
+            StoreOwnerId = vm.StoreOwnerId,
+            CategoryId = vm.CategoryId,
+            Images = images.Select(image => new Image { ImageName = image }).ToList()
+        };
+
+        _productsRepository.Update(product);
+
+        return RedirectToAction(nameof(ManageProducts));
+    }
 
     // GET: ManageProducts/Delete/5
     [Route("delete/{id}")]

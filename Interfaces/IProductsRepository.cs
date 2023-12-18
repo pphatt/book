@@ -15,6 +15,8 @@ public interface IProductsRepository
     int AddNewStoreOwner(StoreOwner storeOwner);
     bool Add(Product product);
     // bool Update(Product product);
+    bool DeleteImages(int productId);
     bool Delete(Product product);
+    bool Update(Product product);
     bool Save();
 }
