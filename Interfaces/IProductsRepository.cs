@@ -9,6 +9,7 @@ public interface IProductsRepository
     Task<Product> GetByIdAsync(int id);
     Task<IEnumerable<Category>> GetAllCategories();
     Task<IEnumerable<Publisher>> GetAllPublisher();
+    Task<IEnumerable<Tag>> GetAllTag();
     Task<IEnumerable<StoreOwner>> GetAllStoreOwner();
     int AddNewPublisher(Publisher publisher);
     bool Add(Product product);

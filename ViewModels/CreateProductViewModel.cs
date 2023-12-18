@@ -1,4 +1,6 @@
-﻿namespace comic.ViewModels;
+﻿using comic.Models;
+
+namespace comic.ViewModels;
 
 public class CreateProductViewModel
 {
@@ -55,6 +57,16 @@ public class CreateProductViewModel
         get;
         set;
     }
-    
-    public List<IFormFile> images { get; set; }
+
+    public List<Tag> Tags
+    {
+        get;
+        set;
+    }
+
+    public List<IFormFile> images
+    {
+        get;
+        set;
+    }
 }

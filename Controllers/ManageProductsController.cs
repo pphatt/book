@@ -85,6 +85,9 @@ public class ManageProductsController : Controller
 
         ViewData["StoreOwnerId"] =
             new SelectList(await _productsRepository.GetAllStoreOwner(), "StoreOwnerId", "FullName");
+        
+        ViewData["TagsId"] =
+            new SelectList(await _productsRepository.GetAllTag(), "TagId", "TagName");
 
         return View();
     }

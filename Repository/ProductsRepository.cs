@@ -76,6 +76,14 @@ public class ProductsRepository : IProductsRepository
         return await publisher.ToListAsync();
     }
     
+    public async Task<IEnumerable<Tag>> GetAllTag()
+    {
+        var tags = _context.Tags
+            .OrderBy(c => c.TagId);
+
+        return await tags.ToListAsync();
+    }
+    
     public async Task<IEnumerable<StoreOwner>> GetAllStoreOwner()
     {
         var storeOwner = _context.StoreOwners
