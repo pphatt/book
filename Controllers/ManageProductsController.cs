@@ -200,6 +200,7 @@ public class ManageProductsController : Controller
             Inventory = product.Inventory,
             CategoryId = product.CategoryId,
             StoreOwnerId = product.StoreOwnerId,
+            DefaultImages = product.Images,
             images = new List<IFormFile>(),
             CreatedAt = product.CreatedAt
         };

@@ -435,3 +435,28 @@
   
   box-shadow: 0 0 #000000, 0 0 #000000, 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
+
+.edit-images {
+  display: flex;
+  gap: 1rem;
+
+  width: 100%;
+  max-height: 500px;
+  
+  //overflow-x: auto;
+
+  aspect-ratio: 5/7;
+
+  img {
+    width: 500px;
+    height: 500px;
+
+    border-radius: 0.25rem;
+
+    object-fit: cover;
+    object-position: center center;
+
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 #0000, 0 0 #0000, var(--tw-shadow);
+  }
+}

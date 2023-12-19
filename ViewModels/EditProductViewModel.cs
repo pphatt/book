@@ -52,11 +52,22 @@ public class EditProductViewModel
         set;
     }
 
+    public ICollection<Image>? DefaultImages
+    {
+        get;
+        set;
+    }
+
+
     public List<IFormFile>? images
     {
         get;
         set;
     }
-    
-    public DateTime CreatedAt { get; set; }
+
+    public DateTime CreatedAt
+    {
+        get;
+        set;
+    }
 }

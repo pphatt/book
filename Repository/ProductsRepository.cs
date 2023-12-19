@@ -52,6 +52,7 @@ public class ProductsRepository : IProductsRepository
             .Include(p => p.Publisher)
             .Include(p => p.StoreOwner)
             .Include(p => p.Category)
+            .Include(p => p.Images)
             .FirstOrDefaultAsync(m => m.ProductId == id);
 
         if (product == null)
