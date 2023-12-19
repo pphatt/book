@@ -60,7 +60,6 @@
 }
 .inner-main-content > div {
   flex: 1;
-  overflow: auto;
 }
 
 .action-section-wrapper {

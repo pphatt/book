@@ -1,743 +1,751 @@
 {
   "Files": [
     {
-      "Id": "C:\\Dev\\C#\\comic\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\comic.bundle.scp.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\comic.bundle.scp.css",
       "PackagePath": "staticwebassets\\comic.bundle.scp.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\add-product.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\admin\\add-product.css",
       "PackagePath": "staticwebassets\\css\\admin\\add-product.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\add-product.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\admin\\add-product.css.map",
       "PackagePath": "staticwebassets\\css\\admin\\add-product.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\add-user.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\admin\\add-user.css",
       "PackagePath": "staticwebassets\\css\\admin\\add-user.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\add-user.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\admin\\add-user.css.map",
       "PackagePath": "staticwebassets\\css\\admin\\add-user.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\delete-product.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\admin\\delete-product.css",
       "PackagePath": "staticwebassets\\css\\admin\\delete-product.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\delete-product.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\admin\\delete-product.css.map",
       "PackagePath": "staticwebassets\\css\\admin\\delete-product.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\delete-user.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\admin\\delete-user.css",
       "PackagePath": "staticwebassets\\css\\admin\\delete-user.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\delete-user.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\admin\\delete-user.css.map",
       "PackagePath": "staticwebassets\\css\\admin\\delete-user.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\product-dashboard.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\admin\\product-dashboard.css",
       "PackagePath": "staticwebassets\\css\\admin\\product-dashboard.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\product-dashboard.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\admin\\product-dashboard.css.map",
       "PackagePath": "staticwebassets\\css\\admin\\product-dashboard.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\user-dashboard.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\admin\\user-dashboard.css",
       "PackagePath": "staticwebassets\\css\\admin\\user-dashboard.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\admin\\user-dashboard.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\admin\\user-dashboard.css.map",
       "PackagePath": "staticwebassets\\css\\admin\\user-dashboard.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\authenticate\\login.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\authenticate\\login.css",
       "PackagePath": "staticwebassets\\css\\authenticate\\login.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\authenticate\\login.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\authenticate\\login.css.map",
       "PackagePath": "staticwebassets\\css\\authenticate\\login.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\authenticate\\register.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\authenticate\\register.css",
       "PackagePath": "staticwebassets\\css\\authenticate\\register.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\authenticate\\register.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\authenticate\\register.css.map",
       "PackagePath": "staticwebassets\\css\\authenticate\\register.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\carousel\\carousel-one.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\components\\carousel\\carousel-one.css",
       "PackagePath": "staticwebassets\\css\\components\\carousel\\carousel-one.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\carousel\\carousel-one.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\components\\carousel\\carousel-one.css.map",
       "PackagePath": "staticwebassets\\css\\components\\carousel\\carousel-one.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\carousel\\carousel-two.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\components\\carousel\\carousel-two.css",
       "PackagePath": "staticwebassets\\css\\components\\carousel\\carousel-two.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\carousel\\carousel-two.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\components\\carousel\\carousel-two.css.map",
       "PackagePath": "staticwebassets\\css\\components\\carousel\\carousel-two.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\hero.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\components\\hero.css",
       "PackagePath": "staticwebassets\\css\\components\\hero.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\hero.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\components\\hero.css.map",
       "PackagePath": "staticwebassets\\css\\components\\hero.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\footer.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\components\\layout\\footer.css",
       "PackagePath": "staticwebassets\\css\\components\\layout\\footer.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\footer.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\components\\layout\\footer.css.map",
       "PackagePath": "staticwebassets\\css\\components\\layout\\footer.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\navigation-bar.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\components\\layout\\navigation-bar.css",
       "PackagePath": "staticwebassets\\css\\components\\layout\\navigation-bar.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\components\\layout\\navigation-bar.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\components\\layout\\navigation-bar.css.map",
       "PackagePath": "staticwebassets\\css\\components\\layout\\navigation-bar.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\global.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\global.css",
       "PackagePath": "staticwebassets\\css\\global.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\global.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\global.css.map",
       "PackagePath": "staticwebassets\\css\\global.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\home\\home.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\home\\home.css",
       "PackagePath": "staticwebassets\\css\\home\\home.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\home\\home.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\home\\home.css.map",
       "PackagePath": "staticwebassets\\css\\home\\home.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\product\\product.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\product\\product.css",
       "PackagePath": "staticwebassets\\css\\product\\product.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\product\\product.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\product\\product.css.map",
       "PackagePath": "staticwebassets\\css\\product\\product.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\shared-layout\\admin-layout.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\shared-layout\\admin-layout.css",
       "PackagePath": "staticwebassets\\css\\shared-layout\\admin-layout.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\shared-layout\\admin-layout.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\shared-layout\\admin-layout.css.map",
       "PackagePath": "staticwebassets\\css\\shared-layout\\admin-layout.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\shared-layout\\authenticate-shared-layout.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\shared-layout\\authenticate-shared-layout.css",
       "PackagePath": "staticwebassets\\css\\shared-layout\\authenticate-shared-layout.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\shared-layout\\authenticate-shared-layout.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\shared-layout\\authenticate-shared-layout.css.map",
       "PackagePath": "staticwebassets\\css\\shared-layout\\authenticate-shared-layout.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\shared-layout\\shared-layout.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\shared-layout\\shared-layout.css",
       "PackagePath": "staticwebassets\\css\\shared-layout\\shared-layout.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\css\\shared-layout\\shared-layout.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\css\\shared-layout\\shared-layout.css.map",
       "PackagePath": "staticwebassets\\css\\shared-layout\\shared-layout.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\favicon.ico",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Black.otf",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-Black.otf",
       "PackagePath": "staticwebassets\\font\\Geist-Black.otf"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Black.woff2",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-Black.woff2",
       "PackagePath": "staticwebassets\\font\\Geist-Black.woff2"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Bold.otf",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-Bold.otf",
       "PackagePath": "staticwebassets\\font\\Geist-Bold.otf"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Bold.woff2",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-Bold.woff2",
       "PackagePath": "staticwebassets\\font\\Geist-Bold.woff2"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Light.otf",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-Light.otf",
       "PackagePath": "staticwebassets\\font\\Geist-Light.otf"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Light.woff2",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-Light.woff2",
       "PackagePath": "staticwebassets\\font\\Geist-Light.woff2"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Medium.otf",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-Medium.otf",
       "PackagePath": "staticwebassets\\font\\Geist-Medium.otf"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Medium.woff2",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-Medium.woff2",
       "PackagePath": "staticwebassets\\font\\Geist-Medium.woff2"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Regular.otf",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-Regular.otf",
       "PackagePath": "staticwebassets\\font\\Geist-Regular.otf"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Regular.woff2",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-Regular.woff2",
       "PackagePath": "staticwebassets\\font\\Geist-Regular.woff2"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-SemiBold.otf",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-SemiBold.otf",
       "PackagePath": "staticwebassets\\font\\Geist-SemiBold.otf"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-SemiBold.woff2",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-SemiBold.woff2",
       "PackagePath": "staticwebassets\\font\\Geist-SemiBold.woff2"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Thin.otf",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-Thin.otf",
       "PackagePath": "staticwebassets\\font\\Geist-Thin.otf"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-Thin.woff2",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-Thin.woff2",
       "PackagePath": "staticwebassets\\font\\Geist-Thin.woff2"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-UltraBlack.otf",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-UltraBlack.otf",
       "PackagePath": "staticwebassets\\font\\Geist-UltraBlack.otf"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-UltraBlack.woff2",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-UltraBlack.woff2",
       "PackagePath": "staticwebassets\\font\\Geist-UltraBlack.woff2"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-UltraLight.otf",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-UltraLight.otf",
       "PackagePath": "staticwebassets\\font\\Geist-UltraLight.otf"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\Geist-UltraLight.woff2",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\Geist-UltraLight.woff2",
       "PackagePath": "staticwebassets\\font\\Geist-UltraLight.woff2"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\GeistVariableVF.ttf",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\GeistVariableVF.ttf",
       "PackagePath": "staticwebassets\\font\\GeistVariableVF.ttf"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\font\\GeistVariableVF.woff2",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\font\\GeistVariableVF.woff2",
       "PackagePath": "staticwebassets\\font\\GeistVariableVF.woff2"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\05f8dcb4-8ea1-48db-a0b1-3a8fbf695e5a.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\05f8dcb4-8ea1-48db-a0b1-3a8fbf695e5a.jpg",
       "PackagePath": "staticwebassets\\images\\05f8dcb4-8ea1-48db-a0b1-3a8fbf695e5a.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\08ac733f-6a4b-4fff-88fd-17c2898d9332.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\08ac733f-6a4b-4fff-88fd-17c2898d9332.jpg",
       "PackagePath": "staticwebassets\\images\\08ac733f-6a4b-4fff-88fd-17c2898d9332.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\13d94309-60dc-4dac-9e3c-2c6bf91076ed.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\13d94309-60dc-4dac-9e3c-2c6bf91076ed.jpg",
       "PackagePath": "staticwebassets\\images\\13d94309-60dc-4dac-9e3c-2c6bf91076ed.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\1c978584-a986-4288-8aee-25c4a47dfe01.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\19f59c56-cfa4-4b37-b31c-a986e9fb24a0.jpg",
+      "PackagePath": "staticwebassets\\images\\19f59c56-cfa4-4b37-b31c-a986e9fb24a0.jpg"
+    },
+    {
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\1c978584-a986-4288-8aee-25c4a47dfe01.jpg",
       "PackagePath": "staticwebassets\\images\\1c978584-a986-4288-8aee-25c4a47dfe01.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\1f0f05dd-ef3f-4110-927f-080974467f0f.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\1f0f05dd-ef3f-4110-927f-080974467f0f.jpg",
       "PackagePath": "staticwebassets\\images\\1f0f05dd-ef3f-4110-927f-080974467f0f.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\2221de21-76f5-49be-8920-fa4b071a0396.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\2221de21-76f5-49be-8920-fa4b071a0396.jpg",
       "PackagePath": "staticwebassets\\images\\2221de21-76f5-49be-8920-fa4b071a0396.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\22add691-47f9-4aee-8040-76044826b622.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\22add691-47f9-4aee-8040-76044826b622.jpg",
       "PackagePath": "staticwebassets\\images\\22add691-47f9-4aee-8040-76044826b622.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\22ff2622-e93c-420f-b477-7a86eec02a1d.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\22ff2622-e93c-420f-b477-7a86eec02a1d.jpg",
       "PackagePath": "staticwebassets\\images\\22ff2622-e93c-420f-b477-7a86eec02a1d.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\2378a37d-519c-4e65-81cd-b09bc2dda63f.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\2378a37d-519c-4e65-81cd-b09bc2dda63f.jpg",
       "PackagePath": "staticwebassets\\images\\2378a37d-519c-4e65-81cd-b09bc2dda63f.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\25c61bc3-4df3-437d-a266-ef629ea65770.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\25c61bc3-4df3-437d-a266-ef629ea65770.jpg",
       "PackagePath": "staticwebassets\\images\\25c61bc3-4df3-437d-a266-ef629ea65770.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\279f4f18-115f-4c70-8707-80f15153592a.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\279f4f18-115f-4c70-8707-80f15153592a.jpg",
       "PackagePath": "staticwebassets\\images\\279f4f18-115f-4c70-8707-80f15153592a.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\2cf834f4-eff8-427e-b4d7-6bf5361f6234.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\2cf834f4-eff8-427e-b4d7-6bf5361f6234.jpg",
       "PackagePath": "staticwebassets\\images\\2cf834f4-eff8-427e-b4d7-6bf5361f6234.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\2fc35906-cdde-47f6-9a7a-b26f112e24be.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\2fc35906-cdde-47f6-9a7a-b26f112e24be.jpg",
       "PackagePath": "staticwebassets\\images\\2fc35906-cdde-47f6-9a7a-b26f112e24be.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\330a08d7-f6b1-4541-b958-443be3463887.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\330a08d7-f6b1-4541-b958-443be3463887.jpg",
       "PackagePath": "staticwebassets\\images\\330a08d7-f6b1-4541-b958-443be3463887.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\3d42bddf-5c49-4bf2-aeeb-6952ca440c2e.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\3d42bddf-5c49-4bf2-aeeb-6952ca440c2e.jpg",
       "PackagePath": "staticwebassets\\images\\3d42bddf-5c49-4bf2-aeeb-6952ca440c2e.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\462a0906-5af5-4a00-805e-93d9fa65246d.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\462a0906-5af5-4a00-805e-93d9fa65246d.jpg",
       "PackagePath": "staticwebassets\\images\\462a0906-5af5-4a00-805e-93d9fa65246d.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\523624d3-80c9-4e78-a61d-bb9584de7fbc.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\523624d3-80c9-4e78-a61d-bb9584de7fbc.jpg",
       "PackagePath": "staticwebassets\\images\\523624d3-80c9-4e78-a61d-bb9584de7fbc.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\5b90247b-7538-4d26-bdb7-bb18dc51cab0.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\5b90247b-7538-4d26-bdb7-bb18dc51cab0.jpg",
       "PackagePath": "staticwebassets\\images\\5b90247b-7538-4d26-bdb7-bb18dc51cab0.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\5e54c679-75d5-4645-b69e-eb46e66f3870.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\5e54c679-75d5-4645-b69e-eb46e66f3870.jpg",
       "PackagePath": "staticwebassets\\images\\5e54c679-75d5-4645-b69e-eb46e66f3870.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\5eb71db0-2984-4d17-b138-2d467633506d.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\5eb71db0-2984-4d17-b138-2d467633506d.jpg",
       "PackagePath": "staticwebassets\\images\\5eb71db0-2984-4d17-b138-2d467633506d.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\67efc5a2-306b-409b-aaba-e513daa13999.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\67efc5a2-306b-409b-aaba-e513daa13999.jpg",
       "PackagePath": "staticwebassets\\images\\67efc5a2-306b-409b-aaba-e513daa13999.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\7847bc06-7b31-4a38-9bcd-c58002cd8808.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\7847bc06-7b31-4a38-9bcd-c58002cd8808.jpg",
       "PackagePath": "staticwebassets\\images\\7847bc06-7b31-4a38-9bcd-c58002cd8808.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\78d05fa6-69e4-40e8-b315-e966cf73e1ef.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\78d05fa6-69e4-40e8-b315-e966cf73e1ef.jpg",
       "PackagePath": "staticwebassets\\images\\78d05fa6-69e4-40e8-b315-e966cf73e1ef.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\7b0c8523-9bfd-4b5e-982e-c446c91bb272.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\7b0c8523-9bfd-4b5e-982e-c446c91bb272.jpg",
       "PackagePath": "staticwebassets\\images\\7b0c8523-9bfd-4b5e-982e-c446c91bb272.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\7cac0992-5b89-4171-87cd-250c300a77d0.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\7cac0992-5b89-4171-87cd-250c300a77d0.jpg",
       "PackagePath": "staticwebassets\\images\\7cac0992-5b89-4171-87cd-250c300a77d0.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\84a140c3-2afb-4c8a-af28-0c9e48431dab.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\84a140c3-2afb-4c8a-af28-0c9e48431dab.jpg",
       "PackagePath": "staticwebassets\\images\\84a140c3-2afb-4c8a-af28-0c9e48431dab.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\94400622-096e-4a56-bb35-d501853148d7.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\94400622-096e-4a56-bb35-d501853148d7.jpg",
       "PackagePath": "staticwebassets\\images\\94400622-096e-4a56-bb35-d501853148d7.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\974804d2-c0df-4639-a0af-425ccf2462f9.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\974804d2-c0df-4639-a0af-425ccf2462f9.jpg",
       "PackagePath": "staticwebassets\\images\\974804d2-c0df-4639-a0af-425ccf2462f9.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\978acb8b-19bc-448b-acea-7eadade924d8.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\978acb8b-19bc-448b-acea-7eadade924d8.jpg",
       "PackagePath": "staticwebassets\\images\\978acb8b-19bc-448b-acea-7eadade924d8.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\98162533-1838-4639-8419-2f19f8af651b.png",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\98162533-1838-4639-8419-2f19f8af651b.png",
       "PackagePath": "staticwebassets\\images\\98162533-1838-4639-8419-2f19f8af651b.png"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\984ede4f-3628-4f4f-b904-ea968900de11.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\984ede4f-3628-4f4f-b904-ea968900de11.jpg",
       "PackagePath": "staticwebassets\\images\\984ede4f-3628-4f4f-b904-ea968900de11.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\985993ef-46b5-45ee-9fae-4fcc2e695e42.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\985993ef-46b5-45ee-9fae-4fcc2e695e42.jpg",
       "PackagePath": "staticwebassets\\images\\985993ef-46b5-45ee-9fae-4fcc2e695e42.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\9ab465d6-03ac-48c7-a4c5-2354aa1f768e.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\9ab465d6-03ac-48c7-a4c5-2354aa1f768e.jpg",
       "PackagePath": "staticwebassets\\images\\9ab465d6-03ac-48c7-a4c5-2354aa1f768e.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\a9041920-28fc-4ae7-88f2-95a73132839c.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\a9041920-28fc-4ae7-88f2-95a73132839c.jpg",
       "PackagePath": "staticwebassets\\images\\a9041920-28fc-4ae7-88f2-95a73132839c.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\a96e80ee-9d37-453a-8577-b61681a51f0f.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\a96e80ee-9d37-453a-8577-b61681a51f0f.jpg",
       "PackagePath": "staticwebassets\\images\\a96e80ee-9d37-453a-8577-b61681a51f0f.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\ad7a4227-8d8f-46a0-b2c4-c4a214f2b969.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\ad7a4227-8d8f-46a0-b2c4-c4a214f2b969.jpg",
       "PackagePath": "staticwebassets\\images\\ad7a4227-8d8f-46a0-b2c4-c4a214f2b969.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\b1ecb77d-0108-4757-b635-c9a5ec91b8e1.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\b1ecb77d-0108-4757-b635-c9a5ec91b8e1.jpg",
       "PackagePath": "staticwebassets\\images\\b1ecb77d-0108-4757-b635-c9a5ec91b8e1.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\b56e7a3a-c2ac-4d07-a5c6-2350233da1ab.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\b56e7a3a-c2ac-4d07-a5c6-2350233da1ab.jpg",
       "PackagePath": "staticwebassets\\images\\b56e7a3a-c2ac-4d07-a5c6-2350233da1ab.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\bb867c48-1ea0-4f8f-b129-d0b216090e85.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\bb867c48-1ea0-4f8f-b129-d0b216090e85.jpg",
       "PackagePath": "staticwebassets\\images\\bb867c48-1ea0-4f8f-b129-d0b216090e85.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\c4beaf09-75d0-4a9c-9dfc-7ca7b08a190a.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\c4beaf09-75d0-4a9c-9dfc-7ca7b08a190a.jpg",
       "PackagePath": "staticwebassets\\images\\c4beaf09-75d0-4a9c-9dfc-7ca7b08a190a.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\ce8a7782-37c0-44dd-8052-84f6d11d00a4.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\ce8a7782-37c0-44dd-8052-84f6d11d00a4.jpg",
       "PackagePath": "staticwebassets\\images\\ce8a7782-37c0-44dd-8052-84f6d11d00a4.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\cf612559-6bec-47ac-9230-1bc7686f88dd.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\cf612559-6bec-47ac-9230-1bc7686f88dd.jpg",
       "PackagePath": "staticwebassets\\images\\cf612559-6bec-47ac-9230-1bc7686f88dd.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\d14f45e3-4598-418b-9849-bd54bd9a065c.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\d14f45e3-4598-418b-9849-bd54bd9a065c.jpg",
       "PackagePath": "staticwebassets\\images\\d14f45e3-4598-418b-9849-bd54bd9a065c.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\d30894c3-b90e-4225-8ac6-21c0ab094aff.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\d1699957-e406-42fc-b1ec-c81c452d3c87.jpg",
+      "PackagePath": "staticwebassets\\images\\d1699957-e406-42fc-b1ec-c81c452d3c87.jpg"
+    },
+    {
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\d30894c3-b90e-4225-8ac6-21c0ab094aff.jpg",
       "PackagePath": "staticwebassets\\images\\d30894c3-b90e-4225-8ac6-21c0ab094aff.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\d54cdbcc-0081-4773-82ae-893cde97e050.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\d54cdbcc-0081-4773-82ae-893cde97e050.jpg",
       "PackagePath": "staticwebassets\\images\\d54cdbcc-0081-4773-82ae-893cde97e050.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\d68e9929-1b28-467e-8af3-3430695beb93.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\d68e9929-1b28-467e-8af3-3430695beb93.jpg",
       "PackagePath": "staticwebassets\\images\\d68e9929-1b28-467e-8af3-3430695beb93.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\e6ce99fd-6506-47f4-b4f5-ed7f8ce59ed6.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\e6ce99fd-6506-47f4-b4f5-ed7f8ce59ed6.jpg",
       "PackagePath": "staticwebassets\\images\\e6ce99fd-6506-47f4-b4f5-ed7f8ce59ed6.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\e7242843-a694-453e-9089-9dcb214626e3.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\e7242843-a694-453e-9089-9dcb214626e3.jpg",
       "PackagePath": "staticwebassets\\images\\e7242843-a694-453e-9089-9dcb214626e3.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\e7e5e267-502f-4b77-9f19-b7ea1344f68f.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\e7e5e267-502f-4b77-9f19-b7ea1344f68f.jpg",
       "PackagePath": "staticwebassets\\images\\e7e5e267-502f-4b77-9f19-b7ea1344f68f.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\e90bdc47-c8b9-4df7-b2c0-17641b645ee1.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\e90bdc47-c8b9-4df7-b2c0-17641b645ee1.jpg",
       "PackagePath": "staticwebassets\\images\\e90bdc47-c8b9-4df7-b2c0-17641b645ee1.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\f3190354-e4db-4456-a184-1d91fcb0d893.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\f3190354-e4db-4456-a184-1d91fcb0d893.jpg",
       "PackagePath": "staticwebassets\\images\\f3190354-e4db-4456-a184-1d91fcb0d893.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\f8f55825-2c11-4b7e-947a-15e52ae34cb0.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\f8f55825-2c11-4b7e-947a-15e52ae34cb0.jpg",
       "PackagePath": "staticwebassets\\images\\f8f55825-2c11-4b7e-947a-15e52ae34cb0.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\fe570c0d-56d8-4213-8b6e-672282794001.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\fe570c0d-56d8-4213-8b6e-672282794001.jpg",
       "PackagePath": "staticwebassets\\images\\fe570c0d-56d8-4213-8b6e-672282794001.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\images\\ff8a7f7e-c7fc-4633-8c4e-1efb76abc2be.jpg",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\images\\ff8a7f7e-c7fc-4633-8c4e-1efb76abc2be.jpg",
       "PackagePath": "staticwebassets\\images\\ff8a7f7e-c7fc-4633-8c4e-1efb76abc2be.jpg"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\admin\\delete-product.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\js\\admin\\delete-product.js",
       "PackagePath": "staticwebassets\\js\\admin\\delete-product.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\admin\\detele-user.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\js\\admin\\detele-user.js",
       "PackagePath": "staticwebassets\\js\\admin\\detele-user.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\auth\\delete-product.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\js\\auth\\delete-product.js",
       "PackagePath": "staticwebassets\\js\\auth\\delete-product.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\auth\\user-panel.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\js\\auth\\user-panel.js",
       "PackagePath": "staticwebassets\\js\\auth\\user-panel.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\carousel\\carousel-one.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\js\\carousel\\carousel-one.js",
       "PackagePath": "staticwebassets\\js\\carousel\\carousel-one.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\carousel\\carousel-two.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\js\\carousel\\carousel-two.js",
       "PackagePath": "staticwebassets\\js\\carousel\\carousel-two.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\global.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\js\\global.js",
       "PackagePath": "staticwebassets\\js\\global.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\hero.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\js\\hero.js",
       "PackagePath": "staticwebassets\\js\\hero.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\home.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\js\\home.js",
       "PackagePath": "staticwebassets\\js\\home.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\login\\password-input.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\js\\login\\password-input.js",
       "PackagePath": "staticwebassets\\js\\login\\password-input.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\product.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\js\\product.js",
       "PackagePath": "staticwebassets\\js\\product.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\register\\password-description.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\js\\register\\password-description.js",
       "PackagePath": "staticwebassets\\js\\register\\password-description.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\register\\password-input.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\js\\register\\password-input.js",
       "PackagePath": "staticwebassets\\js\\register\\password-input.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\js\\search.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\js\\search.js",
       "PackagePath": "staticwebassets\\js\\search.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Dev\\C#\\comic\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Dev\\School-CSharp\\book\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

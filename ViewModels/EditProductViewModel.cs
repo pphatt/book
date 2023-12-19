@@ -57,4 +57,6 @@ public class EditProductViewModel
         get;
         set;
     }
+    
+    public DateTime CreatedAt { get; set; }
 }

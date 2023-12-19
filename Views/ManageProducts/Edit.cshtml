@@ -76,6 +76,7 @@
 
 <form method="post" id="uploadform" enctype="multipart/form-data" class="main-content">
     <input type="hidden" asp-for="@Model.Id" />
+    <input type="hidden" asp-for="@Model.CreatedAt" />
     <div class="form-action">
         <div class="form-action-text">
             <h4>Edit product ID: @Model.Id</h4>

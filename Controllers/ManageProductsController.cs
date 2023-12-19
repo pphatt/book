@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using comic.Interfaces;
@@ -199,7 +200,8 @@ public class ManageProductsController : Controller
             Inventory = product.Inventory,
             CategoryId = product.CategoryId,
             StoreOwnerId = product.StoreOwnerId,
-            images = new List<IFormFile>()
+            images = new List<IFormFile>(),
+            CreatedAt = product.CreatedAt
         };
 
         ViewData["CategoryId"] =
@@ -229,13 +231,13 @@ public class ManageProductsController : Controller
         {
             return View();
         }
-        
+
         var images = new List<string>();
 
         if (vm.images != null && vm.images.Any())
         {
             _productsRepository.DeleteImages(vm.Id);
-            
+
             String uploadfolder = Path.Combine(_env.WebRootPath, "images");
 
             foreach (var image in vm.images)
@@ -271,7 +273,10 @@ public class ManageProductsController : Controller
             Inventory = vm.Inventory,
             StoreOwnerId = vm.StoreOwnerId,
             CategoryId = vm.CategoryId,
-            Images = images.Select(image => new Image { ImageName = image }).ToList()
+            Images = images.Select(image => new Image { ImageName = image }).ToList(),
+            CreatedAt = vm.CreatedAt,
+            UpdatedAt = DateTime.ParseExact(DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"), "yyyy-MM-dd hh:mm:ss",
+                CultureInfo.InvariantCulture)
         };
 
         _productsRepository.Update(product);
