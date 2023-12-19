@@ -94,6 +94,7 @@ public class AccountController : Controller
         {
             Email = registerViewModel.Email,
             UserName = registerViewModel.UserName,
+            Name = registerViewModel.UserName,
         };
             
         var newUserResponse = await _userManager.CreateAsync(newUser, registerViewModel.Password);

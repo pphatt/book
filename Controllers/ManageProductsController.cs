@@ -138,7 +138,7 @@ public class ManageProductsController : Controller
                         PublisherName = vm.NewPublisherName
                     })
                     : vm.PublisherId,
-                Description = vm.Description,
+                Description = vm.Description ?? "",
                 Price = vm.Price,
                 Inventory = vm.Inventory,
                 CategoryId = vm.CategoryId,

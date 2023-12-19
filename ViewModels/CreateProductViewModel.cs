@@ -28,11 +28,11 @@ public class CreateProductViewModel
         set;
     }
 
-    public string Description
+    public string? Description
     {
         get;
         set;
-    } = null!;
+    }
 
     public double Price
     {
